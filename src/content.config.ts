@@ -16,11 +16,11 @@ const lodgesCollection = defineCollection({
     name: z.string(),
     number: z.number(),
     seal: z.string(),
+    meetingInfo: z.string(),
     schedule: z.array(
       z.object({
         date: z.date(),
-        degree: z.enum(["1°", "2°", "3°", "Installation"]),
-        extra: z.string(),
+        work: z.string(),
       }),
     ),
   }),

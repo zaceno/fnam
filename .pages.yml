@@ -25,17 +25,12 @@ content:
       - { name: streetAddress, label: Gatuadress, type: string, required: true }
       - { name: email, label: E-post, type: string, required: true }
       - { name: body, label: Beskrivning, type: rich-text, required: true }
+      - { name: scheduleComment, label: Mötesinfo }
       - name: schedule
         label: Arbetsordning
         type: object
         fields:
           - { name: date, label: Datum, type: date }
-          - {
-              name: degree,
-              label: Grad,
-              type: select,
-              values: ["1°", "2°", "3°", "Installation"],
-            }
-          - { name: extra, label: Arbete, type: string }
+          - { work: extra, label: Arbete, type: string }
         list: true
         required: true
