@@ -1,23 +1,16 @@
 ---
-title: Vad är frimureri
+title: Vad är frimureri?
 order: 0
+image: /fnam/images/Pelare.png
 ---
-# Rubrik 1
+Frimureriet är världens äldsta fortfarande aktiva icke-kyrkliga brödraskap och finns representerat över hela världen. Verksamheten är organiserad i lokala enheter kallade loger, där medlemmarna möts för att utvecklas tillsammans – intellektuellt, moraliskt och andligt.
 
-## Rubrik 2
+Sedan flera sekler har frimureriet varit en samlingsplats för män från olika samhällsskikt, kulturer och trosinriktningar. Det har alltid eftersträvat att överbrygga religiösa, politiska och sociala skiljelinjer – i en anda av tolerans, ödmjukhet och broderskap.
 
-### rubrik 3
+Frimureriets mål är att utveckla och förädla människan – både innanför dess loger och utanför dem. Dess metod är speciell: genom att låta medlemmarna genomgå rituella skådespel, som kallas “grader”, ger frimureriet upplevelser och möjligheter till självreflektion, självförädlande, självfullkomnande – både på en nivå som man kan kalla “moralisk” och i termer av vad man kan kalla “livsvisdom”. Varje grad representerar ett steg på vägen, och progressionen sker först när medlemmen visat att han förstått och införlivat föregående graders innehåll. Frimureriets grader och rituella berättelser ställer medlemmen i en lång traditionskedja tillbaka till medeltidens katedralbyggare, vars konst och legender används som sätt att förädla det moraliska och andliga medvetandet.
 
-Vad är frimureri? – Fritt mureri. Murare utan gränser. Mura hit mura dit mura runt en liten bit.
+ Symboliken bygger på de gamla stenhuggarnas verktyg och arbete – men används i dag i överförd bemärkelse för att främja byggandet av ett inre tempel.
 
-Här kommer ett till stycke med **fetstil** och _snedstil_ som jag testar att lägga till.
+ Det moderna frimureriet – det spekulativa – har formats i mötet med upplysningstidens ideal om förnuft, människovärde och tanke- och yttrandefrihet. Det är öppet för alla män som delar dess mål och syften, oavsett trosuppfattning eller nationalitet.
 
-Samt en lista:
-
-*   En punkt
-    
-*   En till punkt
-    
-    *   En underpunkt
-        
-*   En tredje punkt
+Frimureriets möten innehåller både ceremoniellt och reflekterande innehåll – men är också en plats för kamratskap, samtal och gemensamma måltider där brödraskapet får ta fysisk form.
