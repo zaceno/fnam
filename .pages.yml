@@ -1,8 +1,7 @@
 media:
   - name: images
     label: Bilder
-    input: src/images
-    output: /fnam/images
+    input: src/content/images
 content:
   - name: articles
     label: Artiklar

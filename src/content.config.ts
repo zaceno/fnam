@@ -6,6 +6,7 @@ const articleCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     order: z.number(),
+    image: z.string().optional(),
   }),
 })
 
