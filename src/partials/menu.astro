@@ -1,0 +1,42 @@
+---
+import {getCollection} from 'astro:content'
+const articles = await getCollection('articles')
+const current = Astro.url.pathname
+const base = import.meta.env.BASE_URL
+
+const menuItems = articles.map(article => ({
+  url: `${base}/${article.id}`,
+  title: article.data.title
+}))
+menuItems.unshift({
+  url: `${base}/`,
+  title: 'Hem'
+})
+---
+<ul>
+{menuItems.map(item => (
+<li class:list={{current: item.url === current}}>
+    <a href={item.url}>
+    {item.title}
+    </a>
+  </li>
+))}
+</ul>
+<style>
+  ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: left;
+    gap: 0.3rem;
+  }
+  li {
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    background: #eee;
+    border: 1px #bbb solid;
+  }
+  li.current {
+    background: #ccc;
+  }
+</style>
