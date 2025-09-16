@@ -1,0 +1,19 @@
+---
+import LodgeLayout from '../../partials/lodge-layout.astro'
+import {getCollection, render} from 'astro:content'
+
+export async function getStaticPaths() {
+  const lodges = await getCollection('lodges')
+  return lodges.map(lodge => ({
+    params: {lodge: lodge.id},
+    props: {lodge}
+  }))
+}
+
+const {lodge} = Astro.props
+const {Content} = await render(lodge)
+---
+<LodgeLayout lodge={lodge.data}>
+  <Content />
+</LodgeLayout>
+

@@ -1,0 +1,62 @@
+---
+const formatDate = (d:Date) => {
+  const months = [
+    'januari',
+    'februari',
+    'mars',
+    'april',
+    'maj',
+    'juni',
+    'augusti',
+    'september',
+    'oktober',
+    'november',
+    'december',
+  ]
+  const dd = d.getDate()
+  const mn = d.getMonth()
+  return `${dd} ${months[mn]}`
+}
+
+
+import {Image} from 'astro:assets'
+import {type ImageMetadata} from 'astro'
+import MainLayout from './main-layout.astro'
+import Menu from './menu.astro'
+const {lodge} = Astro.props
+
+const images = import.meta.glob<{
+  default: ImageMetadata
+}>('/src/content/images/*.{jpeg,jpg,png,gif,webp}')
+if (!images['/' + lodge.seal]) throw new Error(`Image ${lodge.seal} not found`)
+
+const title = `Logen ${lodge.name} Nr. ${lodge.number}, ${lodge.city}`
+
+---
+<MainLayout title={title}>
+  <Menu />
+ <main>
+ <Image src={images['/' + lodge.seal]()} alt={`Sigill för ${title}`} width="200"/>
+ <h1>{title}</h1>
+ <slot />
+ </main>
+ <aside>
+   <p>
+     <b>Kontakt:</b>
+     <a href={`mailto:${lodge.email}`}>{lodge.email}</a>
+   </p>
+   <p>
+     <b>Besöksadress:</b>
+     {lodge.streetAddress}, {lodge.city}
+   </p>
+   <p><b>Arbetsordning:</b><br/>
+   {lodge.meetingInfo} </p>
+   {lodge.schedule.map((event: {date: Date, work: string}) => (
+     <p>
+     <b>{formatDate(event.date)}</b> – {event.work}
+     </p>
+   ))}
+ </aside>
+</MainLayout>
+
+

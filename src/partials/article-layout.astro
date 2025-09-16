@@ -9,12 +9,12 @@ const images = import.meta.glob<{
   default: ImageMetadata
 }>('/src/content/images/*.{jpeg,jpg,png,gif,webp}')
 
-if (!images[article.image]) throw new Error(`Image ${article.image} not found`)
+if (!images['/'+article.image]) throw new Error(`Image ${article.image} not found`)
 
 ---
 <MainLayout title={article.title}>
   <Menu />
- <Image src={images[article.image]()} alt="" />
+ <Image src={images['/' + article.image]()} alt="" />
   <h1>{article.title}</h1>
   <slot />
 </MainLayout>
