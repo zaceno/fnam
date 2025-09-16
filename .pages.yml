@@ -24,6 +24,13 @@ content:
       - { name: city, label: Ort, type: string, required: true }
       - { name: streetAddress, label: Gatuadress, type: string, required: true }
       - { name: email, label: E-post, type: string, required: true }
+      - {
+          name: seal,
+          label: Sigill,
+          type: image,
+          required: true,
+          media: images,
+        }
       - { name: meetingInfo, label: Mötesinfo, type: text }
       - name: schedule
         label: Arbetsordning
