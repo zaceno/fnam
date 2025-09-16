@@ -4,6 +4,7 @@ number: 169
 city: Södertälje
 streetAddress: Ängsgatan 7
 email: telge@friaochantagnamurare
+seal: src/content/images/TELGE_omritad_200p.png
 meetingInfo: "Hålltider för mötena: De startar normalt kl. 12.00 och avslutas ca
   15.30. Därefter hålls en brödramåltid som slutar ca 17.30."
 schedule:
