@@ -17,6 +17,9 @@ const lodgesCollection = defineCollection({
     number: z.number(),
     seal: z.string(),
     meetingInfo: z.string(),
+    email: z.string(),
+    streetAddress: z.string(),
+    city: z.string(),
     schedule: z.array(
       z.object({
         date: z.date(),
