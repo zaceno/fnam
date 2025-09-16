@@ -37,7 +37,7 @@ content:
         type: object
         fields:
           - { name: date, label: Datum, type: date }
-          - { name: work, label: Arbete, type: string }
+          - { name: what, label: Arbete, type: string }
         list: true
         required: true
       - { name: body, label: Beskrivning, type: rich-text, required: true }
