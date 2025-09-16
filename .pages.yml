@@ -31,7 +31,7 @@ content:
           required: true,
           media: images,
         }
-      - { name: meetingInfo, label: Mötesinfo, type: text }
+      - { name: meetingInfo, label: Mötesinfo, type: string }
       - name: schedule
         label: Arbetsordning
         type: object
