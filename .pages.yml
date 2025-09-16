@@ -24,8 +24,7 @@ content:
       - { name: city, label: Ort, type: string, required: true }
       - { name: streetAddress, label: Gatuadress, type: string, required: true }
       - { name: email, label: E-post, type: string, required: true }
-      - { name: body, label: Beskrivning, type: rich-text, required: true }
-      - { name: scheduleComment, label: Mötesinfo }
+      - { name: meetingInfo, label: Mötesinfo, type: text }
       - name: schedule
         label: Arbetsordning
         type: object
@@ -34,3 +33,4 @@ content:
           - { work: extra, label: Arbete, type: string }
         list: true
         required: true
+      - { name: body, label: Beskrivning, type: rich-text, required: true }
