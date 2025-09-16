@@ -5,7 +5,7 @@ const articleCollection = defineCollection({
   loader: glob({ pattern: "*.md", base: "./src/content/articles" }),
   schema: z.object({
     title: z.string(),
-    menuOrder: z.number(),
+    order: z.number(),
   }),
 })
 

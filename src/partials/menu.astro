@@ -4,10 +4,13 @@ const articles = await getCollection('articles')
 const current = Astro.url.pathname
 const base = import.meta.env.BASE_URL
 
-const menuItems = articles.map(article => ({
+const menuItems = articles
+.sort((l, r) => (l.data.order - r.data.order))
+.map(article => ({
   url: `${base}/${article.id}`,
   title: article.data.title
 }))
+
 menuItems.unshift({
   url: `${base}/`,
   title: 'Hem'

@@ -1,6 +1,6 @@
 ---
 title: Frimureriets historia
-menuOrder: 20
+order: 20
 ---
 
 Frimureri är jättegammalt

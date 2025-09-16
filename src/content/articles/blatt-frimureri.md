@@ -1,6 +1,6 @@
 ---
 title: Blått frimureri
-menuOrder: 10
+order: 10
 ---
 
 Blått frimureri är blått
