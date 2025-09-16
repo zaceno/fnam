@@ -13,3 +13,29 @@ content:
       - { name: order, label: Rang, type: number, required: true }
       - { name: image, label: Bild, type: image }
       - { name: body, label: Innehåll, type: rich-text }
+  - name: lodges
+    label: Loger
+    type: collection
+    path: src/content/lodges
+    filename: "{primary}.md"
+    fields:
+      - { name: name, label: Namn, type: string, required: true }
+      - { name: number, label: Nummer, type: number, required: true }
+      - { name: city, label: Ort, type: string, required: true }
+      - { name: streetAddress, label: Gatuadress, type: string, required:true }
+      - { name: email, label: E-post, type: string, required: true }
+      - { name: body, label: Beskrivning, type: rich-text }
+      - name: schedule
+        label: Arbetsordning
+        type: object
+        fields:
+          - { name: date, label: Datum, type: date }
+          - {
+              name: degree,
+              label: Grad,
+              type: select,
+              values: ["1°", "2°", "3°", "Installation"],
+            }
+          - { name: extra, label: Arbete, type: string }
+        list: true
+        required: true

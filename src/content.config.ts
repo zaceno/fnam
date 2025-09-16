@@ -10,6 +10,23 @@ const articleCollection = defineCollection({
   }),
 })
 
+const lodgesCollection = defineCollection({
+  loader: glob({ pattern: "*.md", base: "./src/content/lodges" }),
+  schema: z.object({
+    name: z.string(),
+    number: z.number(),
+    seal: z.string(),
+    schedule: z.array(
+      z.object({
+        date: z.date(),
+        degree: z.enum(["1°", "2°", "3°", "Installation"]),
+        extra: z.string(),
+      }),
+    ),
+  }),
+})
+
 export const collections = {
   articles: articleCollection,
+  lodges: lodgesCollection,
 }
