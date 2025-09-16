@@ -8,10 +8,10 @@ seal: src/content/images/TELGE_omritad_200p.png
 meetingInfo: "Hålltider för mötena: De startar normalt kl. 12.00 och avslutas ca
   15.30. Därefter hålls en brödramåltid som slutar ca 17.30."
 schedule:
-  - date: 2025-09-12
-    what: Test5
-  - date: 2025-11-14
-    what: Test6
+  - date: 2025-09-20
+    what: Test13
+  - date: 2025-11-09
+    what: Test14
 ---
 Fria och Antagna Murarelogen Telge nr 169 bildades 20 juni 2012 och sammanträdde inledningsvis i Helsingfors och Åbo. Logen flyttade sedermera över mötesverksamheten till Sverige och har haft sin hemvist på Igelsta gård i Södertälje mellan våren 2014 och våren 2021. Till hösten 2021 bytte logen möteslokal och sammanträder numera på Ängsgatan 7 i Södertälje.
 

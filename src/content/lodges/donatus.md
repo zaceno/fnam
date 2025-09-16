@@ -8,9 +8,9 @@ seal: src/content/images/Donatus-Sigill.png
 meetingInfo: Mötet startar 11:30, och pågår till rund 14:30, varefter vi intar
   en brödramåltid tillsammans.
 schedule:
-  - date: 2025-09-18
-    what: Test2
-  - date: 2025-10-15
-    what: Test3
+  - date: 2025-09-12
+    what: test11
+  - date: 2025-11-15
+    what: test12
 ---
 Lite beskrivning av donatus
