@@ -36,8 +36,8 @@ content:
         label: Arbetsordning
         type: object
         fields:
-          - { name: date, label: Datum, type: date, format: "yyyy-MM-dd" }
-          - { work: extra, label: Arbete, type: string }
+          - { name: date, label: Datum, type: date }
+          - { name: work, label: Arbete, type: string }
         list: true
         required: true
       - { name: body, label: Beskrivning, type: rich-text, required: true }
