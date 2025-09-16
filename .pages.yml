@@ -22,9 +22,9 @@ content:
       - { name: name, label: Namn, type: string, required: true }
       - { name: number, label: Nummer, type: number, required: true }
       - { name: city, label: Ort, type: string, required: true }
-      - { name: streetAddress, label: Gatuadress, type: string, required:true }
+      - { name: streetAddress, label: Gatuadress, type: string, required: true }
       - { name: email, label: E-post, type: string, required: true }
-      - { name: body, label: Beskrivning, type: rich-text }
+      - { name: body, label: Beskrivning, type: rich-text, required: true }
       - name: schedule
         label: Arbetsordning
         type: object
