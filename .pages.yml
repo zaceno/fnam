@@ -27,7 +27,10 @@ content:
         fields:
           - { name: image, label: Bild, type: image }
           - { name: body, label: Text, type: rich-text, required: true }
-          - { name: link, label: Länk, type: reference, collection: articles }
+          - name: link
+            label: Länk
+            type: reference
+            options: { collection: articles }
   - name: lodges
     label: Loger
     type: collection
