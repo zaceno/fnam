@@ -4,7 +4,7 @@ number: 174
 city: Lund
 streetAddress: Krafts Torg 10
 email: donatus@friaochantagnamurare.se
-seal: /src/content/images/Anderssons_constitution.jpg
+seal: /src/content/images/Donatus-Sigill.png
 meetingInfo: Mötet startar 11:30, och pågår till rund 14:30, varefter vi intar
   en brödramåltid tillsammans.
 schedule:
