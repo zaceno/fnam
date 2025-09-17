@@ -5,6 +5,8 @@ image: src/content/images/Frimureriskt_glasfonster-fotor-2025042592738.png
 ---
 Uttrycket “blå loge” eller “blått frimureri” syftar på de tre grundläggande graderna inom frimureriet, vilka kan spåras tillbaka till de första decennierna av 1700-talet: Murarlärling, Brodermurare och Mästarmurare (den mellersta är också känd under namn som “Medbroder” eller “Gesäll”). Dessa tre grader utgör fundamentet för alla frimureriska riter och förenar frimurare världen över. Termen blåloge är särskilt vanlig inom anglosaxiska frimurartraditioner, där man också talar om Craft Masonry – en hänvisning till frimureriets ursprung i medeltida byggnadshantverk. Den svenska ordagranna motsvarigheten ”hantverksmureri” förekommer dock sällan.
 
+![](src/content/images/TELGE_omritad_200p.png)
+
 Namnet blått frimureri kommer från färgen på de regalier som bärs i logen. Inom Svenska Frimurare Orden kallas motsvarigheten till dessa loger istället för S:t Johannesloger.
 
 I de svenska blå logerna arbetar vi på svenska enligt en ritual från slutet av 1700-talet som brukar kallas Preston-Webb, eller “the American Ritual”, vilken har sitt ursprung i ritualen som användes av the Antient Grand Lodge of England (en av två huvudstorloger som det engelska frimureriet under en stor del av 1700-talet var uppsplittrat i). På svenska har ritualen funnits sedan 1923, då en första översättning färdigställdes när det internationellt erkända frimureriet återetablerades i Finland, då med stöd från storlogen i New York. Vår version av ritualen skiljer sig i vissa avseenden från den anglosaxiska, inte minst genom att den musikaliskt förhöjs genom användandet av Jean Sibelius’ verk Musique religieuse, Op. 113, som komponerades specifikt för ritualen.
