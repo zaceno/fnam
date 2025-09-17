@@ -5,4 +5,8 @@ import { defineConfig } from "astro/config"
 export default defineConfig({
   site: "https://zaceno.github.io",
   base: "fnam",
+  image: {
+    responsiveStyles: true,
+    layout: "constrained",
+  },
 })
