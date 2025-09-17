@@ -1,6 +1,7 @@
 ---
 title: Blått frimureri
 order: 10
+image: /src/content/images/Stol_HM.png
 ---
 Uttrycket “blå loge” eller “blått frimureri” syftar på de tre grundläggande graderna inom frimureriet, vilka kan spåras tillbaka till de första decennierna av 1700-talet: Murarlärling, Brodermurare och Mästarmurare (den mellersta är också känd under namn som “Medbroder” eller “Gesäll”). Dessa tre grader utgör fundamentet för alla frimureriska riter och förenar frimurare världen över. Termen blåloge är särskilt vanlig inom anglosaxiska frimurartraditioner, där man också talar om Craft Masonry – en hänvisning till frimureriets ursprung i medeltida byggnadshantverk. Den svenska ordagranna motsvarigheten ”hantverksmureri” förekommer dock sällan.
 
