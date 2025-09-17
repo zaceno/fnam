@@ -7,7 +7,7 @@ content:
   - name: homepage
     label: Framsidan
     type: file
-    path: src/content/front.md
+    path: src/content/framsidan.md
     fields:
       - name: sections
         label: Sektioner
