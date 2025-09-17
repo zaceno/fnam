@@ -6,7 +6,6 @@ const images = import.meta.glob<{
 
 export default async function (path?: string) {
   if (!path) throw new Error("Cannot load content image for empty path")
-  path = "/" + path
   const loader = images[path]
   if (!loader) throw new Error(`content image not found: ${path}`)
   const image = await loader()

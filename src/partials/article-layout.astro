@@ -8,11 +8,10 @@ import Menu from './menu.astro'
 
 interface Props {article: CollectionEntry<'articles'>['data']}
 const {article} = Astro.props
-
 ---
 <MainLayout title={article.title}>
   <Menu />
- <Image src={loadContentImage(article.image)} alt="" />
+  <Image src={loadContentImage(article.image)} alt="" />
   <h1>{article.title}</h1>
   <slot />
 </MainLayout>
