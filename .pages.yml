@@ -7,7 +7,8 @@ content:
   - name: homepage
     label: Framsidan
     type: file
-    path: src/content/framsidan.md
+    path: src/content/framsidan.json
+    format: json
     fields:
       - name: sections
         label: Sektioner
@@ -16,6 +17,7 @@ content:
         fields:
           - { name: image, label: Bild, type: image }
           - { name: body, label: Text, type: rich-text, required: true }
+          - { name: link, label: Länk, type: reference, collection: articles }
   - name: articles
     label: Artiklar
     type: collection
