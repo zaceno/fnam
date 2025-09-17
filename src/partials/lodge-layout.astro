@@ -1,42 +1,19 @@
 ---
-const formatDate = (d:Date) => {
-  const months = [
-    'januari',
-    'februari',
-    'mars',
-    'april',
-    'maj',
-    'juni',
-    'augusti',
-    'september',
-    'oktober',
-    'november',
-    'december',
-  ]
-  const dd = d.getDate()
-  const mn = d.getMonth()
-  return `${dd} ${months[mn]}`
-}
-
-
 import {Image} from 'astro:assets'
-import {type ImageMetadata} from 'astro'
+import formatDate from '../utils/schedule-date-format'
+import loadContentImage from '../utils/load-content-image'
 import MainLayout from './main-layout.astro'
 import Menu from './menu.astro'
+import { type CollectionEntry } from 'astro:content'
+
+interface Props {lodge: CollectionEntry<'lodges'>['data']}
 const {lodge} = Astro.props
-
-const images = import.meta.glob<{
-  default: ImageMetadata
-}>('/src/content/images/*.{jpeg,jpg,png,gif,webp}')
-if (!images['/' + lodge.seal]) throw new Error(`Image ${lodge.seal} not found`)
-
 const title = `Logen ${lodge.name} Nr. ${lodge.number}, ${lodge.city}`
-
 ---
 <MainLayout title={title}>
   <Menu />
  <main>
- <Image src={images['/' + lodge.seal]()} alt={`Sigill för ${title}`} width="200"/>
+ <Image src={loadContentImage(lodge.seal)} alt={`Sigill för ${title}`} width="200"/>
  <h1>{title}</h1>
  <slot />
  </main>
