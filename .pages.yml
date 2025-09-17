@@ -2,6 +2,7 @@ media:
   - name: images
     label: Bilder
     input: src/content/images
+    output: /src/content/images
 content:
   - name: articles
     label: Artiklar
