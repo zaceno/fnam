@@ -7,6 +7,8 @@ Frimureriet är världens äldsta fortfarande aktiva icke-kyrkliga brödraskap o
 
 Sedan flera sekler har frimureriet varit en samlingsplats för män från olika samhällsskikt, kulturer och trosinriktningar. Det har alltid eftersträvat att överbrygga religiösa, politiska och sociala skiljelinjer – i en anda av tolerans, ödmjukhet och broderskap.
 
+![](src/content/images/Donatus-Sigill.png)
+
 Frimureriets mål är att utveckla och förädla människan – både innanför dess loger och utanför dem. Dess metod är speciell: genom att låta medlemmarna genomgå rituella skådespel, som kallas “grader”, ger frimureriet upplevelser och möjligheter till självreflektion, självförädlande, självfullkomnande – både på en nivå som man kan kalla “moralisk” och i termer av vad man kan kalla “livsvisdom”. Varje grad representerar ett steg på vägen, och progressionen sker först när medlemmen visat att han förstått och införlivat föregående graders innehåll. Frimureriets grader och rituella berättelser ställer medlemmen i en lång traditionskedja tillbaka till medeltidens katedralbyggare, vars konst och legender används som sätt att förädla det moraliska och andliga medvetandet.
 
  Symboliken bygger på de gamla stenhuggarnas verktyg och arbete – men används i dag i överförd bemärkelse för att främja byggandet av ett inre tempel.
