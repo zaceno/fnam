@@ -1,7 +1,7 @@
 ---
 title: Vad är en loge?
 order: 50
-image: /src/content/images/Stol_HM.png
+image: $images/Stol_HM.png
 ---
 Logen är ett av frimureriets mest centrala begrepp. Den är både en fysisk plats och en andlig gemenskap – ett rum där män samlas, inte för att resa katedraler av sten, utan för att bygga karaktär, visdom och broderskap.
 

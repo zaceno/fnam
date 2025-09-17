@@ -4,7 +4,7 @@ number: 174
 city: Lund
 streetAddress: Krafts Torg 10
 email: donatus@friaochantagnamurare.se
-seal: /src/content/images/Donatus-Sigill.png
+seal: $images/Donatus-Sigill.png
 meetingInfo: Mötet startar 11:30, och pågår till rund 14:30, varefter vi intar
   en brödramåltid tillsammans.
 schedule:
@@ -15,4 +15,4 @@ schedule:
 ---
 Lite beskrivning av donatus
 
-![](/src/content/images/Brodrakedja.png)
+![]($images/Brodrakedja.png)
