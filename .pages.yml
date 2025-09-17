@@ -4,6 +4,18 @@ media:
     input: src/content/images
     output: $images
 content:
+  - name: homepage
+    label: Framsidan
+    type: file
+    path: src/content/front.md
+    fields:
+      - name: sections
+        label: Sektioner
+        type: object
+        list: true
+        fields:
+          - { name: image, label: Bild, type: image }
+          - { name: body, label: Text, type: rich-text, required: true }
   - name: articles
     label: Artiklar
     type: collection
