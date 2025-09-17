@@ -1,6 +1,7 @@
 ---
 title: Vad är frimureri?
 order: 0
+image: /src/content/images/Pelare.png
 ---
 Frimureriet är världens äldsta fortfarande aktiva icke-kyrkliga brödraskap och finns representerat över hela världen. Verksamheten är organiserad i lokala enheter kallade loger, där medlemmarna möts för att utvecklas tillsammans – intellektuellt, moraliskt och andligt.
 
