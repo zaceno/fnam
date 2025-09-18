@@ -21,7 +21,10 @@ content:
             label: Länk
             type: reference
             options:
-              { collection: articles, value: "{primary}", label: "{title}" }
+              collection: articles
+              value: "{id}"
+              label: "{title}"
+              multiple: false
   - name: articles
     label: Artiklar
     type: collection
