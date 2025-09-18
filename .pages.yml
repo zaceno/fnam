@@ -23,6 +23,7 @@ content:
             options:
               collection: articles
               search: title
+              value: "{title}"
               label: "{title}"
   - name: articles
     label: Artiklar
