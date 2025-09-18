@@ -1,8 +1,15 @@
 ---
 import Menu from '../partials/menu.astro'
 import MainLayout from '../partials/main-layout.astro'
+import FrontPageSection from '../partials/front-page-section.astro'
+import { getCollection, render } from 'astro:content'
+
+const sections = await getCollection('frontPageSections')
+const lodges = await getCollection('lodges')
+
 ---
 <MainLayout>
    <Menu />
   <h1>Fria och Antagna Murare Sverige</h1>
+  {sections.map((section) => <FrontPageSection section={section} />)}
 </MainLayout>
