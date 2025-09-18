@@ -1,5 +1,11 @@
 import fs from "node:fs/promises"
-import { z, defineCollection } from "astro:content"
+import path from "node:path"
+import {
+  z,
+  defineCollection,
+  reference,
+  type ReferenceDataEntry,
+} from "astro:content"
 import { glob, type LoaderContext, type Loader } from "astro/loaders"
 
 const articleCollection = defineCollection({
@@ -40,18 +46,28 @@ const frontPageSections = defineCollection({
       const { sections } = JSON.parse(rawJSON) as {
         sections: { body: string; image?: string; link?: string }[]
       }
-      sections.forEach(async ({ link, image, body }, index) => {
+      for (let index = 0; index < sections.length; index++) {
+        const { link, image, body } = sections[index]
+
+        const linkRef =
+          !link || link === "null"
+            ? undefined
+            : {
+                collection: "articles",
+                id: path.basename(link, path.extname(link)),
+              }
+
         store.set({
-          id: "" + index,
-          data: { link, image },
+          id: String(index + 1),
+          data: { link: linkRef, image },
           rendered: await renderMarkdown(body),
         })
-      })
+      }
     },
   },
   schema: z.object({
     image: z.string().optional(),
-    link: z.string().optional(),
+    link: reference("articles").optional(),
   }),
 })
 
