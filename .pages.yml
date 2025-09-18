@@ -4,16 +4,6 @@ media:
     input: src/content/images
     output: $images
 content:
-  - name: articles
-    label: Artiklar
-    type: collection
-    path: src/content/articles
-    filename: "{primary}.md"
-    fields:
-      - { name: title, label: Titel, type: string, required: true }
-      - { name: order, label: Rang, type: number, required: true }
-      - { name: image, label: Bild, type: image }
-      - { name: body, label: Innehåll, type: rich-text }
   - name: homepage
     label: Framsidan
     type: file
@@ -30,7 +20,17 @@ content:
           - name: link
             label: Länk
             type: reference
-            options: { collection: articles }
+            options: { collection: articles, value: "{id}", label: "{title}" }
+  - name: articles
+    label: Artiklar
+    type: collection
+    path: src/content/articles
+    filename: "{primary}.md"
+    fields:
+      - { name: title, label: Titel, type: string, required: true }
+      - { name: order, label: Rang, type: number, required: true }
+      - { name: image, label: Bild, type: image }
+      - { name: body, label: Innehåll, type: rich-text }
   - name: lodges
     label: Loger
     type: collection
