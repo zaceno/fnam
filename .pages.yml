@@ -20,7 +20,8 @@ content:
           - name: link
             label: Länk
             type: reference
-            options: { collection: articles, value: "{id}", label: "{title}" }
+            options:
+              { collection: articles, value: "{primary}", label: "{title}" }
   - name: articles
     label: Artiklar
     type: collection
