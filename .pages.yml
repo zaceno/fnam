@@ -23,9 +23,7 @@ content:
             options:
               collection: articles
               search: title
-              value: "{id}"
-              label: "{title}-{id}-{path}-{primary}"
-              multiple: false
+              label: "{title}"
   - name: articles
     label: Artiklar
     type: collection
