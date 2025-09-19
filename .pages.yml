@@ -17,7 +17,6 @@ components:
         component: articleRef
 content:
   - name: menu
-    label: Navigeringsmeny
     type: file
     path: src/content/meny.json
     format: json
