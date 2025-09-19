@@ -1,3 +1,56 @@
 {
-  "main": []
+  "main": [
+    {
+      "link": {
+        "url": "./",
+        "title": "Hem"
+      }
+    },
+    {
+      "link": {
+        "url": "vad-ar-frimureri",
+        "title": "Vad är frimureri?"
+      },
+      "submenu": [
+        {
+          "url": "blatt-frimureri",
+          "title": "Blått frimureri"
+        },
+        {
+          "url": "frimureriets-historia",
+          "title": "Frimureriets historia"
+        },
+        {
+          "url": "frimureri-och-religion",
+          "title": "Frimureri och religion"
+        },
+        {
+          "url": "vad-ar-en-loge",
+          "title": "Vad är en loge?"
+        }
+      ]
+    },
+    {
+      "link": {
+        "url": "distriktet-sverige",
+        "title": "Distriktet Sverige"
+      },
+      "submenu": [
+        {
+          "url": "loger/telge",
+          "title": "Logen Telge Nr. 169"
+        },
+        {
+          "url": "loger/donatus",
+          "title": "Logen Donatus Nr. 174"
+        }
+      ]
+    },
+    {
+      "link": {
+        "url": "english",
+        "title": "English"
+      }
+    }
+  ]
 }
