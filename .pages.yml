@@ -4,34 +4,25 @@ media:
     input: src/content/images
     output: $images
 components:
-  - name: link
+  articleRef:
+    type: reference
+    options: { collection: 'articles' }
+  plainLink:
     type: object
     fields:
       - { name: url, label: URL, type: string, required: true }
       - { name: title, label: Titel, type: string, required: true }
-  - name: menuLink
+  menuLink:
     type: block
     required: true
     blockKey: type
     blocks:
-      - name: anylink
+      - name: plainLink
         label: Länk
-        component: link
+        component: plainLink
       - name: article
         label: Artikel
-        type: reference
-        options: { collection: articles }
-  - name: menuTop
-    type: object
-    fields:
-      - name: menuitem
-        label: Huvudval
-        component: menuLink
-      - name: submenu
-        label: Undermeny
-        component: menuLink
-        list: true
-
+        component: articleRef
 content:
   - name: menu
     label: Navigeringsmeny
@@ -40,8 +31,11 @@ content:
     format: json
     fields:
       - name: main
-        component: menuTop
+        type: object
         list: true
+        fields:
+          - { name: link, label: Huvudval, component: menuLink, required: true}
+          - { name: submenu, label: Undermeny, component: menuLink, list: true}
   - name: homepage
     label: Framsidan
     type: file
