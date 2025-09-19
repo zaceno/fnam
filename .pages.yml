@@ -4,10 +4,6 @@ media:
     input: src/content/images
     output: $images
 components:
-  articleLink:
-    label: Länk
-    type: reference
-    options: {collection: 'articles', label: "{title}"}
   menuLink:
     type: object
     fields:
@@ -40,7 +36,9 @@ content:
           - { name: image, label: Bild, type: image }
           - { name: body, label: Text, type: rich-text, required: true }
           - name: link
-            component: articleLink
+            label: Länk
+            type: reference
+            options: {collection: 'articles', label: "{title}"}
   - name: faq
     label: FAQ
     type: file
@@ -54,8 +52,6 @@ content:
         fields:
           - { name: question, label: Fråga, type: string, required: true}
           - { name: answer, label: Svar, type: rich-text}
-          - name: link
-            component: articleLink
   - name: articles
     label: Artiklar
     type: collection
