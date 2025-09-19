@@ -4,6 +4,10 @@ media:
     input: src/content/images
     output: $images
 components:
+  articleLink:
+    label: Länk
+    type: reference
+    options: {collection: 'articles', label: "{title}"}
   menuLink:
     type: object
     fields:
@@ -36,11 +40,22 @@ content:
           - { name: image, label: Bild, type: image }
           - { name: body, label: Text, type: rich-text, required: true }
           - name: link
-            label: Länk
-            type: reference
-            options:
-              collection: articles
-              label: "{title}"
+            component: articleLink
+  - name: faq
+    label: FAQ
+    type: file
+    path: src/content/faq.json
+    format: json
+    fields:
+      - name: questions
+        label: Frågor
+        type: object
+        list: true
+        fields:
+          - { name: question, label: Fråga, type: string, required: true}
+          - { name: answer, label: Svar, type: rich-text}
+          - name: link
+            component: articleLink
   - name: articles
     label: Artiklar
     type: collection
