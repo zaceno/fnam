@@ -12,7 +12,7 @@ Distriktet leds av en distriktsstormästare som är stormästarens personliga re
 
 Distriktet Sverige omfattar i dag fyra loger. Dessa loger är verksamma enligt internationellt erkända frimureriska principer och ritualer, och välkomnar troende män med gott anseende – oavsett religiös bakgrund.
 
-Kontakt distriktsstormästaren med e-post: [dism@friaochantagnamurare.se](mailto:dism@friaochantagnamurare.se) [](mailto:dism@friaochantagnamurare.se)
+Kontakt distriktsstormästaren med e-post: [dism@friaochantagnamurare.se](mailto:dism@friaochantagnamurare.se)
 
 ## _Vill du besöka oss?_
 
