@@ -31,6 +31,31 @@ const lodgesCollection = defineCollection({
   }),
 })
 
+const FAQ_SOURCE = "./src/content/faq.json"
+const frequentlyAskedQuestions = defineCollection({
+  loader: {
+    name: "faq-loader",
+    async load({ store, renderMarkdown }: LoaderContext) {
+      store.clear()
+      const rawJSON = await fs.readFile(FAQ_SOURCE, "utf-8")
+      const { questions } = JSON.parse(rawJSON) as {
+        questions: { question: string; answer: string }[]
+      }
+      for (let index = 0; index < questions.length; index++) {
+        const { question, answer } = questions[index]
+        store.set({
+          id: String(index + 1),
+          data: { question },
+          rendered: await renderMarkdown(answer),
+        })
+      }
+    },
+  },
+  schema: z.object({
+    question: z.string(),
+  }),
+})
+
 const FRONT_PAGE_SECTIONS_SOURCE = "./src/content/framsidan.json"
 const frontPageSections = defineCollection({
   loader: {
@@ -66,6 +91,7 @@ const frontPageSections = defineCollection({
 
 export const collections = {
   frontPageSections,
+  frequentlyAskedQuestions,
   articles: articleCollection,
   lodges: lodgesCollection,
 }
