@@ -1,1 +1,12 @@
-{ "questions": [] }
+{
+  "questions": [
+    {
+      "question": "Vad är frimureri?",
+      "answer": "Frimureriet är ett moralsystem, en lära i levnadskonst och ett levnadssätt. Det bygger på idén att varje människa kan göra skillnad. Därför erbjuder frimureriet ett sammanhang för personlig mognad, broderlig gemenskap, välgörenhet och livslångt lärande.\n\n[Läs mer om frimureriet här](/fnam/vad-ar-frimureri)"
+    },
+    {
+      "question": "Hur blir jag frimurare?",
+      "answer": "För att bli medlem behöver du först uttrycka ditt intresse, träffa nuvarande medlemmar, skicka in en ansökan och genomgå en intervju samt en granskning. Om du blir godkänd deltar du i en invigningsceremoni. \n\n[Mer information finns på vår sida för medlemskap.](/fnam/vill-du-bli-frimurare)"
+    }
+  ]
+}
