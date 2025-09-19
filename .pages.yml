@@ -23,6 +23,7 @@ content:
     fields:
       - name: main
         component: menuLink
+        list: true
   - name: articles
     type: collection
     path: src/content/articles
