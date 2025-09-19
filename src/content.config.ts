@@ -48,7 +48,6 @@ const frontPageSections = defineCollection({
       }
       for (let index = 0; index < sections.length; index++) {
         const { link, image, body } = sections[index]
-
         const linkRef =
           !link || link === "null"
             ? undefined
@@ -56,7 +55,6 @@ const frontPageSections = defineCollection({
                 collection: "articles",
                 id: path.basename(link, path.extname(link)),
               }
-
         store.set({
           id: String(index + 1),
           data: { link: linkRef, image },

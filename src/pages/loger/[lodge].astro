@@ -1,6 +1,9 @@
 ---
-import LodgeLayout from '../../partials/lodge-layout.astro'
 import {getCollection, render} from 'astro:content'
+import {Image} from 'astro:assets'
+import formatDate from '../../utils/schedule-date-format'
+import loadContentImage from '../../utils/load-content-image'
+import MainLayout from '../../partials/main-layout.astro'
 
 export async function getStaticPaths() {
   const lodges = await getCollection('lodges')
@@ -12,8 +15,35 @@ export async function getStaticPaths() {
 
 const {lodge} = Astro.props
 const {Content} = await render(lodge)
+const info = lodge.data
+const title = `Logen ${info.name} Nr. ${info.number}, ${info.city}`
 ---
-<LodgeLayout lodge={lodge.data}>
+<MainLayout title={title}>
+ <main>
+  <Image
+    src={loadContentImage(info.seal)}
+    alt={`Sigill för ${title}`} width="200"
+  />
+  <h1>{title}</h1>
   <Content />
-</LodgeLayout>
-
+ </main>
+ <aside>
+   <p>
+     <b>Kontakt:</b>
+     <a href={`mailto:${info.email}`}>{info.email}</a>
+   </p>
+   <p>
+     <b>Besöksadress:</b>
+     {info.streetAddress}, {info.city}
+   </p>
+   <p>
+     <b>Arbetsordning:</b><br/>
+     {info.meetingInfo}
+   </p>
+   {info.schedule.map((event: {date: Date, work: string}) => (
+     <p>
+      <b>{formatDate(event.date)}</b> – {event.work}
+     </p>
+   ))}
+ </aside>
+</MainLayout>
