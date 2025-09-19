@@ -1,39 +1,50 @@
 ---
-import {getCollection} from 'astro:content'
+import fs from 'node:fs/promises'
 
-const current = Astro.url.pathname
-const base = import.meta.env.BASE_URL
+type Link = {url: string, title: string}
+type ContentData = {main: {link: Link, submenu?: Link[]}[]}
 
-const articles = (await getCollection('articles'))
-  .sort((l, r) => (l.data.order - r.data.order))
-  .map(article => ({
-    url: `${base}/${article.id}`,
-    title: article.data.title
-  }))
-
-const lodges = (await getCollection('lodges'))
-.sort((l, r) => (l.data.number - r.data.number))
-.map(lodge => ({
-  url: `${base}/loger/${lodge.id}`,
-  title: `${lodge.data.name} ${lodge.data.number}`
-}))
-
-const homeItem = {
-  url: `${base}/`,
-  title: 'Hem'
+function isLink(item: Link | Submenu): item is Link {
+  return 'url' in item
 }
 
-const menuItems = [homeItem, ...articles, ...lodges]
+function fixUrl(link:Link):Link {
+  return {
+    title: link.title,
+    url: import.meta.env.BASE_URL + '/' + link.url
+  }
+}
+
+const menuJSON = await fs.readFile('src/content/meny.json', 'utf-8')
+const menu = JSON.parse(menuJSON) as ContentData
+const baseurl = import.meta.env.BASE_URL
+const current = Astro.url.pathname
 ---
 <nav>
   <menu>
-    {menuItems.map(item => (
-      <li class:list={{current: item.url === current}}>
-        <a href={item.url}>
-        {item.title}
+  {(() => {
+    const anchor = (link:Link) => {
+      const url=`${baseurl}/${link.url}`
+      return (
+        <a class:list={{current: current===url}} href={url}>
+          {link.title}
         </a>
-      </li>
-    ))}
+      )
+    }
+    return menu.main.map(item => !item.submenu ? <li>{anchor(item.link)}</li> : (
+        <li>
+        {item.link.title}
+        <menu>
+          <li>{anchor(item.link)}</li>
+          {item.submenu.map(subitem => (
+            <li>
+              {anchor(subitem)}
+            </li>
+          ))}
+        </menu>
+        </li>
+      ))
+  })()}
   </menu>
 </nav>
 <style>
