@@ -1,8 +1,3 @@
-media:
-  - name: images
-    label: Bilder
-    input: src/content/images
-    output: $images
 components:
   articleRef:
     type: reference
@@ -10,18 +5,15 @@ components:
   plainLink:
     type: object
     fields:
-      - { name: url, label: URL, type: string, required: true }
-      - { name: title, label: Titel, type: string, required: true }
+      - { name: url, label: URL, type: string }
+      - { name: title, label: Titel, type: string }
   menuLink:
     type: block
-    required: true
     blockKey: type
     blocks:
       - name: plainLink
-        label: Länk
         component: plainLink
       - name: article
-        label: Artikel
         component: articleRef
 content:
   - name: menu
@@ -31,65 +23,12 @@ content:
     format: json
     fields:
       - name: main
-        type: object
-        list: true
-        fields:
-          - { name: link, label: Huvudval, component: menuLink, required: true}
-          - { name: submenu, label: Undermeny, component: menuLink, list: true}
-  - name: homepage
-    label: Framsidan
-    type: file
-    path: src/content/framsidan.json
-    format: json
-    fields:
-      - name: sections
-        label: Sektioner
-        type: object
-        list: true
-        fields:
-          - { name: image, label: Bild, type: image }
-          - { name: body, label: Text, type: rich-text, required: true }
-          - name: link
-            label: Länk
-            type: reference
-            options:
-              collection: articles
-              label: "{title}"
+        component: menuLink
   - name: articles
-    label: Artiklar
     type: collection
     path: src/content/articles
     filename: "{primary}.md"
     fields:
       - { name: title, label: Titel, type: string, required: true }
-      - { name: order, label: Rang, type: number, required: true }
       - { name: image, label: Bild, type: image }
       - { name: body, label: Innehåll, type: rich-text }
-  - name: lodges
-    label: Loger
-    type: collection
-    path: src/content/lodges
-    filename: "{primary}.md"
-    fields:
-      - { name: name, label: Namn, type: string, required: true }
-      - { name: number, label: Nummer, type: number, required: true }
-      - { name: city, label: Ort, type: string, required: true }
-      - { name: streetAddress, label: Gatuadress, type: string, required: true }
-      - { name: email, label: E-post, type: string, required: true }
-      - {
-          name: seal,
-          label: Sigill,
-          type: image,
-          required: true,
-          media: images,
-        }
-      - { name: meetingInfo, label: Mötesinfo, type: string }
-      - name: schedule
-        label: Arbetsordning
-        type: object
-        fields:
-          - { name: date, label: Datum, type: date }
-          - { name: work, label: Arbete, type: string }
-        list: true
-        required: true
-      - { name: body, label: Beskrivning, type: rich-text, required: true }
