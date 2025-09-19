@@ -4,17 +4,6 @@ import fs from 'node:fs/promises'
 type Link = {url: string, title: string}
 type ContentData = {main: {link: Link, submenu?: Link[]}[]}
 
-function isLink(item: Link | Submenu): item is Link {
-  return 'url' in item
-}
-
-function fixUrl(link:Link):Link {
-  return {
-    title: link.title,
-    url: import.meta.env.BASE_URL + '/' + link.url
-  }
-}
-
 const menuJSON = await fs.readFile('src/content/meny.json', 'utf-8')
 const menu = JSON.parse(menuJSON) as ContentData
 const baseurl = import.meta.env.BASE_URL

@@ -3,10 +3,8 @@ import MainLayout from '../partials/main-layout.astro'
 import { getCollection, render } from 'astro:content';
 
 const faqData = await getCollection('frequentlyAskedQuestions')
-console.log('----------_FAQDATA', faqData)
 const questions = await Promise.all(faqData.map(async (question) => {
   const {Content}  = await render(question)
-  console.log('------RETURNING', question.data.question)
   return {
     question: question.data.question,
     answer: Content
