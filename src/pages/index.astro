@@ -1,47 +1,47 @@
 ---
-import {Image} from 'astro:assets'
-import { getCollection, render, getEntry } from 'astro:content'
-import loadContentImage from '../utils/load-content-image'
-import MainLayout from '../partials/main-layout.astro'
-import LodgesGallery from '../partials/lodges-gallery.astro'
+import { Image } from "astro:assets";
+import { getCollection, render, getEntry } from "astro:content";
+import loadContentImage from "../utils/load-content-image";
+import MainLayout from "../partials/main-layout.astro";
+import LodgesGallery from "../partials/lodges-gallery.astro";
 
-const sectionsData = await getCollection('frontPageSections')
+const sectionsData = await getCollection("frontPageSections");
 
-const sections = await Promise.all(sectionsData.map(async (section) => {
-  
-  let linkUrl = null 
-  let linkTitle = null 
-  let imgLoader = null
-  
-  const {Content} = await render(section) 
-  
-  if (section.data.link) {
-    const linked = await getEntry(section.data.link)
-    linkUrl = `${import.meta.env.BASE_URL}/${linked.id}`
-    linkTitle = linked.data.title
-  }
-  
-  if (section.data.image) {
-    imgLoader = loadContentImage(section.data.image)
-  }
+const sections = await Promise.all(
+  sectionsData.map(async (section) => {
+    let linkUrl = null;
+    let linkTitle = null;
+    let imgLoader = null;
 
-  return {Content, linkUrl, linkTitle, imgLoader} 
-}))
+    const { Content } = await render(section);
+
+    if (section.data.link) {
+      const linked = await getEntry(section.data.link);
+      linkUrl = `${import.meta.env.BASE_URL}/${linked.id}`;
+      linkTitle = linked.data.title;
+    }
+
+    if (section.data.image) {
+      imgLoader = loadContentImage(section.data.image);
+    }
+
+    return { Content, linkUrl, linkTitle, imgLoader };
+  })
+);
 ---
-<MainLayout>
 
+<MainLayout>
   <h1>Fria och Antagna Murare Sverige</h1>
 
-  {sections.map(({imgLoader, linkUrl, linkTitle, Content}) => (
-    <section>
-      {imgLoader && <Image src={imgLoader} alt="" />}
-      <Content />
-      {linkUrl && <a href={linkUrl}>{linkTitle}</a>}
-    </section>
-  ))}
-  
-  <LodgesGallery />  
+  {
+    sections.map(({ imgLoader, linkUrl, linkTitle, Content }) => (
+      <section>
+        {imgLoader && <Image src={imgLoader} alt="" />}
+        <Content />
+        {linkUrl && <a href={linkUrl}>{linkTitle}</a>}
+      </section>
+    ))
+  }
 
+  <LodgesGallery />
 </MainLayout>
-
-

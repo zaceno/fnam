@@ -1,41 +1,114 @@
 ---
-import fs from 'node:fs/promises'
+import fs from "node:fs/promises";
 
-type Link = {url: string, title: string}
-type ContentData = {main: {link: Link, submenu?: Link[]}[]}
+type Link = { url: string; title: string };
+type ContentData = { main: { link: Link; submenu?: Link[] }[] };
 
-const menuJSON = await fs.readFile('src/content/meny.json', 'utf-8')
-const menu = JSON.parse(menuJSON) as ContentData
-const baseurl = import.meta.env.BASE_URL
-const current = Astro.url.pathname
+const menuJSON = await fs.readFile("src/content/meny.json", "utf-8");
+const menu = JSON.parse(menuJSON) as ContentData;
+const baseurl = import.meta.env.BASE_URL;
+const current = Astro.url.pathname;
 ---
-<nav>
-  <menu>
-  {(() => {
-    const anchor = (link:Link) => {
-      const url=`${baseurl}/${link.url}`
-      return (
-        <a class:list={{current: current===url}} href={url}>
-          {link.title}
-        </a>
-      )
-    }
-    return menu.main.map(item => !item.submenu ? <li>{anchor(item.link)}</li> : (
-        <li>
-        {item.link.title}
-        <menu>
-          <li>{anchor(item.link)}</li>
-          {item.submenu.map(subitem => (
-            <li>
-              {anchor(subitem)}
+
+<nav class="main-nav">
+  <ul class="menu">
+    {
+      (() => {
+        const anchor = (link: Link) => {
+          const url = `${baseurl}/${link.url}`;
+          return (
+            <a class:list={{ current: current === url }} href={url}>
+              {link.title}
+            </a>
+          );
+        };
+        return menu.main.map((item) =>
+          !item.submenu ? (
+            <li>{anchor(item.link)}</li>
+          ) : (
+            <li class="has-dropdown">
+              <span class="dropdown-label">{item.link.title}</span>
+              <ul class="dropdown">
+                <li>{anchor(item.link)}</li>
+                {item.submenu.map((subitem) => (
+                  <li>{anchor(subitem)}</li>
+                ))}
+              </ul>
             </li>
-          ))}
-        </menu>
-        </li>
-      ))
-  })()}
-  </menu>
+          )
+        );
+      })()
+    }
+  </ul>
 </nav>
 <style>
-.current {font-weight: bold;}
+  .main-nav {
+    font-family: inherit;
+    background: linear-gradient(90deg, #e3eaf3 0%, #b3c9e6 100%);
+    /* A calm, charming blue gradient */
+    box-shadow: 0 2px 8px #0001;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0 2rem;
+    display: flex;
+    gap: 2rem;
+    min-height: 3.2rem;
+    align-items: center;
+  }
+  .menu > li {
+    position: relative;
+  }
+  .menu > li > a,
+  .dropdown-label {
+    text-decoration: none;
+    color: #222;
+    padding: 0.5rem 1rem;
+    display: block;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    transition: background 0.2s;
+  }
+  .menu > li > a:hover,
+  .dropdown-label:hover {
+    background: #d0e3f7;
+  }
+  .current {
+    font-weight: bold;
+  }
+  .has-dropdown:hover > .dropdown,
+  .has-dropdown:focus-within > .dropdown {
+    display: block;
+  }
+  .dropdown {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    min-width: 180px;
+    background: #fff;
+    box-shadow: 0 4px 16px #0002;
+    border-radius: 0 0 0.5rem 0.5rem;
+    z-index: 100;
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 0;
+  }
+  .dropdown li {
+    width: 100%;
+  }
+  .dropdown a {
+    color: #1565c0;
+    padding: 0.5rem 1rem;
+    display: block;
+    text-decoration: none;
+    border-radius: 0.3rem;
+    transition: background 0.2s;
+  }
+  .dropdown a:hover {
+    background: #e3eaf3;
+  }
 </style>
