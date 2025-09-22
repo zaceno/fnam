@@ -31,6 +31,19 @@ const sections = await Promise.all(
 ---
 
 <MainLayout>
+  <section class="image-stack">
+    <img
+      src="/src/content/images/Umea_tempel.png"
+      alt="Umeå Tempel"
+      class="background-img"
+    />
+    <img
+      src="/src/content/images/Distriktsigill_frilagt-3.png"
+      alt="Distriktsigill"
+      class="center-round-img"
+    />
+  </section>
+
   <h1>Fria och Antagna Murare Sverige</h1>
 
   {
@@ -45,3 +58,46 @@ const sections = await Promise.all(
 
   <LodgesGallery />
 </MainLayout>
+
+<style>
+  .image-stack {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .background-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(6px);
+    z-index: -2;
+  }
+  .image-stack::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: -1;
+  }
+  .center-round-img {
+    position: relative;
+    z-index: 1;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    background: #fff;
+    padding: 1rem;
+    object-fit: contain;
+  }
+</style>
