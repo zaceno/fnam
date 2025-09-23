@@ -4,7 +4,11 @@ import { getCollection, render, getEntry } from "astro:content";
 import loadContentImage from "../utils/load-content-image";
 import MainLayout from "../partials/main-layout.astro";
 import LodgesGallery from "../partials/lodges-gallery.astro";
+import "../styles/index.css";
 
+
+const vadArFrimureri = await getEntry('articles', 'vad-ar-frimureri');
+const mainTitle = vadArFrimureri?.data.title ?? '';
 const sectionsData = await getCollection("frontPageSections");
 
 const sections = await Promise.all(
@@ -29,7 +33,6 @@ const sections = await Promise.all(
   })
 );
 ---
-
 <MainLayout>
   <section class="image-stack">
     <img
@@ -37,67 +40,35 @@ const sections = await Promise.all(
       alt="Umeå Tempel"
       class="background-img"
     />
-    <img
-      src="/src/content/images/Distriktsigill_frilagt-3.png"
-      alt="Distriktsigill"
-      class="center-round-img"
-    />
+    <div style="display:flex; flex-direction:column; align-items:center; width:100%;">
+      <img src="/src/content/images/Distriktsigill_frilagt-3.png" alt="Distriktsigill" class="center-round-img" />
+  <div style="text-align:center; font-weight:bold; font-size:2rem; margin-top:0.5rem; margin-bottom:0; color:#222;">
+        Fria och Antagna Murare i Sverige
+      </div>
+    </div>
   </section>
 
-  <h1>Fria och Antagna Murare Sverige</h1>
+  <section class="three-boxes-section">
+    <div class="three-boxes">
+      {sections.slice(0, 3).map(({ imgLoader, linkUrl, linkTitle, Content }, i) => (
+        <div class="box" key={i}>
+          {imgLoader && <Image src={imgLoader} alt="" />}
+          <div class="box-content">
+            <Content />
+          </div>
+          {linkUrl ? (
+            <a class="box-btn" href={linkUrl}>{linkTitle || 'Läs mer'}</a>
+          ) : (
+            <button class="box-btn" disabled style="opacity:0.5;cursor:not-allowed">Ingen länk</button>
+          )}
+        </div>
+      ))}
+    </div>
+  </section>
 
-  {
-    sections.map(({ imgLoader, linkUrl, linkTitle, Content }) => (
-      <section>
-        {imgLoader && <Image src={imgLoader} alt="" />}
-        <Content />
-        {linkUrl && <a href={linkUrl}>{linkTitle}</a>}
-      </section>
-    ))
-  }
+
+
+
 
   <LodgesGallery />
 </MainLayout>
-
-<style>
-  .image-stack {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-  .background-img {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: blur(6px);
-    z-index: -2;
-  }
-  .image-stack::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.5);
-    z-index: -1;
-  }
-  .center-round-img {
-    position: relative;
-    z-index: 1;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
-    background: #fff;
-    padding: 1rem;
-    object-fit: contain;
-  }
-</style>

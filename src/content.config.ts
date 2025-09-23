@@ -1,7 +1,7 @@
 import fs from "node:fs/promises"
 import path from "node:path"
 import { z, defineCollection, reference } from "astro:content"
-import { glob, type LoaderContext, type Loader } from "astro/loaders"
+import { glob, type LoaderContext } from "astro/loaders"
 
 const articleCollection = defineCollection({
   loader: glob({ pattern: "*.md", base: "./src/content/articles" }),
@@ -90,8 +90,8 @@ const frontPageSections = defineCollection({
 })
 
 export const collections = {
-  frontPageSections,
   frequentlyAskedQuestions,
   articles: articleCollection,
   lodges: lodgesCollection,
+  frontPageSections,
 }
