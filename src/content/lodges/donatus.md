@@ -31,7 +31,7 @@ Logen Donatus nr 174 grundades 6 november 2013 i Helsingfors, erhöll interimist
 
 Det första mötet i Lund hölls den 26 september 2015.
 
-[Läs en artikel om logen Donatus invigning (Utdrag ur Koilliskulma 2/15)](../Utdrag-ur-Koilliskulma_2_2015.pdf)
+[Läs en artikel om logen Donatus invigning (Utdrag ur Koilliskulma 2/15)](../../Utdrag-ur-Koilliskulma_2_2015.pdf)
 
 ![Frimurare samlade för invigning av logen Donatus nr 174. Stormästare Juhani Vuori och Sveriges stormästare Anders Strömberg.]($images/Donatus_invigning.jpg)
 
