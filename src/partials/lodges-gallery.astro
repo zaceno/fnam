@@ -3,6 +3,7 @@ import {Image} from 'astro:assets'
 import { getCollection } from 'astro:content'
 import loadContentImage from '../utils/load-content-image'
 const lodges = await getCollection('lodges')
+lodges.sort((l, r) => (l.data.number - r.data.number))
 ---
 <section>
   {lodges.map(lodge => (
