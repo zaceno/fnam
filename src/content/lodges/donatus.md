@@ -33,7 +33,7 @@ Det första mötet i Lund hölls den 26 september 2015.
 
 [Läs en artikel om logen Donatus invigning (Utdrag ur Koilliskulma 2/15)](../content/images/Utdrag-ur-Koilliskulma_2_2015.pdf)
 
-<p style="text-align: center"><img src="$images/Donatus_invigning.jpg" alt="Frimurare samlade för invigning av logen Donatus nr 174. Stormästare Juhani Vuori och Sveriges stormästare Anders Strömberg."></p>
+![Frimurare samlade för invigning av logen Donatus nr 174. Stormästare Juhani Vuori och Sveriges stormästare Anders Strömberg.]($images/Donatus_invigning.jpg)
 
 ### Om logens namn
 
