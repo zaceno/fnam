@@ -33,6 +33,8 @@ Det första mötet i Lund hölls den 26 september 2015.
 
 [Läs en artikel om logen Donatus invigning (Utdrag ur Koilliskulma 2/15)](../content/images/Utdrag-ur-Koilliskulma_2_2015.pdf)
 
+![Frimurare samlade för invigning av logen Donatus nr 174. Stormästare Juhani Vuori och Sveriges stormästare Anders Strömberg.]($images/Donatus_invigning.jpg)
+
 ### Om logens namn
 
 F.&A.M Logen Donatus nr 174 är uppkallade efter [Lunds domkyrkas](http://sv.wikipedia.org/wiki/Lunds_domkyrka) första arkitekt Donatus. Denne stenmästare tros ha varit bördig från norra Italien och kom närmast från bygget av kejsardomen i Speyer.
