@@ -32,6 +32,18 @@
     },
     {
       "link": {
+        "url": "vill-du-bli-frimurare",
+        "title": "Vill du bli Frimurare?"
+      },
+      "submenu": [
+        {
+          "url": "kontakta-logerna",
+          "title": "Kontakt"
+        }
+      ]
+    },
+    {
+      "link": {
         "url": "distriktet-sverige",
         "title": "Distriktet Sverige"
       },
