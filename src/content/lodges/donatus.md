@@ -31,7 +31,7 @@ Logen Donatus nr 174 grundades 6 november 2013 i Helsingfors, erhöll interimist
 
 Det första mötet i Lund hölls den 26 september 2015.
 
-\[Läs en artikel om logen Donatus invigning (Utdrag ur Koilliskulma 2/15)\](../content/images/Utdrag-ur-Koilliskulma\_2\_2015.pdf)
+[Läs en artikel om logen Donatus invigning (Utdrag ur Koilliskulma 2/15)](../content/images/Utdrag-ur-Koilliskulma_2_2015.pdf)
 
 <p style="text-align: center"><img src="$images/Donatus_invigning.jpg" alt="Frimurare samlade för invigning av logen Donatus nr 174. Stormästare Juhani Vuori och Sveriges stormästare Anders Strömberg."></p>
 
@@ -44,3 +44,5 @@ Lunds domkyrka började att byggas på 1100-talet efter att Lund hade blivit sä
 Donatus främsta bidrag till domkyrkobygget är det ”fördolda rummet” — [kryptan](http://lundsdomkyrka.se/rundtur/kryptan/). Detta rum, som är ett av de allra äldsta bevarade i Sverige, är vida berömt för sin arkitektur. Främst för sina konstfärdigt utformade pelare som syftar tillbaka till pelarna i Salomos tempel i Jerusalem. Huvudaltaret som invigdes 1123 av biskop Asker är tillägnat Johannes Döparen.  
   
 Donatus nämns i Lunds domkyrkas dödsbok och därmed vet vi att han avled under något av åren 1135-1140
+
+![Donatus sammanträder i EOS frimurarhus i Lund]($images/EOS-1024x735.jpg)
