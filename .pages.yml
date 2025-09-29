@@ -59,7 +59,6 @@ content:
     filename: "{primary}.md"
     fields:
       - { name: title, label: Titel, type: string, required: true }
-      - { name: order, label: Rang, type: number, required: true }
       - { name: image, label: Bild, type: image }
       - { name: body, label: Innehåll, type: rich-text }
   - name: lodges
