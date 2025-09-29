@@ -25,24 +25,22 @@ schedule:
   - date: 2025-12-20
     work: Installation (3°)
 ---
-### Logens historia
+# F.&A.M Logen Donatus nr 174
 
-Logen Donatus nr 174 grundades 6 november 2013 i Helsingfors, erhöll interimistiskt tillståndsbevis 8 mars 2014 och invigdes under högtidliga former i Södertälje den 14 februari 2015 av stormästaren för Storlogen för Fria och Antagna Murare i Finland. Moderloge är F.&A.M. Logen Telge nr 169.
+Logen Donatus, som arbetat i Lund sedan 2015, är en aktiv och intellektuellt stimulerande gemenskap, i vilken det rituella arbetet varvas med spänstiga och utvecklande diskussioner och broderligt samkväm. En logedag hos Donatus kan sträckas ut över hela lördagen för dem som vill – först det rituella mötet, sedan brödramåltid med diskussioner och ibland små föredrag och till sist, för dem som vill och hinner efterloge på en pub. Den typiskt lundensiska kombinationen av tankens kreativitet och ceremoniernas skönhet präglar logen, på ett sätt som vi hoppas och tror för vidare frimureriets tidiga sätt att arbeta under 1700-talet, då logearbetet, broderskapet och filosofin gick hand i hand.
 
-Det första mötet i Lund hölls den 26 september 2015.
+## Om logens namn
 
-[Läs en artikel om logen Donatus invigning (Utdrag ur Koilliskulma 2/15)](../../Utdrag-ur-Koilliskulma_2_2015.pdf)
+Logen är uppkallad efter Lunds domkyrkas förste arkitekt Donatus. Denne stenmästare tros ha varit bördig från norra Italien och kom närmast från bygget av kejsardomen i Speyer.
 
-![Frimurare samlade för invigning av logen Donatus nr 174. Stormästare Juhani Vuori och Sveriges stormästare Anders Strömberg.]($images/Donatus_invigning.jpg)
+Lunds domkyrka började byggas på 1100-talet, efter att Lund hade blivit säte för Nordens ärkebiskop. Kyrkan byggdes av sandsten i romansk stil. 
 
-### Om logens namn
+Donatus’ främsta bidrag till domkyrkobygget är det ”fördolda rummet” — kryptan. Detta rum, som är ett av de allra äldsta bevarade i Sverige, är vida berömt för sin arkitektur; främst för sina konstfärdigt utformade pelare, som syftar tillbaka till pelarna i Salomos tempel i Jerusalem. Huvudaltaret, som invigdes 1123 av biskop Asker, är tillägnat Johannes Döparen. 
 
-F.&A.M Logen Donatus nr 174 är uppkallade efter [Lunds domkyrkas](http://sv.wikipedia.org/wiki/Lunds_domkyrka) första arkitekt Donatus. Denne stenmästare tros ha varit bördig från norra Italien och kom närmast från bygget av kejsardomen i Speyer.
+Donatus nämns i Lunds domkyrkas dödsbok. och därmed vet vi att han avled under något av åren mellan 1135 och 1140.
 
-Lunds domkyrka började att byggas på 1100-talet efter att Lund hade blivit säte för Nordens ärkebiskop. Kyrkan byggdes av sandsten i romansk stil.
+## Om logens valspråk
 
-Donatus främsta bidrag till domkyrkobygget är det ”fördolda rummet” — [kryptan](http://lundsdomkyrka.se/rundtur/kryptan/). Detta rum, som är ett av de allra äldsta bevarade i Sverige, är vida berömt för sin arkitektur. Främst för sina konstfärdigt utformade pelare som syftar tillbaka till pelarna i Salomos tempel i Jerusalem. Huvudaltaret som invigdes 1123 av biskop Asker är tillägnat Johannes Döparen.
-
-Donatus nämns i Lunds domkyrkas dödsbok och därmed vet vi att han avled under något av åren 1135-1140
+Logens valspråk – _Quod est superius est sicut quod est inferius_ – betyder ”det som är ovan är såsom det som är nedan” eller förenklat ”såsom ovan, så också nedan”, och är ett fritt citat från den latinska versionen av den så kallade Smaragdtavlan, en medeltida hermetisk text, som uttrycker idén om kosmiska korrespondenser, en central tanke i de hermetiska och alkemiska tankevärldar som bildar delar av frimureriets tankearv.
 
 ![Donatus sammanträder i EOS frimurarhus i Lund]($images/EOS-1024x735.jpg)
