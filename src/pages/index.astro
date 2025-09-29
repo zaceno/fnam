@@ -7,6 +7,7 @@ import loadContentImage from "../utils/load-content-image";
 import MainLayout from "../partials/main-layout.astro";
 import LodgesGallery from "../partials/lodges-gallery.astro";
 import "../styles/index.css";
+import "../styles/homepage.css";
 
 const vadArFrimureri = await getEntry('articles', 'vad-ar-frimureri');
 const villDuBliFrimurare = await getEntry('articles', 'vill-du-bli-frimurare');
@@ -42,6 +43,78 @@ const compassImage = loadContentImage("$images/solstav-scaled.jpg");
 const moonImage = loadContentImage("$images/Manstav.jpg");
 ---
 <MainLayout>
+  <style>
+    .hero-section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: white;
+    }
+    .hero-logo {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      background: #fff;
+      padding: 1.5rem;
+      object-fit: contain;
+      margin-bottom: 2rem;
+    }
+    .hero-text h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+    .hero-text h2 {
+      font-size: 2rem;
+      font-weight: 300;
+      margin: 0.5rem 0 0 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+    
+    @media (max-width: 768px) {
+      .welcome-container, .reflection-container {
+        flex-direction: column;
+        gap: 2rem;
+      }
+      
+      .hero-text h1 {
+        font-size: 2rem;
+      }
+      
+      .hero-text h2 {
+        font-size: 1.5rem;
+      }
+      
+      .welcome-content h2, .reflection-content h2, .lodges-container h2 {
+        font-size: 2rem;
+      }
+      
+      .first-step-content h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+  
   <!-- Hero Section -->
   <section class="hero-section">
     <Image class="hero-background" src={templetUmea} alt="Umeå tempel" />
@@ -55,48 +128,48 @@ const moonImage = loadContentImage("$images/Manstav.jpg");
   </section>
 
   <!-- Welcome Section -->
-  <section class="welcome-section">
-    <div class="welcome-container">
-      <div class="welcome-image">
-        <Image src={solstavImage} alt="Frimureriskt kompass och vinkelhake" />
+  <section class="welcome-section" style="background: #f8fafc; padding: 4rem 0;">
+    <div class="welcome-container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; gap: 4rem;">
+      <div class="welcome-image" style="flex: 1; text-align: center;">
+        <Image src={solstavImage} alt="Frimureriskt kompass och vinkelhake" style="max-width: 100%; height: auto; border-radius: 1rem; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);" />
       </div>
-      <div class="welcome-content">
-        <h2>Välkommen!</h2>
-        <p>Välkommen till Fria och Antagna Murare, hem för det blå frimureriet i Sverige. Vi är öppna för alla redbara män som tror på ett Högsta Väsen.</p>
-        <p>Frimureriet är ett moralsystem höljt i allegorier och illustrerat av symboler. Frimureriet vill stimulera till att tänka, fråga och söka. Det är ett system för personlig utveckling där medlemmarna uppmuntras att utforska sina egna värderingar och forma sin karaktär. Det är en väg till frihet under ansvar, till självkännedom och självförbättring.</p>
-        <p>Frimureriet har varken politiska eller religiösa bindningar, och för samman män i olika åldrar, med olika bakgrunder, kulturer och trosuppfattningar. I loger runt om i landet samlas vi regelbundet för att delta i ceremonier och traditioner som främjar öppenhet, tolerans och respekt – och som inspirerar oss att ta ansvar, både som medmänniskor och samhällsmedborgare.</p>
-        <a href="/vad-ar-frimureri" class="cta-button">Vad Är Frimureri</a>
+      <div class="welcome-content" style="flex: 1;">
+        <h2 style="color: #1a237e; font-size: 2.5rem; margin-bottom: 2rem; font-weight: 600;">Välkommen!</h2>
+        <p style="color: #333; line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.1rem;">Välkommen till Fria och Antagna Murare, hem för det blå frimureriet i Sverige. Vi är öppna för alla redbara män som tror på ett Högsta Väsen.</p>
+        <p style="color: #333; line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.1rem;">Frimureriet är ett moralsystem höljt i allegorier och illustrerat av symboler. Frimureriet vill stimulera till att tänka, fråga och söka. Det är ett system för personlig utveckling där medlemmarna uppmuntras att utforska sina egna värderingar och forma sin karaktär. Det är en väg till frihet under ansvar, till självkännedom och självförbättring.</p>
+        <p style="color: #333; line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.1rem;">Frimureriet har varken politiska eller religiösa bindningar, och för samman män i olika åldrar, med olika bakgrunder, kulturer och trosuppfattningar. I loger runt om i landet samlas vi regelbundet för att delta i ceremonier och traditioner som främjar öppenhet, tolerans och respekt – och som inspirerar oss att ta ansvar, både som medmänniskor och samhällsmedborgare.</p>
+        <a href="/vad-ar-frimureri" style="background: #1a237e; color: white; padding: 1rem 2rem; border-radius: 2rem; text-decoration: none; font-weight: 600; font-size: 1.1rem; display: inline-block; margin-top: 2rem; transition: background 0.3s ease;">Vad Är Frimureri</a>
       </div>
     </div>
   </section>
 
   <!-- Reflection Section -->
-  <section class="reflection-section">
-    <div class="reflection-container">
-      <div class="reflection-content">
-        <h2>Plats för stillhet och reflexion</h2>
-        <p>Vår tid kännetecknas av högt tempo, krav på ständig prestation och en allt starkare fixering vid det yttre och materiella. Samtidigt försvagas de gemensamma värden som tidigare burit samhällen och skapat samhörighet. Många upplever en växande känsla av rotlöshet och främlingskap – både inför sig själva och inför andra. I en sådan tid har frimureriet något värdefullt att erbjuda.</p>
-        <p>Det utgör en plats där människan får stanna upp, blicka inåt och återknyta kontakten med det som är bestående och meningsfullt. I en värld där mycket kretsar kring yta och prestation, inbjuder frimureriet till en inre resa – ett sökande efter det som formar en hållbar självkänsla, etisk kompass och medmänsklig förankring.</p>
-        <a href="/vill-du-bli-frimurare" class="cta-button">Vill Du Bli Frimurare?</a>
+  <section class="reflection-section" style="background: #fff; padding: 4rem 0;">
+    <div class="reflection-container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; gap: 4rem;">
+      <div class="reflection-content" style="flex: 1;">
+        <h2 style="color: #1a237e; font-size: 2.5rem; margin-bottom: 2rem; font-weight: 600;">Plats för stillhet och reflexion</h2>
+        <p style="color: #333; line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.1rem;">Vår tid kännetecknas av högt tempo, krav på ständig prestation och en allt starkare fixering vid det yttre och materiella. Samtidigt försvagas de gemensamma värden som tidigare burit samhällen och skapat samhörighet. Många upplever en växande känsla av rotlöshet och främlingskap – både inför sig själva och inför andra. I en sådan tid har frimureriet något värdefullt att erbjuda.</p>
+        <p style="color: #333; line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.1rem;">Det utgör en plats där människan får stanna upp, blicka inåt och återknyta kontakten med det som är bestående och meningsfullt. I en värld där mycket kretsar kring yta och prestation, inbjuder frimureriet till en inre resa – ett sökande efter det som formar en hållbar självkänsla, etisk kompass och medmänsklig förankring.</p>
+        <a href="/vill-du-bli-frimurare" style="background: #1a237e; color: white; padding: 1rem 2rem; border-radius: 2rem; text-decoration: none; font-weight: 600; font-size: 1.1rem; display: inline-block; margin-top: 2rem; transition: background 0.3s ease;">Vill Du Bli Frimurare?</a>
       </div>
-      <div class="reflection-image">
-        <Image src={manstavImage} alt="Frimureriskt kompass och vinkelhake" />
+      <div class="reflection-image" style="flex: 1; text-align: center;">
+        <Image src={manstavImage} alt="Frimureriskt kompass och vinkelhake" style="max-width: 100%; height: auto; border-radius: 1rem; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);" />
       </div>
     </div>
   </section>
 
   <!-- First Step Section -->
-  <section class="first-step-section">
-    <Image class="first-step-background" src={templetUmea} alt="Umeå tempel" />
-    <div class="first-step-content">
-      <h2>Allt börjar med ett första steg...</h2>
+  <section class="first-step-section" style="position: relative; height: 60vh; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+    <Image class="first-step-background" src={templetUmea} alt="Umeå tempel" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;" />
+    <div class="first-step-content" style="position: relative; z-index: 2; text-align: center; color: white;">
+      <h2 style="font-size: 3rem; font-weight: bold; margin: 0; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">Allt börjar med ett första steg...</h2>
     </div>
   </section>
 
   <!-- Lodges Section -->
-  <section class="lodges-section">
-    <div class="lodges-container">
-      <h2>Logerna i Sverige</h2>
+  <section class="lodges-section" style="background: #e3eaf3; padding: 4rem 0;">
+    <div class="lodges-container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; text-align: center;">
+      <h2 style="color: #1a237e; font-size: 2.5rem; margin-bottom: 3rem; font-weight: 600;">Logerna i Sverige</h2>
       <LodgesGallery />
     </div>
   </section>

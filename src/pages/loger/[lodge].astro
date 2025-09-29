@@ -1,9 +1,10 @@
 ---
-import {getCollection, render} from 'astro:content'
+import {getCollection, render} from 'astro:content'
 import {Image} from 'astro:assets'
 import formatDate from '../../utils/schedule-date-format'
 import loadContentImage from '../../utils/load-content-image'
 import MainLayout from '../../partials/main-layout.astro'
+import PageLayout from '../../partials/page-layout.astro'
 
 export async function getStaticPaths() {
   const lodges = await getCollection('lodges')
@@ -13,37 +14,162 @@ export async function getStaticPaths() {
   }))
 }
 
-const {lodge} = Astro.props
-const {Content} = await render(lodge)
+const {lodge} = Astro.props
+const {Content} = await render(lodge)
 const info = lodge.data
-const title = `Logen ${info.name} Nr. ${info.number}, ${info.city}`
+const title = `Logen ${info.name} Nr. ${info.number}`
+const subtitle = `${info.city}`
 ---
 <MainLayout title={title}>
- <main>
-  <Image
-    src={loadContentImage(info.seal)}
-    alt={`Sigill för ${title}`} width="200"
-  />
-  <h1>{title}</h1>
-  <Content />
- </main>
- <aside>
-   <p>
-     <b>Kontakt:</b>
-     <a href={`mailto:${info.email}`}>{info.email}</a>
-   </p>
-   <p>
-     <b>Besöksadress:</b>
-     {info.streetAddress}, {info.city}
-   </p>
-   <p>
-     <b>Arbetsordning:</b><br/>
-     {info.meetingInfo}
-   </p>
-   {info.schedule.map((event: {date: Date, work: string}) => (
-     <p>
-      <b>{formatDate(event.date)}</b> – {event.work}
-     </p>
-   ))}
- </aside>
+  <PageLayout title={title} subtitle={subtitle} image={info.seal}>
+    <div class="lodge-content">
+      <div class="lodge-main">
+        <Content />
+      </div>
+      
+      <aside class="lodge-sidebar">
+        <div class="lodge-info-card">
+          <h3>Kontaktinformation</h3>
+          <div class="info-item">
+            <strong>E-post:</strong>
+            <a href={`mailto:${info.email}`}>{info.email}</a>
+          </div>
+          <div class="info-item">
+            <strong>Besöksadress:</strong>
+            <span>{info.streetAddress}, {info.city}</span>
+          </div>
+        </div>
+
+        <div class="lodge-info-card">
+          <h3>Arbetsordning</h3>
+          <p>{info.meetingInfo}</p>
+        </div>
+
+        {info.schedule && info.schedule.length > 0 && (
+          <div class="lodge-info-card">
+            <h3>Kommande möten</h3>
+            <div class="schedule-list">
+              {info.schedule.map((event: {date: Date, work: string}, index: number) => (
+                <div class="schedule-item" key={index}>
+                  <div class="schedule-date">
+                    <strong>{formatDate(event.date)}</strong>
+                  </div>
+                  <div class="schedule-work">
+                    {event.work}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </aside>
+    </div>
+  </PageLayout>
 </MainLayout>
+
+<style>
+  .lodge-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+
+  .lodge-main {
+    min-width: 0; /* Prevents grid overflow */
+  }
+
+  .lodge-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .lodge-info-card {
+    background: #f8fafc;
+    border: 1px solid #e3eaf3;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+  }
+
+  .lodge-info-card h3 {
+    color: #1a237e;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e3eaf3;
+  }
+
+  .info-item {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .info-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .info-item strong {
+    color: #1a237e;
+    font-weight: 600;
+  }
+
+  .info-item a {
+    color: #1a237e;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .info-item a:hover {
+    color: #3949ab;
+    text-decoration: underline;
+  }
+
+  .info-item span {
+    color: #333;
+  }
+
+  .schedule-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .schedule-item {
+    padding: 1rem;
+    background: white;
+    border-radius: 0.5rem;
+    border: 1px solid #e3eaf3;
+  }
+
+  .schedule-date {
+    color: #1a237e;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .schedule-work {
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .lodge-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .lodge-info-card {
+      padding: 1rem;
+    }
+
+    .schedule-item {
+      padding: 0.75rem;
+    }
+  }
+</style>

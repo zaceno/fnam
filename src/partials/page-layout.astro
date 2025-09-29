@@ -1,0 +1,249 @@
+---
+import { Image } from "astro:assets";
+import distriktsSigill from '../pages/_index_assets/Distriktsigill_frilagt-3.png'
+import templetUmea from '../pages/_index_assets/Umea_tempel.png'
+import loadContentImage from '../utils/load-content-image'
+
+const { title, subtitle, image, showHero = true } = Astro.props
+---
+
+<div class="page-layout">
+  {showHero && (
+    <section class="page-hero">
+      <Image class="page-hero-background" src={templetUmea} alt="Umeå tempel" />
+      <div class="page-hero-content">
+        <Image class="page-hero-logo" src={distriktsSigill} alt="Distriktssigill" />
+        <div class="page-hero-text">
+          <h1>{title}</h1>
+          {subtitle && <h2>{subtitle}</h2>}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <main class="page-main">
+    <div class="page-container">
+      {!showHero && (
+        <div class="page-header">
+          <h1>{title}</h1>
+          {subtitle && <h2>{subtitle}</h2>}
+        </div>
+      )}
+      
+      {image && (
+        <div class="page-image">
+          <Image src={loadContentImage(image)} alt={title} />
+        </div>
+      )}
+      
+      <div class="page-content">
+        <slot />
+      </div>
+    </div>
+  </main>
+</div>
+
+<style>
+  .page-layout {
+    min-height: 100vh;
+  }
+
+  /* Page Hero Section */
+  .page-hero {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .page-hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .page-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+  }
+
+  .page-hero-logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    background: #fff;
+    padding: 1rem;
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+  }
+
+  .page-hero-text h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+
+  .page-hero-text h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 0.5rem 0 0 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+
+  /* Page Main Content */
+  .page-main {
+    background: #f8fafc;
+    min-height: 50vh;
+  }
+
+  .page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+
+  .page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .page-header h1 {
+    color: #1a237e;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .page-header h2 {
+    color: #666;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 0;
+  }
+
+  .page-image {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .page-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .page-content {
+    background: white;
+    border-radius: 1rem;
+    padding: 3rem;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+    line-height: 1.8;
+  }
+
+  .page-content h1,
+  .page-content h2,
+  .page-content h3,
+  .page-content h4 {
+    color: #1a237e;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .page-content h1 {
+    font-size: 2rem;
+    border-bottom: 2px solid #e3eaf3;
+    padding-bottom: 0.5rem;
+  }
+
+  .page-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .page-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .page-content p {
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+
+  .page-content ul,
+  .page-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+  }
+
+  .page-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .page-content blockquote {
+    border-left: 4px solid #1a237e;
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #666;
+  }
+
+  .page-content a {
+    color: #1a237e;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .page-content a:hover {
+    color: #3949ab;
+    text-decoration: underline;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .page-hero {
+      height: 40vh;
+      min-height: 300px;
+    }
+
+    .page-hero-logo {
+      width: 120px;
+      height: 120px;
+    }
+
+    .page-hero-text h1 {
+      font-size: 2rem;
+    }
+
+    .page-hero-text h2 {
+      font-size: 1.25rem;
+    }
+
+    .page-container {
+      padding: 2rem 1rem;
+    }
+
+    .page-content {
+      padding: 2rem;
+    }
+
+    .page-header h1 {
+      font-size: 2rem;
+    }
+
+    .page-header h2 {
+      font-size: 1.25rem;
+    }
+  }
+</style>

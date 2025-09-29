@@ -1,10 +1,11 @@
 ---
 import MainLayout from '../partials/main-layout.astro'
+import PageLayout from '../partials/page-layout.astro'
 import { getCollection, render } from 'astro:content';
 
 const faqData = await getCollection('frequentlyAskedQuestions')
 const questions = await Promise.all(faqData.map(async (question) => {
-  const {Content}  = await render(question)
+  const {Content}  = await render(question)
   return {
     question: question.data.question,
     answer: Content
@@ -12,13 +13,110 @@ const questions = await Promise.all(faqData.map(async (question) => {
 }))
 ---
 <MainLayout title="Vanliga frågor">
-  <h1> Vanliga Frågor</h1>
-{questions.map(question => (
-  <details>
-    <summary>
-      {question.question}
-    </summary>
-    <question.answer />
-  </details>
-))}
+  <PageLayout title="Vanliga Frågor" subtitle="Här hittar du svar på de vanligaste frågorna om frimureriet">
+    <div class="faq-container">
+      {questions.map((question, index) => (
+        <div class="faq-item" key={index}>
+          <details class="faq-details">
+            <summary class="faq-question">
+              <span class="faq-icon">+</span>
+              {question.question}
+            </summary>
+            <div class="faq-answer">
+              <question.answer />
+            </div>
+          </details>
+        </div>
+      ))}
+    </div>
+  </PageLayout>
 </MainLayout>
+
+<style>
+  .faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .faq-item {
+    margin-bottom: 1rem;
+    border: 1px solid #e3eaf3;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background: white;
+  }
+
+  .faq-details {
+    width: 100%;
+  }
+
+  .faq-question {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    background: #f8fafc;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a237e;
+    transition: background-color 0.3s ease;
+    list-style: none;
+  }
+
+  .faq-question:hover {
+    background: #e3eaf3;
+  }
+
+  .faq-question::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-icon {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    min-width: 1.5rem;
+    text-align: center;
+  }
+
+  .faq-details[open] .faq-icon {
+    transform: rotate(45deg);
+  }
+
+  .faq-answer {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  .faq-answer p {
+    margin-bottom: 1rem;
+  }
+
+  .faq-answer p:last-child {
+    margin-bottom: 0;
+  }
+
+  .faq-answer ul,
+  .faq-answer ol {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+  }
+
+  .faq-answer li {
+    margin-bottom: 0.5rem;
+  }
+
+  .faq-answer a {
+    color: #1a237e;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .faq-answer a:hover {
+    color: #3949ab;
+    text-decoration: underline;
+  }
+</style>
