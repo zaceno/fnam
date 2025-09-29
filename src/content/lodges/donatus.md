@@ -37,7 +37,7 @@ Lunds domkyrka började byggas på 1100-talet, efter att Lund hade blivit säte 
 
 Donatus’ främsta bidrag till domkyrkobygget är det ”fördolda rummet” — kryptan. Detta rum, som är ett av de allra äldsta bevarade i Sverige, är vida berömt för sin arkitektur; främst för sina konstfärdigt utformade pelare, som syftar tillbaka till pelarna i Salomos tempel i Jerusalem. Huvudaltaret, som invigdes 1123 av biskop Asker, är tillägnat Johannes Döparen. 
 
-Donatus nämns i Lunds domkyrkas dödsbok. och därmed vet vi att han avled under något av åren mellan 1135 och 1140.
+Donatus nämns i Lunds domkyrkas dödsbok och därmed vet vi att han avled under något av åren mellan 1135 och 1140.
 
 ## Om logens valspråk
 
