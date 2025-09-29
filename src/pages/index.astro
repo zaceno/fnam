@@ -93,29 +93,131 @@ const moonImage = loadContentImage("$images/Manstav.jpg");
     
     @media (max-width: 768px) {
       .hero-section {
-        height: 60vh;
-        min-height: 300px;
+        height: 70vh;
+        min-height: 400px;
+        padding: 2rem 1rem;
       }
       
       .hero-logo {
-        width: 150px;
-        height: 150px;
+        width: 180px;
+        height: 180px;
+        margin-bottom: 1.5rem;
+      }
+      
+      .hero-text h1 {
+        font-size: 2.2rem;
+        line-height: 1.1;
+        margin-bottom: 0.5rem;
+      }
+      
+      .hero-text h2 {
+        font-size: 1.4rem;
+        font-weight: 400;
+      }
+      
+      .welcome-section, .reflection-section {
+        padding: 3rem 0;
+      }
+      
+      .welcome-container, .reflection-container {
+        flex-direction: column;
+        gap: 2.5rem;
+        padding: 0 1.5rem;
+        max-width: 100%;
+      }
+      
+      .welcome-content, .reflection-content {
+        order: 2;
+        text-align: center;
+      }
+      
+      .welcome-image, .reflection-image {
+        order: 1;
+        max-width: 300px;
+        margin: 0 auto;
+      }
+      
+      .welcome-content h2, .reflection-content h2 {
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+      
+      .welcome-content p, .reflection-content p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        text-align: left;
+        margin-bottom: 1.2rem;
+      }
+      
+      .first-step-section {
+        height: 50vh;
+        min-height: 300px;
+        padding: 2rem 1rem;
+      }
+      
+      .first-step-content h2 {
+        font-size: 2.2rem;
+        padding: 0 1rem;
+        line-height: 1.2;
+      }
+      
+      .lodges-section {
+        padding: 3rem 0;
+      }
+      
+      .lodges-container {
+        padding: 0 1.5rem;
+      }
+      
+      .lodges-container h2 {
+        font-size: 2.2rem;
+        margin-bottom: 2.5rem;
+      }
+      
+      .cta-button {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        margin-top: 2rem;
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero-section {
+        height: 60vh;
+        min-height: 350px;
+        padding: 1.5rem 0.5rem;
+      }
+      
+      .hero-logo {
+        width: 140px;
+        height: 140px;
         margin-bottom: 1rem;
       }
       
       .hero-text h1 {
         font-size: 1.8rem;
-        line-height: 1.2;
+        line-height: 1.1;
       }
       
       .hero-text h2 {
         font-size: 1.2rem;
       }
       
+      .welcome-section, .reflection-section {
+        padding: 2.5rem 0;
+      }
+      
       .welcome-container, .reflection-container {
-        flex-direction: column;
         gap: 2rem;
         padding: 0 1rem;
+      }
+      
+      .welcome-image, .reflection-image {
+        max-width: 250px;
       }
       
       .welcome-content h2, .reflection-content h2 {
@@ -126,19 +228,25 @@ const moonImage = loadContentImage("$images/Manstav.jpg");
       .welcome-content p, .reflection-content p {
         font-size: 1rem;
         line-height: 1.6;
-      }
-      
-      .welcome-image, .reflection-image {
-        order: -1;
+        margin-bottom: 1rem;
       }
       
       .first-step-section {
         height: 40vh;
         min-height: 250px;
+        padding: 1.5rem 0.5rem;
       }
       
       .first-step-content h2 {
         font-size: 1.8rem;
+        padding: 0 0.5rem;
+      }
+      
+      .lodges-section {
+        padding: 2.5rem 0;
+      }
+      
+      .lodges-container {
         padding: 0 1rem;
       }
       
@@ -148,16 +256,17 @@ const moonImage = loadContentImage("$images/Manstav.jpg");
       }
       
       .cta-button {
-        padding: 0.8rem 1.5rem;
+        padding: 0.9rem 1.5rem;
         font-size: 1rem;
         margin-top: 1.5rem;
+        max-width: 280px;
       }
     }
     
-    @media (max-width: 480px) {
+    @media (max-width: 360px) {
       .hero-section {
-        height: 50vh;
-        min-height: 250px;
+        height: 55vh;
+        min-height: 300px;
       }
       
       .hero-logo {
@@ -166,23 +275,27 @@ const moonImage = loadContentImage("$images/Manstav.jpg");
       }
       
       .hero-text h1 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
       }
       
       .hero-text h2 {
-        font-size: 1rem;
+        font-size: 1.1rem;
       }
       
       .welcome-content h2, .reflection-content h2 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
       }
       
       .first-step-content h2 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
       }
       
       .lodges-container h2 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
+      }
+      
+      .welcome-content p, .reflection-content p {
+        font-size: 0.95rem;
       }
     }
   </style>
@@ -210,7 +323,7 @@ const moonImage = loadContentImage("$images/Manstav.jpg");
         <p style="color: #333; line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.1rem;">Välkommen till Fria och Antagna Murare, hem för det blå frimureriet i Sverige. Vi är öppna för alla redbara män som tror på ett Högsta Väsen.</p>
         <p style="color: #333; line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.1rem;">Frimureriet är ett moralsystem höljt i allegorier och illustrerat av symboler. Frimureriet vill stimulera till att tänka, fråga och söka. Det är ett system för personlig utveckling där medlemmarna uppmuntras att utforska sina egna värderingar och forma sin karaktär. Det är en väg till frihet under ansvar, till självkännedom och självförbättring.</p>
         <p style="color: #333; line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.1rem;">Frimureriet har varken politiska eller religiösa bindningar, och för samman män i olika åldrar, med olika bakgrunder, kulturer och trosuppfattningar. I loger runt om i landet samlas vi regelbundet för att delta i ceremonier och traditioner som främjar öppenhet, tolerans och respekt – och som inspirerar oss att ta ansvar, både som medmänniskor och samhällsmedborgare.</p>
-        <a href="/vad-ar-frimureri" style="background: #1a237e; color: white; padding: 1rem 2rem; border-radius: 2rem; text-decoration: none; font-weight: 600; font-size: 1.1rem; display: inline-block; margin-top: 2rem; transition: background 0.3s ease;">Vad Är Frimureri</a>
+        <a href={`${import.meta.env.BASE_URL}/vad-ar-frimureri`} style="background: #1a237e; color: white; padding: 1rem 2rem; border-radius: 2rem; text-decoration: none; font-weight: 600; font-size: 1.1rem; display: inline-block; margin-top: 2rem; transition: background 0.3s ease;" onmouseover="this.style.background='#3949ab'" onmouseout="this.style.background='#1a237e'">Vad Är Frimureri</a>
       </div>
     </div>
   </section>
@@ -222,7 +335,7 @@ const moonImage = loadContentImage("$images/Manstav.jpg");
         <h2 style="color: #1a237e; font-size: 2.5rem; margin-bottom: 2rem; font-weight: 600;">Plats för stillhet och reflexion</h2>
         <p style="color: #333; line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.1rem;">Vår tid kännetecknas av högt tempo, krav på ständig prestation och en allt starkare fixering vid det yttre och materiella. Samtidigt försvagas de gemensamma värden som tidigare burit samhällen och skapat samhörighet. Många upplever en växande känsla av rotlöshet och främlingskap – både inför sig själva och inför andra. I en sådan tid har frimureriet något värdefullt att erbjuda.</p>
         <p style="color: #333; line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.1rem;">Det utgör en plats där människan får stanna upp, blicka inåt och återknyta kontakten med det som är bestående och meningsfullt. I en värld där mycket kretsar kring yta och prestation, inbjuder frimureriet till en inre resa – ett sökande efter det som formar en hållbar självkänsla, etisk kompass och medmänsklig förankring.</p>
-        <a href="/vill-du-bli-frimurare" style="background: #1a237e; color: white; padding: 1rem 2rem; border-radius: 2rem; text-decoration: none; font-weight: 600; font-size: 1.1rem; display: inline-block; margin-top: 2rem; transition: background 0.3s ease;">Vill Du Bli Frimurare?</a>
+        <a href={`${import.meta.env.BASE_URL}/vill-du-bli-frimurare`} style="background: #1a237e; color: white; padding: 1rem 2rem; border-radius: 2rem; text-decoration: none; font-weight: 600; font-size: 1.1rem; display: inline-block; margin-top: 2rem; transition: background 0.3s ease;" onmouseover="this.style.background='#3949ab'" onmouseout="this.style.background='#1a237e'">Vill Du Bli Frimurare?</a>
       </div>
       <div class="reflection-image" style="flex: 1; text-align: center;">
         <Image src={manstavImage} alt="Frimureriskt kompass och vinkelhake" style="max-width: 100%; height: auto; border-radius: 1rem; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);" />
