@@ -1,5 +1,7 @@
 ---
 import { Image } from "astro:assets";
+import distriktsSigill from './_index_assets/Distriktsigill_frilagt-3.png'
+import templetUmea from './_index_assets/Umea_tempel.png'
 import { getCollection, render, getEntry } from "astro:content";
 import loadContentImage from "../utils/load-content-image";
 import MainLayout from "../partials/main-layout.astro";
@@ -35,13 +37,9 @@ const sections = await Promise.all(
 ---
 <MainLayout>
   <section class="image-stack">
-    <img
-      src="/src/content/images/Umea_tempel.png"
-      alt="Umeå Tempel"
-      class="background-img"
-    />
+    <Image class="background-img" src={templetUmea} alt="Umeå tempel" />
     <div style="display:flex; flex-direction:column; align-items:center; width:100%;">
-      <img src="/src/content/images/Distriktsigill_frilagt-3.png" alt="Distriktsigill" class="center-round-img" />
+    <Image class="center-round-img" src={distriktsSigill} alt="Distriktssigill" />
   <div style="text-align:center; font-weight:bold; font-size:2rem; margin-top:0.5rem; margin-bottom:0; color:#222;">
         Fria och Antagna Murare i Sverige
       </div>
