@@ -5,6 +5,7 @@ body {
   background: #f8fafc;
   color: #222;
   margin: 0;
+  line-height: 1.6;
 }
 .hero {
   padding: 3rem 0 2rem 0;
@@ -55,9 +56,12 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin: 2rem 0;
+  margin: 2rem auto; /* Center the component */
+  max-width: 1100px; /* Give it a max-width for large screens */
+  background: #fff; /* This makes it the "white box" */
   border-radius: 1rem;
   overflow: hidden;
+  box-shadow: 0 2px 8px #0001; /* This gives it the "visible edge" */
 }
 .image-blurb .image-side {
   flex: 1 1 300px;
@@ -67,13 +71,13 @@ body {
 .image-blurb img {
   max-width: 100%;
   height: auto;
-  border-radius: 1rem;
-  margin: 2rem;
+  border-radius: 0.5rem; /* Slightly round the image corners */
 }
 .image-blurb .content-side {
   flex: 2 1 400px;
   min-width: 280px;
   padding: 2rem;
+  box-sizing: border-box;
 }
 .contact-form {
   background: #f8fafc;

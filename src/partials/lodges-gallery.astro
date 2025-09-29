@@ -1,42 +1,91 @@
 ---
-import {Image} from 'astro:assets'
+import {Image} from 'astro:assets'
 import { getCollection } from 'astro:content'
 import loadContentImage from '../utils/load-content-image'
 const lodges = await getCollection('lodges')
 lodges.sort((l, r) => (l.data.number - r.data.number))
 ---
-<section>
+<div class="lodges-grid">
   {lodges.map(lodge => (
-  <a href={`${import.meta.env.BASE_URL}/loger/${lodge.id}`}>
-      <Image class="seal" src={loadContentImage(lodge.data.seal)} alt={lodge.data.name} />
-      {lodge.data.name}
-      {lodge.data.number}
+  <a href={`${import.meta.env.BASE_URL}/loger/${lodge.id}`} class="lodge-card">
+      <div class="lodge-logo">
+        <Image src={loadContentImage(lodge.data.seal)} alt={lodge.data.name} />
+      </div>
+      <div class="lodge-info">
+        <h3>{lodge.data.name}</h3>
+        <p>Nr {lodge.data.number}</p>
+      </div>
   </a>
   ))}
-</section>
+</div>
 
 <style>
-  section {
-    background: #eee;
+  .lodges-grid {
     display: grid;
-    gap: 6rem;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    padding: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
   }
   
-  a {
-    display: block;
-    position: relative;
-    text-align: center;
-  } 
-   
-  img {
-    display: block;
+  .lodge-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+  }
+  
+  .lodge-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .lodge-logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .lodge-logo img {
     width: 100%;
-    max-width: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1rem;
+    height: 100%;
+    object-fit: contain;
   }
   
+  .lodge-info {
+    text-align: center;
+  }
+  
+  .lodge-info h3 {
+    color: #1a237e;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+  }
+  
+  .lodge-info p {
+    color: #666;
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .lodges-grid {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 2rem;
+    }
+    
+    .lodge-logo {
+      width: 100px;
+      height: 100px;
+    }
+  }
 </style>
