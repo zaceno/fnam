@@ -79,13 +79,41 @@ lodges.sort((l, r) => (l.data.number - r.data.number))
   
   @media (max-width: 768px) {
     .lodges-grid {
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1.5rem;
     }
     
     .lodge-logo {
       width: 100px;
       height: 100px;
+    }
+    
+    .lodge-info h3 {
+      font-size: 1.1rem;
+    }
+    
+    .lodge-info p {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .lodges-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    
+    .lodge-logo {
+      width: 80px;
+      height: 80px;
+    }
+    
+    .lodge-info h3 {
+      font-size: 1rem;
+    }
+    
+    .lodge-info p {
+      font-size: 0.8rem;
     }
   }
 </style>

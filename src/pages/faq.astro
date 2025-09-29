@@ -119,4 +119,41 @@ const questions = await Promise.all(faqData.map(async (question) => {
     color: #3949ab;
     text-decoration: underline;
   }
+
+  @media (max-width: 768px) {
+    .faq-container {
+      padding: 0 1rem;
+    }
+
+    .faq-question {
+      padding: 1rem;
+      font-size: 1rem;
+    }
+
+    .faq-icon {
+      font-size: 1.2rem;
+      margin-right: 0.75rem;
+    }
+
+    .faq-answer {
+      padding: 0 1rem 1rem 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .faq-question {
+      padding: 0.75rem;
+      font-size: 0.95rem;
+    }
+
+    .faq-icon {
+      font-size: 1rem;
+      margin-right: 0.5rem;
+    }
+
+    .faq-answer {
+      padding: 0 0.75rem 0.75rem 0.75rem;
+      font-size: 0.9rem;
+    }
+  }
 </style>

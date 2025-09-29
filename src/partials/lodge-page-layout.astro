@@ -207,18 +207,20 @@ const { title, subtitle, lodgeSeal } = Astro.props
   @media (max-width: 768px) {
     .lodge-hero {
       height: 40vh;
-      min-height: 300px;
+      min-height: 250px;
     }
 
     .lodge-hero-content {
       flex-direction: column;
-      gap: 2rem;
+      gap: 1.5rem;
       text-align: center;
+      padding: 0 1rem;
     }
 
     .lodge-hero-main {
       flex-direction: column;
       text-align: center;
+      gap: 1rem;
     }
 
     .lodge-hero-logo {
@@ -232,11 +234,12 @@ const { title, subtitle, lodgeSeal } = Astro.props
     }
 
     .lodge-hero-text h1 {
-      font-size: 2rem;
+      font-size: 1.8rem;
+      line-height: 1.2;
     }
 
     .lodge-hero-text h2 {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
     }
 
     .lodge-container {
@@ -244,7 +247,61 @@ const { title, subtitle, lodgeSeal } = Astro.props
     }
 
     .lodge-content {
-      padding: 2rem;
+      padding: 2rem 1.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .lodge-hero {
+      height: 35vh;
+      min-height: 200px;
+    }
+
+    .lodge-hero-content {
+      gap: 1rem;
+      padding: 0 0.5rem;
+    }
+
+    .lodge-hero-main {
+      gap: 0.5rem;
+    }
+
+    .lodge-hero-logo {
+      width: 80px;
+      height: 80px;
+    }
+
+    .lodge-seal-small {
+      width: 50px;
+      height: 50px;
+    }
+
+    .lodge-hero-text h1 {
+      font-size: 1.5rem;
+    }
+
+    .lodge-hero-text h2 {
+      font-size: 1rem;
+    }
+
+    .lodge-container {
+      padding: 1.5rem 0.5rem;
+    }
+
+    .lodge-content {
+      padding: 1.5rem 1rem;
+    }
+
+    .lodge-content h1 {
+      font-size: 1.5rem;
+    }
+
+    .lodge-content h2 {
+      font-size: 1.25rem;
+    }
+
+    .lodge-content h3 {
+      font-size: 1.1rem;
     }
   }
 </style>

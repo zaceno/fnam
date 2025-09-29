@@ -230,20 +230,22 @@ const { title, subtitle, image, showHero = true } = Astro.props
   @media (max-width: 768px) {
     .page-hero {
       height: 40vh;
-      min-height: 300px;
+      min-height: 250px;
     }
 
     .page-hero-logo {
-      width: 120px;
-      height: 120px;
+      width: 100px;
+      height: 100px;
+      margin-bottom: 1rem;
     }
 
     .page-hero-text h1 {
-      font-size: 2rem;
+      font-size: 1.8rem;
+      line-height: 1.2;
     }
 
     .page-hero-text h2 {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
     }
 
     .page-container {
@@ -251,15 +253,72 @@ const { title, subtitle, image, showHero = true } = Astro.props
     }
 
     .page-content {
-      padding: 2rem;
+      padding: 2rem 1.5rem;
     }
 
     .page-header h1 {
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
 
     .page-header h2 {
+      font-size: 1.2rem;
+    }
+
+    .page-image-section {
+      margin-top: 2rem;
+      padding: 2rem 0;
+    }
+
+    .page-image-container {
+      padding: 0 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .page-hero {
+      height: 35vh;
+      min-height: 200px;
+    }
+
+    .page-hero-logo {
+      width: 80px;
+      height: 80px;
+    }
+
+    .page-hero-text h1 {
+      font-size: 1.5rem;
+    }
+
+    .page-hero-text h2 {
+      font-size: 1rem;
+    }
+
+    .page-container {
+      padding: 1.5rem 0.5rem;
+    }
+
+    .page-content {
+      padding: 1.5rem 1rem;
+    }
+
+    .page-header h1 {
+      font-size: 1.5rem;
+    }
+
+    .page-header h2 {
+      font-size: 1rem;
+    }
+
+    .page-content h1 {
+      font-size: 1.5rem;
+    }
+
+    .page-content h2 {
       font-size: 1.25rem;
+    }
+
+    .page-content h3 {
+      font-size: 1.1rem;
     }
   }
 </style>
