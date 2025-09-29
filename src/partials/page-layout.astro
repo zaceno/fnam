@@ -30,15 +30,17 @@ const { title, subtitle, image, showHero = true } = Astro.props
         </div>
       )}
       
-      {image && (
-        <div class="page-image">
-          <Image src={loadContentImage(image)} alt={title} />
-        </div>
-      )}
-      
       <div class="page-content">
         <slot />
       </div>
+      
+      {image && (
+        <div class="page-image-section">
+          <div class="page-image-container">
+            <Image src={loadContentImage(image)} alt={title} />
+          </div>
+        </div>
+      )}
     </div>
   </main>
 </div>
@@ -133,16 +135,30 @@ const { title, subtitle, image, showHero = true } = Astro.props
     margin: 0;
   }
 
-  .page-image {
-    text-align: center;
-    margin-bottom: 3rem;
+  .page-image-section {
+    margin-top: 4rem;
+    padding: 3rem 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #e3eaf3 100%);
+    border-radius: 1rem;
   }
 
-  .page-image img {
+  .page-image-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 2rem;
+  }
+
+  .page-image-container img {
     max-width: 100%;
     height: auto;
     border-radius: 1rem;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+  }
+
+  .page-image-container img:hover {
+    transform: scale(1.02);
   }
 
   .page-content {

@@ -4,7 +4,7 @@ import {Image} from 'astro:assets'
 import formatDate from '../../utils/schedule-date-format'
 import loadContentImage from '../../utils/load-content-image'
 import MainLayout from '../../partials/main-layout.astro'
-import PageLayout from '../../partials/page-layout.astro'
+import LodgePageLayout from '../../partials/lodge-page-layout.astro'
 
 export async function getStaticPaths() {
   const lodges = await getCollection('lodges')
@@ -21,7 +21,7 @@ const title = `Logen ${info.name} Nr. ${info.number}`
 const subtitle = `${info.city}`
 ---
 <MainLayout title={title}>
-  <PageLayout title={title} subtitle={subtitle} image={info.seal}>
+  <LodgePageLayout title={title} subtitle={subtitle} lodgeSeal={info.seal}>
     <div class="lodge-content">
       <div class="lodge-main">
         <Content />
@@ -64,7 +64,7 @@ const subtitle = `${info.city}`
         )}
       </aside>
     </div>
-  </PageLayout>
+  </LodgePageLayout>
 </MainLayout>
 
 <style>
