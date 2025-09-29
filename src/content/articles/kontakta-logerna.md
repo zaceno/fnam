@@ -13,7 +13,7 @@ E-post: [donatus@friaochantagnamurare.se](mailto:donatus@friaochantagnamurare.se
 [Läs mer om Logen Donatus](../loger/donatus)
 
 **_F. & A. M. Logen Igelsta Nr. 175, Göteborg_**  
-_Logen Igelsta är tänkta att flytta till Göteborg, så intresserade män i Västsverige är välkomna att höra av sig!_  
+_Logen Igelsta är tänkt att flytta till Göteborg, så intresserade män i Västsverige är välkomna att höra av sig!_  
 E-post: [igelsta@friaochantagnamurare.se](mailto:igelsta@friaochantagnamurare.se)  
 [Läs mer om Logen Igelsta](../loger/igelsta)
 

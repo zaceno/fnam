@@ -2,8 +2,6 @@
 title: Distriktet Sverige
 order: 0
 ---
-# **Distriktet Sverige**
-
 Det blå frimureriet under Fria och Antagna Murare etablerades i Sverige relativt nyligen. Den första logen grundades år 2012, och ytterligare två loger tillkom under 2013. Inledningsvis tillhörde dessa loger ett distrikt med bas i Helsingfors.
 
 För att bättre möta det växande behovet av lokal närvaro och samordning, grundades ett eget distrikt för Sverige år 2014. Detta markerade en viktig milstolpe i utvecklingen av det blå frimureriet i landet.
