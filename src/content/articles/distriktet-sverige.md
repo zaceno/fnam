@@ -1,6 +1,5 @@
 ---
 title: Distriktet Sverige
-order: 0
 ---
 Det blå frimureriet under Fria och Antagna Murare etablerades i Sverige relativt nyligen. Den första logen grundades år 2012, och ytterligare två loger tillkom under 2013. Inledningsvis tillhörde dessa loger ett distrikt med bas i Helsingfors.
 
@@ -11,10 +10,6 @@ Distriktet leds av en distriktsstormästare som är stormästarens personliga re
 Distriktet Sverige omfattar i dag fyra loger. Dessa loger är verksamma enligt internationellt erkända frimureriska principer och ritualer, och välkomnar troende män med gott anseende – oavsett religiös bakgrund.
 
 Kontakt distriktsstormästaren med e-post: [dism@friaochantagnamurare.se](mailto:dism@friaochantagnamurare.se)
-
-## _Vill du besöka oss?_
-
-Frimurare som innehar minst tredje graden i en loge som tillhör en storloge erkänd av Storlogen för Fria och Antagna Murare i Finland (exempelvis Svenska Frimurare Orden), har rätt att besöka våra loger inklusive gradgivningar i 1°, 2° och 3°. Vi välkomnar alltid besök från våra systerorganisationer! För mer information, kontakta respektive loge.
 
 ## _Storlogen i Finland_
 
