@@ -47,7 +47,7 @@ Logens valspråk – _Quod est superius est sicut quod est inferius_ – betyder
 
 Frimurare som innehar minst tredje graden i en loge som tillhör en storloge erkänd av Storlogen för Fria och Antagna Murare i Finland (exempelvis Svenska Frimurare Orden), har rätt att besöka våra loger inklusive gradgivningar i 1°, 2° och 3°. Vi välkomnar alltid besök från våra systerorganisationer! 
 
-<span class="center">  
+<span class="center-image">  
 ![]($images/TELGE_omritad_200p.png)  
 </span>
 
