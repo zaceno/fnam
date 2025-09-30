@@ -2,6 +2,8 @@
 title: Frimureriets historia
 image: /src/content/images/Fem_kolonner-scaled-e1754923585948.jpg
 ---
+![Fem_kolonner-scaled-e1754923585948.jpg](https://github.com/zaceno/fnam/blob/main/src/content/images/Fem_kolonner-scaled-e1754923585948.jpg?raw=true)
+
 # Frimureriets historia
 
 Frimureriet är en av världens äldsta icke-kyrkliga organisationer med obruten verksamhet. Genom seklerna har forskare försökt spåra dess ursprung – men trots stora framsteg är gåtan är ännu inte helt löst. Historiska källor har studerats, och likheter har sökts mellan frimureriet och forntida traditioner, mysterieskolor, symboler och tankesystem. Genom dessa försök har man funnit ekon av frimureriets idévärld i antikens dygdeetik och i naturvetenskapens framväxt.
