@@ -2,7 +2,11 @@
 title: Blått frimureri
 image: $images/Frimureriskt_glasfonster-fotor-2025042592738.png
 ---
+<div class="right-floating">
+
 ![Frimureriskt_glasfonster-fotor-2025042592738.png](https://github.com/zaceno/fnam/blob/main/src/content/images/Frimureriskt_glasfonster-fotor-2025042592738.png?raw=true)
+
+</div>
 
 ## Det blå frimureriet
 
