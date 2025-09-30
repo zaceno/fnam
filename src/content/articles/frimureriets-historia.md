@@ -1,8 +1,9 @@
 ---
 title: Frimureriets historia
-order: 20
 image: /src/content/images/Fem_kolonner-scaled-e1754923585948.jpg
 ---
+# Frimureriets historia
+
 Frimureriet är en av världens äldsta icke-kyrkliga organisationer med obruten verksamhet. Genom seklerna har forskare försökt spåra dess ursprung – men trots stora framsteg är gåtan är ännu inte helt löst. Historiska källor har studerats, och likheter har sökts mellan frimureriet och forntida traditioner, mysterieskolor, symboler och tankesystem. Genom dessa försök har man funnit ekon av frimureriets idévärld i antikens dygdeetik och i naturvetenskapens framväxt.
 
 Men frimureriets idéer sträcker sig också vidare – till medeltidens skolastik, renässansens nyfikenhet, humanismens människosyn och upplysningstidens tro på förnuft och framsteg. Även om själva den organiserade frimurarrörelsen kan spåras drygt 300 år bakåt i tiden, är de tankar och ideal som bär rörelsen betydligt äldre.
