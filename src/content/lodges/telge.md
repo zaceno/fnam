@@ -32,3 +32,7 @@ Fria och Antagna Murarelogen Telge nr 169 bildades 20 juni 2012 och sammanträdd
 Logen invigdes under högtidliga former på Igelsta gård i Södertälje den 14 september 2013 av stormästaren för Storlogen för Fria och Antagna Murare i Finland. Svenska Frimurare Ordens stormästare var inbjuden gäst vid invigningen. Moderloge för Logen Telge Nr 169 är den svenskspråkiga logen Patria St. Henrik Nr 5 i Helsingfors.
 
 Logen har ett valspråk som på svenska enklast översätts som _“Broderskap i tidens anda”._
+
+## Vill du besöka oss?
+
+Frimurare som innehar minst tredje graden i en loge som tillhör en storloge erkänd av Storlogen för Fria och Antagna Murare i Finland (exempelvis Svenska Frimurare Orden), har rätt att besöka våra loger inklusive gradgivningar i 1°, 2° och 3°. Vi välkomnar alltid besök från våra systerorganisationer!
