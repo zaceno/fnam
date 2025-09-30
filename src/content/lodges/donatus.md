@@ -43,4 +43,8 @@ Donatus nämns i Lunds domkyrkas dödsbok och därmed vet vi att han avled under
 
 Logens valspråk – _Quod est superius est sicut quod est inferius_ – betyder ”det som är ovan är såsom det som är nedan” eller förenklat ”såsom ovan, så också nedan”, och är ett fritt citat från den latinska versionen av den så kallade Smaragdtavlan, en medeltida hermetisk text, som uttrycker idén om kosmiska korrespondenser, en central tanke i de hermetiska och alkemiska tankevärldar som bildar delar av frimureriets tankearv.
 
+## Vill du besöka oss?
+
+Frimurare som innehar minst tredje graden i en loge som tillhör en storloge erkänd av Storlogen för Fria och Antagna Murare i Finland (exempelvis Svenska Frimurare Orden), har rätt att besöka våra loger inklusive gradgivningar i 1°, 2° och 3°. Vi välkomnar alltid besök från våra systerorganisationer! 
+
 ![Donatus sammanträder i EOS frimurarhus i Lund]($images/EOS-1024x735.jpg)
