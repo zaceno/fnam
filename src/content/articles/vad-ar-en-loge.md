@@ -8,6 +8,12 @@ Logen är ett av frimureriets mest centrala begrepp. Den är både en fysisk pla
 
 Ordet loge återfinns på flera språk – engelska _Lodge_, franska _Loge_, tyska _Loge_ – och går tillbaka till medeltidens bygghyddor. Där samlades tidens skickliga hantverkare – stenhuggare, arkitekter och lärlingar – för att planera arbetet, befordra kunskap, och skydda yrkeshemligheter. Dessa fria murare, _freemasons_, rörde sig mellan olika byggarbetsplatser och var inte bundna till stadens skrån och gillen. 
 
+<div class="right-floating">
+
+![Stol_HM.png](https://github.com/zaceno/fnam/blob/main/src/content/images/Stol_HM.png?raw=true)
+
+</div>
+
 Deras loger låg i direkt anslutning till arbetsplatser för borgar, kyrkor, katedraler och kloster. I dessa rum växte ett rikt symbolspråk fram, baserat på hantverkets verktyg och levnadsregler – ett arv som lever kvar i dagens frimureri.
 
 När tiden för de stora katedralbyggena gick mot sitt slut, förändrades logernas syfte. Från praktiska arbetsplatser utvecklades de till andliga rum för utbildning och personlig utveckling. I upplysningstidens anda införlivades tankar om tolerans, människovärde och individuell frihet. Logerna öppnades för män utanför muraryrket – filosofer, vetenskapsmän och samhällsbärare – och blev till rum för inre byggande. Här lades grunden för det moderna frimureriet.
