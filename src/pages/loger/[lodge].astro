@@ -21,17 +21,13 @@ const title = `Logen ${info.name} Nr. ${info.number}`
 const subtitle = `${info.city}`
 ---
 <MainLayout title={title}>
-  <LodgePageLayout title={title} subtitle={subtitle}>
+  <LodgePageLayout title={title} subtitle={subtitle} lodgeSeal={info.seal}>
     <div class="lodge-content">
       <div class="lodge-main">
         <Content />
       </div>
       
       <aside class="lodge-sidebar">
-        <div class="lodge-seal-card">
-          <Image src={loadContentImage(info.seal)} alt={`Logen ${info.name} sigill`} class="lodge-seal" />
-        </div>
-        
         <div class="lodge-info-card">
           <h3>Kontaktinformation</h3>
           <div class="info-item">
@@ -89,20 +85,6 @@ const subtitle = `${info.city}`
     gap: 2rem;
   }
 
-  .lodge-seal-card {
-    background: #fff;
-    border: 2px solid #e3eaf3;
-    border-radius: 0.75rem;
-    padding: 1.5rem;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .lodge-seal {
-    max-width: 200px;
-    height: auto;
-    border-radius: 0.5rem;
-  }
 
   .lodge-info-card {
     background: #f8fafc;
@@ -183,13 +165,6 @@ const subtitle = `${info.city}`
       gap: 2rem;
     }
 
-    .lodge-seal-card {
-      padding: 1rem;
-    }
-
-    .lodge-seal {
-      max-width: 160px;
-    }
 
     .lodge-info-card {
       padding: 1rem;
@@ -213,13 +188,6 @@ const subtitle = `${info.city}`
       gap: 1.5rem;
     }
 
-    .lodge-seal-card {
-      padding: 0.75rem;
-    }
-
-    .lodge-seal {
-      max-width: 120px;
-    }
 
     .lodge-info-card {
       padding: 0.75rem;

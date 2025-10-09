@@ -4,7 +4,7 @@ import distriktsSigill from '../pages/_index_assets/Distriktsigill_frilagt-3.png
 import templetUmea from '../pages/_index_assets/Umea_tempel.png'
 import loadContentImage from '../utils/load-content-image'
 
-const { title, subtitle } = Astro.props
+const { title, subtitle, lodgeSeal } = Astro.props
 ---
 
 <div class="lodge-page-layout">
@@ -13,10 +13,20 @@ const { title, subtitle } = Astro.props
     <Image class="lodge-hero-background" src={templetUmea} alt="Umeå tempel" />
     <div class="lodge-hero-content">
       <div class="lodge-hero-main">
-        <Image class="lodge-hero-logo" src={distriktsSigill} alt="Distriktssigill" />
         <div class="lodge-hero-text">
-          <h1>{title}</h1>
-          {subtitle && <h2>{subtitle}</h2>}
+          <div class="lodge-title-row">
+            {lodgeSeal && (
+              <Image 
+                src={loadContentImage(lodgeSeal)} 
+                alt={`Logen ${title} sigill`} 
+                class="lodge-seal-small" 
+              />
+            )}
+            <div class="lodge-text-content">
+              <h1>{title}</h1>
+              {subtitle && <h2>{subtitle}</h2>}
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -88,18 +98,44 @@ const { title, subtitle } = Astro.props
     flex-shrink: 0;
   }
 
+  .lodge-title-row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .lodge-text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .lodge-hero-text h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: bold;
     margin: 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    line-height: 1.1;
+  }
+
+  .lodge-seal-small {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    background: #fff;
+    padding: 1rem;
+    object-fit: contain;
+    flex-shrink: 0;
   }
 
   .lodge-hero-text h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 300;
-    margin: 0.5rem 0 0 0;
+    margin: 0.25rem 0 0 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    line-height: 1.2;
   }
 
 
@@ -205,10 +241,15 @@ const { title, subtitle } = Astro.props
       height: 160px;
     }
 
+    .lodge-seal-small {
+      width: 160px;
+      height: 160px;
+    }
+
 
     .lodge-hero-text h1 {
-      font-size: 1.8rem;
-      line-height: 1.2;
+      font-size: 2.2rem;
+      line-height: 1.1;
     }
 
     .lodge-hero-text h2 {
@@ -244,9 +285,14 @@ const { title, subtitle } = Astro.props
       height: 120px;
     }
 
+    .lodge-seal-small {
+      width: 120px;
+      height: 120px;
+    }
+
 
     .lodge-hero-text h1 {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
     }
 
     .lodge-hero-text h2 {

@@ -44,7 +44,7 @@ const current = Astro.url.pathname;
 <style>
   .main-nav {
     font-family: inherit;
-    background: linear-gradient(90deg, #e3eaf3 0%, #b3c9e6 100%);
+    background: #3F7F9F;
     box-shadow: 0 2px 8px #0001;
     border-radius: 0.5rem;
     margin-bottom: 2rem;
@@ -65,7 +65,7 @@ const current = Astro.url.pathname;
   .menu > li > a,
   .dropdown-label {
     text-decoration: none;
-    color: #222;
+    color: white;
     padding: 0.5rem 1rem;
     display: block;
     cursor: pointer;
@@ -74,7 +74,7 @@ const current = Astro.url.pathname;
   }
   .menu > li > a:hover,
   .dropdown-label:hover {
-    background: #d0e3f7;
+    background: rgba(255, 255, 255, 0.2);
   }
   .current {
     font-weight: bold;
@@ -89,7 +89,7 @@ const current = Astro.url.pathname;
     left: 0;
     top: 100%;
     min-width: 180px;
-    background: #fff;
+    background: #3F7F9F;
     box-shadow: 0 4px 16px #0002;
     border-radius: 0 0 0.5rem 0.5rem;
     z-index: 100;
@@ -101,7 +101,7 @@ const current = Astro.url.pathname;
     width: 100%;
   }
   .dropdown a {
-    color: #1565c0;
+    color: white;
     padding: 0.5rem 1rem;
     display: block;
     text-decoration: none;
@@ -109,7 +109,7 @@ const current = Astro.url.pathname;
     transition: background 0.2s;
   }
   .dropdown a:hover {
-    background: #e3eaf3;
+    background: rgba(255, 255, 255, 0.2);
   }
   
   /* Simple mobile fixes */
