@@ -1,8 +1,9 @@
 ---
 title: Frimureri och religion
-order: 40
 image: $images/Anderssons_constitution.jpg
 ---
+# Frimureri och religion
+
 Frimureriet är ingen religion – och det utger sig inte för att vara en ersättning för religion. Det erbjuder varken frälsning eller sakrament och har ingen teologisk lära. Vad det däremot förutsätter är en uppriktig tro på ett Högsta Väsen. Detta är en grundförutsättning för medlemskap i de flesta delar av världen, men det handlar inte om tillhörighet till en specifik kyrka eller trosinriktning. Det blå frimureriet kan sägas vara konfessionsfritt eller konfessionsneutralt. Frimureriet respekterar varje individs personliga tro och lägger sig inte i hur han väljer att utöva den.
 
 Denna princip har varit en bärande del av frimureriets anda sedan de första grundläggande reglerna skrevs ned i The Constitution of the Free-Masons från 1723 – författad av pastor James Anderson – formuleras det så här i den första paragrafen:

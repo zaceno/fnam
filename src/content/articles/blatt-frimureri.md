@@ -1,9 +1,16 @@
 ---
 title: Blått frimureri
-order: 10
 image: $images/Frimureriskt_glasfonster-fotor-2025042592738.png
 ---
+## Det blå frimureriet
+
 Uttrycket “blå loge” eller “blått frimureri” syftar på de tre grundläggande graderna inom frimureriet, vilka kan spåras tillbaka till de första decennierna av 1700-talet: Murarlärling, Brodermurare och Mästarmurare (den mellersta är också känd under namn som “Medbroder” eller “Gesäll”). Dessa tre grader utgör fundamentet för alla frimureriska riter och förenar frimurare världen över. Termen blåloge är särskilt vanlig inom anglosaxiska frimurartraditioner, där man också talar om Craft Masonry – en hänvisning till frimureriets ursprung i medeltida byggnadshantverk. Den svenska ordagranna motsvarigheten ”hantverksmureri” förekommer dock sällan.
+
+<div class="right-floating">
+
+![](https://sahandprs.com/wp-content/uploads/2025/03/AdobeStock_11274847-scaled.jpeg)
+
+</div>
 
 Namnet blått frimureri kommer från färgen på de regalier som bärs i logen. Inom Svenska Frimurare Orden kallas motsvarigheten till dessa loger istället för S:t Johannesloger.
 
@@ -27,5 +34,6 @@ Yorkriten är en av de mest utbredda frimureriska riterna i världen. Den bygger
 
 Den Urgamla och Antagna Skotska Riten är ett annat globalt spritt system som erbjuder en symbolisk och andlig resa genom totalt 33 grader. Riten har sina rötter i 1700-talets Europa och bär spår av upplysningstidens idévärld, kristen mystik, kabbala och tempelriddartraditioner. Trots sitt namn har Riten rent historiskt ingenting med Skottland att göra; dess grund lades i 1700-talets Frankrike, och den utvecklades sedan i Nordamerika. Kopplingen till Skottland har att göra med en viss mystisk nimbus kring “skotska” ting i frimurerisk idéhistoria; det finns också andra frimurarriter som också har “Skotsk” i namnet – också de utan koppling till Skottland.
 
-Varje grad i den Urgamla och Antagna Skotska Riten förmedlar moraliska, filosofiska och etiska teman genom rikt utformade ritualer. Målet är att förädla individen och fördjupa förståelsen för livets och existensens mysterier.  
+Varje grad i den Urgamla och Antagna Skotska Riten förmedlar moraliska, filosofiska och etiska teman genom rikt utformade ritualer. Målet är att förädla individen och fördjupa förståelsen för livets och existensens mysterier.
+
 Skotska riten är internationellt etablerad och varierar mellan länder, framför allt i hur många grader som arbetas med full ritual. I vissa jurisdiktioner krävs kristen tro för medlemskap, medan riten i andra delar av världen är öppen för troende män oavsett religion.

@@ -1,11 +1,18 @@
 ---
 title: Vad är en loge?
-order: 50
 image: $images/Stol_HM.png
 ---
+# Vad är en loge?
+
 Logen är ett av frimureriets mest centrala begrepp. Den är både en fysisk plats och en andlig gemenskap – ett rum där män samlas, inte för att resa katedraler av sten, utan för att bygga karaktär, visdom och broderskap.
 
 Ordet loge återfinns på flera språk – engelska _Lodge_, franska _Loge_, tyska _Loge_ – och går tillbaka till medeltidens bygghyddor. Där samlades tidens skickliga hantverkare – stenhuggare, arkitekter och lärlingar – för att planera arbetet, befordra kunskap, och skydda yrkeshemligheter. Dessa fria murare, _freemasons_, rörde sig mellan olika byggarbetsplatser och var inte bundna till stadens skrån och gillen. 
+
+<div class="right-floating">
+
+![Stol_HM.png](https://github.com/zaceno/fnam/blob/main/src/content/images/Stol_HM.png?raw=true)
+
+</div>
 
 Deras loger låg i direkt anslutning till arbetsplatser för borgar, kyrkor, katedraler och kloster. I dessa rum växte ett rikt symbolspråk fram, baserat på hantverkets verktyg och levnadsregler – ett arv som lever kvar i dagens frimureri.
 
@@ -15,7 +22,7 @@ De lokala logerna, som är frimureriets viktigaste enheter, är sinsemellan orga
 
 Logemöten kan vara av två slag: dels föreningsmöten där man behandlar administrativa frågor, dels ceremoniella möten. Efter mötet samlas bröderna ofta till en enkel måltid i gemenskap – ett tillfälle för samtal, glädje och samhörighet.
 
-## _Vad gör vi i logen?_
+## Vad gör vi i logen?
 
 När vi frimurare talar om logen, menar vi inte bara ett rum eller en byggnad. Vi talar om ett rum i tillvaron – ett andligt och rituellt utrymme där något särskilt får ske. Det är här vi utför vårt rituella arbete, som syftar till att skapa upplevelser – inte yttre spektakel, utan inre rörelser. Upplevelser som väcker eftertanke, väcker frågor och öppnar dörrar mot nya insikter.
 

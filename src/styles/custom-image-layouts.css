@@ -1,0 +1,14 @@
+.center-image {
+  display: block;
+  text-align: center;
+}
+
+.right-floating {
+  width: 33%;
+  position: relative;
+  float: right;
+  margin: 1.5rem 0 1.5rem 1.5rem;
+  & img {
+    width: 100%;
+  }
+}
