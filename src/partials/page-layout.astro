@@ -30,16 +30,18 @@ const { title, subtitle, image, showHero = true } = Astro.props
         </div>
       )}
       
-      {image && (
-        <div class="page-image-section">
-          <div class="page-image-container">
-            <Image src={loadContentImage(image)} alt={title} />
-          </div>
+      <div class="page-main-content" style="display: flex; align-items: flex-start; gap: 4rem;">
+        <div class="page-content" style="flex: 1;">
+          <slot />
         </div>
-      )}
-      
-      <div class="page-content">
-        <slot />
+        
+        {image && (
+          <div class="page-image-section" style="flex: 1; text-align: center;">
+            <div class="page-image-container">
+              <Image src={loadContentImage(image)} alt={title} style="width: 100%; max-width: 500px; height: auto; border-radius: 1rem; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); object-fit: contain;" />
+            </div>
+          </div>
+        )}
       </div>
     </div>
   </main>
@@ -144,24 +146,23 @@ const { title, subtitle, image, showHero = true } = Astro.props
   }
 
   .page-image-section {
-    margin-bottom: 2rem;
-    padding: 3rem 0;
-    background: linear-gradient(135deg, #f8fafc 0%, #e3eaf3 100%);
-    border-radius: 1rem;
+    padding: 0;
+    background: none;
+    border-radius: 0;
   }
 
   .page-image-container {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
     text-align: center;
-    padding: 0 2rem;
+    padding: 0;
   }
 
   .page-image-container img {
     max-width: 100%;
     height: auto;
     border-radius: 1rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
   }
 
@@ -252,10 +253,20 @@ const { title, subtitle, image, showHero = true } = Astro.props
       padding: 0 1rem;
     }
     
+    .page-main-content {
+      flex-direction: column !important;
+      gap: 2rem !important;
+    }
+    
     .page-image-section {
       width: 100%;
       margin: 0;
-      padding: 0 1rem;
+      padding: 0;
+      order: 1;
+    }
+    
+    .page-content {
+      order: 2;
     }
 
     .page-hero-logo {

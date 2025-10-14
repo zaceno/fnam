@@ -131,7 +131,8 @@ const moonImage = loadContentImage("$images/Manstav.jpg");
       
       .welcome-image, .reflection-image {
         order: 1;
-        max-width: 300px;
+        width: 100%;
+        max-width: 400px;
         margin: 0 auto;
       }
       
@@ -215,7 +216,8 @@ const moonImage = loadContentImage("$images/Manstav.jpg");
       }
       
       .welcome-image, .reflection-image {
-        max-width: 250px;
+        width: 100%;
+        max-width: 300px;
       }
       
       .welcome-content h2, .reflection-content h2 {
@@ -312,31 +314,34 @@ const moonImage = loadContentImage("$images/Manstav.jpg");
 
   <!-- Welcome Section -->
   <section class="welcome-section" style="background: #f8fafc; padding: 4rem 0; min-height: auto;">
-    <div class="welcome-container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: flex-start; gap: 4rem;">
-      <div class="welcome-image" style="flex: 1; text-align: center;">
-        <Image src={solstavImage} alt="Frimureriskt kompass och vinkelhake" style="max-width: 100%; height: auto; border-radius: 1rem; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);" />
+    <div class="welcome-container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: flex-start; gap: 4rem; vertical-align: top;">
+      <div class="welcome-image" style="flex: 1; text-align: center; display: flex; align-items: flex-start; justify-content: center;">
+        <Image src={sections[0]?.imgLoader || solstavImage} alt="Frimureriskt kompass och vinkelhake" style="width: 100%; max-width: 600px; height: auto; border-radius: 1rem; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); object-fit: contain;" />
       </div>
       <div class="welcome-content" style="flex: 1;">
-        <h2 style="color: #1a237e; font-size: 2.5rem; margin-bottom: 2rem; font-weight: 600;">Välkommen!</h2>
-        <p style="color: #333; line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.1rem;">Välkommen till Fria och Antagna Murare, hem för det blå frimureriet i Sverige. Vi är öppna för alla redbara män som tror på ett Högsta Väsen.</p>
-        <p style="color: #333; line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.1rem;">Frimureriet är ett moralsystem höljt i allegorier och illustrerat av symboler. Frimureriet vill stimulera till att tänka, fråga och söka. Det är ett system för personlig utveckling där medlemmarna uppmuntras att utforska sina egna värderingar och forma sin karaktär. Det är en väg till frihet under ansvar, till självkännedom och självförbättring.</p>
-        <p style="color: #333; line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.1rem;">Frimureriet har varken politiska eller religiösa bindningar, och för samman män i olika åldrar, med olika bakgrunder, kulturer och trosuppfattningar. I loger runt om i landet samlas vi regelbundet för att delta i ceremonier och traditioner som främjar öppenhet, tolerans och respekt – och som inspirerar oss att ta ansvar, både som medmänniskor och samhällsmedborgare.</p>
-        <a href={`${import.meta.env.BASE_URL}/vad-ar-frimureri`} style="background: #1a237e; color: white; padding: 1rem 2rem; border-radius: 2rem; text-decoration: none; font-weight: 600; font-size: 1.1rem; display: inline-block; margin-top: 2rem; transition: background 0.3s ease;" onmouseover="this.style.background='#3949ab'" onmouseout="this.style.background='#1a237e'">Vad Är Frimureri</a>
+        <div style="color: #333; line-height: 1.8; font-size: 1.1rem;">
+          {sections[0]?.Content && <sections[0].Content />}
+        </div>
+        {sections[0]?.linkUrl && (
+          <a href={sections[0].linkUrl} style="background: #1a237e; color: white; padding: 1rem 2rem; border-radius: 2rem; text-decoration: none; font-weight: 600; font-size: 1.1rem; display: inline-block; margin-top: 2rem; transition: background 0.3s ease;" onmouseover="this.style.background='#3949ab'" onmouseout="this.style.background='#1a237e'">Vad Är Frimureri</a>
+        )}
       </div>
     </div>
   </section>
 
   <!-- Reflection Section -->
   <section class="reflection-section" style="background: #fff; padding: 4rem 0; min-height: auto;">
-    <div class="reflection-container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: flex-start; gap: 4rem;">
+    <div class="reflection-container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: flex-start; gap: 4rem; vertical-align: top;">
       <div class="reflection-content" style="flex: 1;">
-        <h2 style="color: #1a237e; font-size: 2.5rem; margin-bottom: 2rem; font-weight: 600;">Plats för stillhet och reflexion</h2>
-        <p style="color: #333; line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.1rem;">Vår tid kännetecknas av högt tempo, krav på ständig prestation och en allt starkare fixering vid det yttre och materiella. Samtidigt försvagas de gemensamma värden som tidigare burit samhällen och skapat samhörighet. Många upplever en växande känsla av rotlöshet och främlingskap – både inför sig själva och inför andra. I en sådan tid har frimureriet något värdefullt att erbjuda.</p>
-        <p style="color: #333; line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.1rem;">Det utgör en plats där människan får stanna upp, blicka inåt och återknyta kontakten med det som är bestående och meningsfullt. I en värld där mycket kretsar kring yta och prestation, inbjuder frimureriet till en inre resa – ett sökande efter det som formar en hållbar självkänsla, etisk kompass och medmänsklig förankring.</p>
-        <a href={`${import.meta.env.BASE_URL}/vill-du-bli-frimurare`} style="background: #1a237e; color: white; padding: 1rem 2rem; border-radius: 2rem; text-decoration: none; font-weight: 600; font-size: 1.1rem; display: inline-block; margin-top: 2rem; transition: background 0.3s ease;" onmouseover="this.style.background='#3949ab'" onmouseout="this.style.background='#1a237e'">Vill Du Bli Frimurare?</a>
+        <div style="color: #333; line-height: 1.8; font-size: 1.1rem;">
+          {sections[1]?.Content && <sections[1].Content />}
+        </div>
+        {sections[1]?.linkUrl && (
+          <a href={sections[1].linkUrl} style="background: #1a237e; color: white; padding: 1rem 2rem; border-radius: 2rem; text-decoration: none; font-weight: 600; font-size: 1.1rem; display: inline-block; margin-top: 2rem; transition: background 0.3s ease;" onmouseover="this.style.background='#3949ab'" onmouseout="this.style.background='#1a237e'">Vill Du Bli Frimurare?</a>
+        )}
       </div>
-      <div class="reflection-image" style="flex: 1; text-align: center;">
-        <Image src={manstavImage} alt="Frimureriskt kompass och vinkelhake" style="max-width: 100%; height: auto; border-radius: 1rem; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);" />
+      <div class="reflection-image" style="flex: 1; text-align: center; display: flex; align-items: flex-start; justify-content: center;">
+        <Image src={sections[1]?.imgLoader || manstavImage} alt="Frimureriskt kompass och vinkelhake" style="width: 100%; max-width: 600px; height: auto; border-radius: 1rem; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); object-fit: contain;" />
       </div>
     </div>
   </section>
