@@ -1,10 +1,15 @@
 ---
 import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
 import distriktsSigill from '../pages/_index_assets/Distriktsigill_frilagt-3.png'
 import templetUmea from '../pages/_index_assets/Umea_tempel.png'
 import loadContentImage from '../utils/load-content-image'
 
 const { title, subtitle, image, showHero = true } = Astro.props
+
+// Get all articles for the related articles section
+const allArticles = await getCollection('articles')
+const relatedArticles = allArticles.filter(article => article.id !== title?.toLowerCase().replace(/\s+/g, '-')).slice(0, 3)
 ---
 
 <div class="page-layout">
@@ -40,6 +45,24 @@ const { title, subtitle, image, showHero = true } = Astro.props
             <div class="page-image-container">
               <Image src={loadContentImage(image)} alt={title} style="width: 100%; max-width: 500px; height: auto; border-radius: 1rem; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); object-fit: contain;" />
             </div>
+            
+            <!-- Related Articles Section - Right below the image -->
+            {relatedArticles.length > 0 && (
+              <div class="related-articles-section" style="margin-top: 2rem;">
+                <h3 class="related-articles-title">Läs mer</h3>
+                <div class="related-articles-grid">
+                  {relatedArticles.map(article => (
+                    <a href={`${import.meta.env.BASE_URL}/${article.id}`} class="related-article-card">
+                      <div class="related-article-content">
+                        <h4 class="related-article-title">{article.data.title}</h4>
+                        <p class="related-article-excerpt">Klicka för att läsa mer om {article.data.title.toLowerCase()}</p>
+                      </div>
+                      <div class="related-article-arrow">→</div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         )}
       </div>
@@ -235,6 +258,78 @@ const { title, subtitle, image, showHero = true } = Astro.props
     text-decoration: underline;
   }
 
+  /* Related Articles Section */
+  .related-articles-section {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #e3eaf3 100%);
+    border-radius: 1rem;
+  }
+
+  .related-articles-title {
+    color: #1a237e;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .related-articles-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .related-article-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+  }
+
+  .related-article-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    border-color: #1a237e;
+  }
+
+  .related-article-content {
+    flex: 1;
+  }
+
+  .related-article-title {
+    color: #1a237e;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .related-article-excerpt {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  .related-article-arrow {
+    color: #1a237e;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 1rem;
+    transition: transform 0.3s ease;
+  }
+
+  .related-article-card:hover .related-article-arrow {
+    transform: translateX(4px);
+  }
+
   /* Responsive Design */
   @media (max-width: 768px) {
     .page-hero {
@@ -267,6 +362,28 @@ const { title, subtitle, image, showHero = true } = Astro.props
     
     .page-content {
       order: 2;
+    }
+    
+    .related-articles-section {
+      margin-top: 1.5rem;
+      padding: 1.5rem;
+    }
+    
+    .related-articles-title {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+    
+    .related-article-card {
+      padding: 1rem;
+    }
+    
+    .related-article-title {
+      font-size: 1rem;
+    }
+    
+    .related-article-excerpt {
+      font-size: 0.8rem;
     }
 
     .page-hero-logo {
