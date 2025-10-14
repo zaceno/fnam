@@ -30,10 +30,6 @@ const { title, subtitle, image, showHero = true } = Astro.props
         </div>
       )}
       
-      <div class="page-content">
-        <slot />
-      </div>
-      
       {image && (
         <div class="page-image-section">
           <div class="page-image-container">
@@ -41,6 +37,10 @@ const { title, subtitle, image, showHero = true } = Astro.props
           </div>
         </div>
       )}
+      
+      <div class="page-content">
+        <slot />
+      </div>
     </div>
   </main>
 </div>
@@ -144,7 +144,7 @@ const { title, subtitle, image, showHero = true } = Astro.props
   }
 
   .page-image-section {
-    margin-top: 4rem;
+    margin-bottom: 2rem;
     padding: 3rem 0;
     background: linear-gradient(135deg, #f8fafc 0%, #e3eaf3 100%);
     border-radius: 1rem;
@@ -290,7 +290,7 @@ const { title, subtitle, image, showHero = true } = Astro.props
     }
 
     .page-image-section {
-      margin-top: 2.5rem;
+      margin-bottom: 1.5rem;
       padding: 2.5rem 0;
     }
 
@@ -350,7 +350,7 @@ const { title, subtitle, image, showHero = true } = Astro.props
     }
 
     .page-image-section {
-      margin-top: 2rem;
+      margin-bottom: 1rem;
       padding: 2rem 0;
     }
 

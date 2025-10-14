@@ -27,12 +27,9 @@
 }
 
 .hero-logo {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
+  width: 350px;
+  height: 350px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-  background: #fff;
-  padding: 1.5rem;
   object-fit: contain;
   margin-bottom: 2rem;
 }
