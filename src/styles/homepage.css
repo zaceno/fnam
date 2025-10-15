@@ -1,12 +1,5 @@
 /* src/styles/homepage.css */
 
-body {
-  font-family: 'Segoe UI', 'Arial', sans-serif;
-  background: #f8fafc;
-  color: #222;
-  margin: 0;
-  line-height: 1.6;
-}
 .hero {
   padding: 3rem 0 2rem 0;
   text-align: center;
@@ -136,11 +129,14 @@ body {
   background: #f3f4f6;
 }
 @media (max-width: 900px) {
-  .head-blurbs, .grey-blurbs, .image-blurb {
+  .head-blurbs,
+  .grey-blurbs,
+  .image-blurb {
     flex-direction: column;
     align-items: stretch;
   }
-  .image-blurb .image-side, .image-blurb .content-side {
+  .image-blurb .image-side,
+  .image-blurb .content-side {
     margin: 0;
     padding: 1rem;
   }

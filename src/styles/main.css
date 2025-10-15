@@ -1,0 +1,96 @@
+@layer reset, tokens, base, components, utilities;
+
+@import "./reset.css";
+@import "@fontsource-variable/source-sans-3/index.css";
+@import "@fontsource/newsreader/200.css";
+@import "@fontsource/newsreader/300.css";
+@import "@fontsource/newsreader/600.css";
+
+@layer tokens {
+  :root {
+    --font-serif: "Newsreader", Georgia, serif;
+    --font-sans: "Source Sans 3 Variable", sans-serif;
+    --font-weight-thin: 200;
+    --font-weight-normal: 300;
+    --font-weight-fat: 600;
+  }
+}
+
+@layer base {
+  html {
+    font-size: 100%;
+    @media (min-width: 576px) {
+      font-size: 106.25%; /* 16px */
+    }
+    @media (min-width: 768px) {
+      font-size: 112.5%; /* 18 px */
+    }
+    @media (min-width: 1200px) {
+      font-size: 125%; /* 20px */
+    }
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-weight: var(--font-weight-normal);
+    background: #f8fafc;
+    color: #000;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-serif);
+    font-weight: var(--font-weight-normal);
+  }
+
+  h1 {
+    font-size: 1.7rem;
+    font-weight: bold;
+  }
+  h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    font-style: italic;
+  }
+  h3 {
+    font-size: 1.2rem;
+    font-weight: normal;
+  }
+  h4 {
+    font-size: 1rem;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+  p,
+  ul,
+  ol,
+  blockquote {
+    margin: 1.7rem 0 1.7rem 0;
+    line-height: 1.7em;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin: 2.5rem 0 1rem 0;
+    line-height: 1.1em;
+    & + * {
+      margin-top: 1rem;
+    }
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+@layer components {
+}
+
+@layer utilities {
+  :is(img, picture, svg, video, canvas).inline {
+    display: inline-block;
+  }
+}
