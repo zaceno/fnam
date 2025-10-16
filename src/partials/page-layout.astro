@@ -28,12 +28,6 @@ const relatedArticles = allArticles.filter(article => article.id !== title?.toLo
 
   <main class="page-main">
     <div class="page-container">
-      {!showHero && (
-        <div class="page-header">
-          <h1>{title}</h1>
-          {subtitle && <h2>{subtitle}</h2>}
-        </div>
-      )}
       
       {image && imagePosition === 'top' && (
         <div class="page-image-section page-image-top">
@@ -228,10 +222,6 @@ const relatedArticles = allArticles.filter(article => article.id !== title?.toLo
     max-width: 100%;
     margin: 0 auto;
     text-align: center;
-    background: white;
-    border-radius: 1rem;
-    padding: 3rem;
-    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
   }
 
   /* Bottom related articles */
@@ -416,6 +406,7 @@ const relatedArticles = allArticles.filter(article => article.id !== title?.toLo
     
     .page-content {
       order: 2;
+      padding: 2.5rem 2rem;
     }
     
     .related-articles-section {
@@ -464,7 +455,7 @@ const relatedArticles = allArticles.filter(article => article.id !== title?.toLo
     }
 
     .page-content {
-      padding: 2.5rem 2rem;
+      padding: 0;
     }
 
     .page-header h1 {
