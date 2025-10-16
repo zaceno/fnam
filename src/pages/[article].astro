@@ -16,9 +16,25 @@ export async function getStaticPaths() {
 const {article} = Astro.props
 const {title, image} = article.data
 const {Content} = await render(article)
+
+// Define layout configurations for specific articles
+const layoutConfig: Record<string, { showHero: boolean; imagePosition: string }> = {
+  'vad-ar-frimureri': { showHero: false, imagePosition: 'right' },
+  'blatt-frimureri': { showHero: false, imagePosition: 'right' },
+  'vad-ar-en-loge': { showHero: false, imagePosition: 'right' },
+  'frimureriets-historia': { showHero: false, imagePosition: 'top' },
+  'frimureri-och-religion': { showHero: false, imagePosition: 'top' }
+}
+
+const config = layoutConfig[article.id] || { showHero: true, imagePosition: 'right' }
 ---
 <MainLayout title={title}>
-  <PageLayout title={title} image={image}>
+  <PageLayout 
+    title={title} 
+    image={image} 
+    showHero={config.showHero}
+    imagePosition={config.imagePosition}
+  >
     <Content />
   </PageLayout>
 </MainLayout>

@@ -5,7 +5,7 @@ import distriktsSigill from '../pages/_index_assets/Distriktsigill_frilagt-3.png
 import templetUmea from '../pages/_index_assets/Umea_tempel.png'
 import loadContentImage from '../utils/load-content-image'
 
-const { title, subtitle, image, showHero = true } = Astro.props
+const { title, subtitle, image, showHero = true, imagePosition = 'right' } = Astro.props
 
 // Get all articles for the related articles section
 const allArticles = await getCollection('articles')
@@ -35,12 +35,20 @@ const relatedArticles = allArticles.filter(article => article.id !== title?.toLo
         </div>
       )}
       
+      {image && imagePosition === 'top' && (
+        <div class="page-image-section page-image-top">
+          <div class="page-image-container">
+            <Image src={loadContentImage(image)} alt={title} style="width: 100%; height: auto; border-radius: 0.5rem; object-fit: cover;" />
+          </div>
+        </div>
+      )}
+      
       <div class="page-main-content" style="display: flex; align-items: flex-start; gap: 4rem;">
         <div class="page-content" style="flex: 1;">
           <slot />
         </div>
         
-        {image && (
+        {image && imagePosition === 'right' && (
           <div class="page-image-section" style="flex: 1; text-align: center;">
             <div class="page-image-container">
               <Image src={loadContentImage(image)} alt={title} style="width: 100%; max-width: 500px; height: auto; border-radius: 1rem; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); object-fit: contain;" />
@@ -66,6 +74,23 @@ const relatedArticles = allArticles.filter(article => article.id !== title?.toLo
           </div>
         )}
       </div>
+      
+      {image && imagePosition === 'top' && relatedArticles.length > 0 && (
+        <div class="related-articles-section related-articles-bottom">
+          <h3 class="related-articles-title">Läs mer</h3>
+          <div class="related-articles-grid">
+            {relatedArticles.map(article => (
+              <a href={`${import.meta.env.BASE_URL}/${article.id}`} class="related-article-card">
+                <div class="related-article-content">
+                  <h4 class="related-article-title">{article.data.title}</h4>
+                  <p class="related-article-excerpt">Klicka för att läsa mer om {article.data.title.toLowerCase()}</p>
+                </div>
+                <div class="related-article-arrow">→</div>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   </main>
 </div>
@@ -191,6 +216,27 @@ const relatedArticles = allArticles.filter(article => article.id !== title?.toLo
 
   .page-image-container img:hover {
     transform: scale(1.02);
+  }
+
+  /* Top image positioning */
+  .page-image-top {
+    text-align: center;
+    margin: 2rem 0 3rem 0;
+  }
+
+  .page-image-top .page-image-container {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background: white;
+    border-radius: 1rem;
+    padding: 3rem;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Bottom related articles */
+  .related-articles-bottom {
+    margin-top: 3rem;
   }
 
   .page-content {
@@ -359,6 +405,14 @@ const relatedArticles = allArticles.filter(article => article.id !== title?.toLo
       padding: 0;
       order: 1;
     }
+
+    .page-image-top {
+      margin: 1.5rem 0;
+    }
+
+    .page-image-top .page-image-container {
+      padding: 2rem 1.5rem;
+    }
     
     .page-content {
       order: 2;
@@ -367,6 +421,10 @@ const relatedArticles = allArticles.filter(article => article.id !== title?.toLo
     .related-articles-section {
       margin-top: 1.5rem;
       padding: 1.5rem;
+    }
+
+    .related-articles-bottom {
+      margin-top: 2rem;
     }
     
     .related-articles-title {
@@ -484,6 +542,10 @@ const relatedArticles = allArticles.filter(article => article.id !== title?.toLo
 
     .page-image-container {
       padding: 0 1rem;
+    }
+
+    .page-image-top .page-image-container {
+      padding: 1.5rem 1rem;
     }
   }
 
