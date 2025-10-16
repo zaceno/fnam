@@ -8,13 +8,17 @@ const { title, subtitle, lodgeSeal } = Astro.props
 ---
 
 <div class="lodge-page-layout">
-  <!-- Lodge Hero Section -->
-  <section class="lodge-hero">
-    <Image class="lodge-hero-background" src={templetUmea} alt="Umeå tempel" />
-    <div class="lodge-hero-content">
-      <div class="lodge-hero-main">
-        <div class="lodge-hero-text">
-          <div class="lodge-title-row">
+  <!-- Lodge Main Content -->
+  <main class="lodge-main">
+    <div class="lodge-container">
+      <div class="lodge-content">
+        <div class="lodge-main">
+          <slot />
+        </div>
+        
+        <aside class="lodge-sidebar">
+          <!-- Lodge Sigil Section -->
+          <div class="lodge-sigil-section">
             {lodgeSeal && (
               <Image 
                 src={loadContentImage(lodgeSeal)} 
@@ -22,21 +26,10 @@ const { title, subtitle, lodgeSeal } = Astro.props
                 class="lodge-seal-small" 
               />
             )}
-            <div class="lodge-text-content">
-              <h1>{title}</h1>
-              {subtitle && <h2>{subtitle}</h2>}
-            </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Lodge Main Content -->
-  <main class="lodge-main">
-    <div class="lodge-container">
-      <div class="lodge-content">
-        <slot />
+          
+          <slot name="sidebar" />
+        </aside>
       </div>
     </div>
   </main>
@@ -47,95 +40,28 @@ const { title, subtitle, lodgeSeal } = Astro.props
     min-height: 100vh;
   }
 
-  /* Lodge Hero Section */
-  .lodge-hero {
-    position: relative;
-    width: 100%;
-    height: 50vh;
-    min-height: 400px;
+  /* Lodge Sigil Section */
+  .lodge-sigil-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-  }
-
-  .lodge-hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-  }
-
-  .lodge-hero-content {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    max-width: 1200px;
-    padding: 0 2rem;
-  }
-
-  .lodge-hero-main {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    color: white;
-  }
-
-  .lodge-hero-logo {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-    background: #fff;
-    padding: 1rem;
-    object-fit: contain;
-    flex-shrink: 0;
-  }
-
-  .lodge-title-row {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .lodge-text-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .lodge-hero-text h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    line-height: 1.1;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    margin-top: 1.5rem;
   }
 
   .lodge-seal-small {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-    background: #fff;
-    padding: 1rem;
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
     object-fit: contain;
     flex-shrink: 0;
-  }
-
-  .lodge-hero-text h2 {
-    font-size: 1.8rem;
-    font-weight: 300;
-    margin: 0.25rem 0 0 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    line-height: 1.2;
   }
 
 
@@ -148,15 +74,30 @@ const { title, subtitle, lodgeSeal } = Astro.props
   .lodge-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 4rem 2rem;
+    padding: 1rem 2rem;
   }
 
   .lodge-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    margin-top: 0;
+    align-items: start;
+  }
+
+  .lodge-main {
+    min-width: 0;
     background: white;
     border-radius: 1rem;
     padding: 3rem;
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
     line-height: 1.8;
+  }
+
+  .lodge-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
   }
 
   .lodge-content h1,
@@ -218,93 +159,37 @@ const { title, subtitle, lodgeSeal } = Astro.props
 
   /* Responsive Design */
   @media (max-width: 768px) {
-    .lodge-hero {
-      height: 40vh;
-      min-height: 250px;
-    }
-
-    .lodge-hero-content {
-      flex-direction: column;
-      gap: 1.5rem;
-      text-align: center;
-      padding: 0 1rem;
-    }
-
-    .lodge-hero-main {
-      flex-direction: column;
-      text-align: center;
-      gap: 1rem;
-    }
-
-    .lodge-hero-logo {
-      width: 160px;
-      height: 160px;
-    }
-
-    .lodge-seal-small {
-      width: 160px;
-      height: 160px;
-    }
-
-
-    .lodge-hero-text h1 {
-      font-size: 2.2rem;
-      line-height: 1.1;
-    }
-
-    .lodge-hero-text h2 {
-      font-size: 1.2rem;
-    }
-
     .lodge-container {
-      padding: 2rem 1rem;
+      padding: 0.5rem 1rem;
     }
 
     .lodge-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .lodge-main {
       padding: 2rem 1.5rem;
+    }
+
+    .lodge-seal-small {
+      width: 150px;
+      height: 150px;
     }
   }
 
   @media (max-width: 480px) {
-    .lodge-hero {
-      height: 35vh;
-      min-height: 200px;
+    .lodge-container {
+      padding: 0.5rem 0.5rem;
     }
 
-    .lodge-hero-content {
-      gap: 1rem;
-      padding: 0 0.5rem;
-    }
-
-    .lodge-hero-main {
-      gap: 0.5rem;
-    }
-
-    .lodge-hero-logo {
-      width: 120px;
-      height: 120px;
+    .lodge-main {
+      padding: 1.5rem 1rem;
     }
 
     .lodge-seal-small {
       width: 120px;
       height: 120px;
-    }
-
-
-    .lodge-hero-text h1 {
-      font-size: 1.8rem;
-    }
-
-    .lodge-hero-text h2 {
-      font-size: 1rem;
-    }
-
-    .lodge-container {
-      padding: 1.5rem 0.5rem;
-    }
-
-    .lodge-content {
-      padding: 1.5rem 1rem;
     }
 
     .lodge-content h1 {

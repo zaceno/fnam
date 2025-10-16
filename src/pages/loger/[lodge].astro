@@ -22,47 +22,43 @@ const subtitle = `${info.city}`
 ---
 <MainLayout title={title}>
   <LodgePageLayout title={title} subtitle={subtitle} lodgeSeal={info.seal}>
-    <div class="lodge-content">
-      <div class="lodge-main">
-        <Content />
+    <Content />
+    
+    <div slot="sidebar">
+      <div class="lodge-info-card">
+        <h3>Kontaktinformation</h3>
+        <div class="info-item">
+          <strong>E-post:</strong>
+          <a href={`mailto:${info.email}`}>{info.email}</a>
+        </div>
+        <div class="info-item">
+          <strong>Besöksadress:</strong>
+          <span>{info.streetAddress}, {info.city}</span>
+        </div>
       </div>
-      
-      <aside class="lodge-sidebar">
-        <div class="lodge-info-card">
-          <h3>Kontaktinformation</h3>
-          <div class="info-item">
-            <strong>E-post:</strong>
-            <a href={`mailto:${info.email}`}>{info.email}</a>
-          </div>
-          <div class="info-item">
-            <strong>Besöksadress:</strong>
-            <span>{info.streetAddress}, {info.city}</span>
-          </div>
-        </div>
 
-        <div class="lodge-info-card">
-          <h3>Arbetsordning</h3>
-          <p>{info.meetingInfo}</p>
-        </div>
+      <div class="lodge-info-card">
+        <h3>Arbetsordning</h3>
+        <p>{info.meetingInfo}</p>
+      </div>
 
-        {info.schedule && info.schedule.length > 0 && (
-          <div class="lodge-info-card">
-            <h3>Kommande möten</h3>
-            <div class="schedule-list">
-              {info.schedule.map((event: {date: Date, work: string}, index: number) => (
-                <div class="schedule-item" key={index}>
-                  <div class="schedule-date">
-                    <strong>{formatDate(event.date)}</strong>
-                  </div>
-                  <div class="schedule-work">
-                    {event.work}
-                  </div>
+      {info.schedule && info.schedule.length > 0 && (
+        <div class="lodge-info-card">
+          <h3>Kommande möten</h3>
+          <div class="schedule-list">
+            {info.schedule.map((event: {date: Date, work: string}, index: number) => (
+              <div class="schedule-item" key={index}>
+                <div class="schedule-date">
+                  <strong>{formatDate(event.date)}</strong>
                 </div>
-              ))}
-            </div>
+                <div class="schedule-work">
+                  {event.work}
+                </div>
+              </div>
+            ))}
           </div>
-        )}
-      </aside>
+        </div>
+      )}
     </div>
   </LodgePageLayout>
 </MainLayout>
@@ -82,7 +78,7 @@ const subtitle = `${info.city}`
   .lodge-sidebar {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
 
@@ -91,6 +87,11 @@ const subtitle = `${info.city}`
     border: 1px solid #e3eaf3;
     border-radius: 0.75rem;
     padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .lodge-info-card:last-child {
+    margin-bottom: 0;
   }
 
   .lodge-info-card h3 {
