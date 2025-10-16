@@ -25,6 +25,8 @@ schedule:
   - date: 2025-12-14
     work: Gradgivning 3°
 ---
+# F.&A.M Logen Aurelius nr 179
+
 <p style="text-align: center"><em>DUM VIVIS, DUM LICET, FAC BONUS FIAS</em></p>
 
 Fria och Antagna Murare Logen Aurelius nr 179 grundades 22a maj 2017. Den 30e september 2017 skedde överlåtelse av det interimistiska tillståndsbeviset. Logen invigdes under högtidliga former i Umeå den 30 september 2023. Är du intresserad och vill veta mer så ta kontakt via [aurelius@friaochantagnamurare.se](mailto:aurelius@friaochantagnamurare.se)
