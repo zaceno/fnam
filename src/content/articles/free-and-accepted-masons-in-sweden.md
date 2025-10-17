@@ -1,6 +1,5 @@
 ---
 title: Free & Accepted Masons in Sweden
-order: 0
 ---
 ## Welcome!
 
