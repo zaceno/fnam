@@ -1,7 +1,7 @@
 ---
 title: Free & Accepted Masons in Sweden
 ---
-## Welcome!
+# Welcome!
 
 Welcome to the Free and Accepted Masons – the home of Craft Freemasonry in Sweden. We welcome all honorable men who believe in a Supreme Being. Freemasonry is a moral system, veiled in allegory and illustrated by symbols. It encourages us to think, to question, and to seek. It is a system of personal development in which members are inspired to examine their own values and shape their character. It is a path to freedom with responsibility, to self-knowledge, and to self-improvement.
 
