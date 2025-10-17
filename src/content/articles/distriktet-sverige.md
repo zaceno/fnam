@@ -15,7 +15,7 @@ Kontakt distriktsstormästaren med e-post: [dism@friaochantagnamurare.se](mailto
 
 Storlogen för Fria och Antagna Murare i Finland grundades år 1924 av tre loger: Suomi 1 i Helsingfors, Tammer 2 i Tammerfors och Phoenix 3 i Åbo. Dessa loger, som i sin tur hade grundats under åren 1922 och 1923 under storlogen i New York la grunden för det blå frimureriet i Finland och senare även i Sverige.
 
-Storlogens huvudsakliga uppgift är att samordna, stödja och vägleda de lokala logernas arbete i landet. Detta sker i en anda av kontinuitet med de värden och principer som fastställdes i frimureriets första moderna konstitution, publicerad i England år 1723. Där definierades de så kallade “de uråldriga landmärkena”, som fortfarande utgör den ideologiska och rituella kärnan i frimureriet.
+Storlogens huvudsakliga uppgift är att samordna, stödja och vägleda de lokala logernas arbete i jurisdiktionen. Detta sker i en anda av kontinuitet med de värden och principer som fastställdes i frimureriets första moderna konstitution, publicerad i England år 1723. Där definierades de så kallade “de uråldriga landmärkena”, som fortfarande utgör den ideologiska och rituella kärnan i frimureriet.
 
 Storlogen leds av en stormästare, vald för en mandatperiod om två år. Till stormästarens stöd finns ett råd – storlogens styrelse – samt ett äldsteråd. Den löpande administrationen sköts av storskrivaren.
 
