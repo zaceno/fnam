@@ -8,9 +8,9 @@ Frimureriet är ingen religion – och det utger sig inte för att vara en ersä
 
 Denna princip har varit en bärande del av frimureriets anda sedan de första grundläggande reglerna skrevs ned i The Constitution of the Free-Masons från 1723 – författad av pastor James Anderson – formuleras det så här i den första paragrafen:
 
-Murarens yrke förpliktar honom att följa moralens lag. Om han förstår murarvetenskap är han inte en enfaldig gudsförnekare eller irreligiös fritänkare. Även om murare i forna tider i varje land förpliktades att omfatta landets eller nationens religion, vilken den än var, anses det numera lämpligare att förplikta dem bara till den religion som alla är eniga om och låta var och en att ha sina egna åsikter, med andra ord vara goda och trofasta människor, hederliga och redbara män, vilket kyrkosamfund eller sekt de än må höra till.
+**_Murarens yrke förpliktar honom att följa moralens lag. Om han förstår murarvetenskap är han inte en enfaldig gudsförnekare eller irreligiös fritänkare. Även om murare i forna tider i varje land förpliktades att omfatta landets eller nationens religion, vilken den än var, anses det numera lämpligare att förplikta dem bara till den religion som alla är eniga om och låta var och en att ha sina egna åsikter, med andra ord vara goda och trofasta människor, hederliga och redbara män, vilket kyrkosamfund eller sekt de än må höra till._**
 
-Sålunda blir mureriet en hemvist för försonlighet och ett redskap för sann förenande vänskap mellan personer som annars för alltid skulle bli främmande för varandra.
+**_Sålunda blir mureriet en hemvist för försonlighet och ett redskap för sann förenande vänskap mellan personer som annars för alltid skulle bli främmande för varandra._**
 
 Frimureriet vill vara just detta: en hemvist för försonlighet och ett andligt rum där män från olika bakgrunder möts i respekt, tolerans och gemensam eftertanke. Inom logen diskuteras aldrig religion – inte av ointresse, utan av vördnad. Den enskildes tro är hans egen, och frimureriet söker inte påverka den. I stället möts vi i en gemensam vördnad inför det gudomliga, varje broder med sin egen förståelse, sin egen väg.
 
