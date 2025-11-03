@@ -5,11 +5,38 @@ import distriktsSigill from '../pages/_index_assets/Distriktsigill_frilagt-3.png
 import templetUmea from '../pages/_index_assets/Umea_tempel.png'
 import loadContentImage from '../utils/load-content-image'
 
-const { title, subtitle, image, showHero = true, imagePosition = 'right' } = Astro.props
+const { title, subtitle, image, showHero = true, imagePosition = 'right', articleId } = Astro.props
+
+// Function to convert title to sentence case (first letter capitalized, rest lowercase)
+function toSentenceCase(str: string): string {
+  if (!str) return str;
+  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+}
+
+// Mapping of related articles for each page (based on user specification)
+const relatedArticlesMap: Record<string, string[]> = {
+  'vad-ar-frimureri': ['vad-ar-en-loge', 'frimureriets-historia', 'vill-du-bli-frimurare'],
+  'blatt-frimureri': ['frimureriets-historia', 'distriktet-sverige', 'vill-du-bli-frimurare'],
+  'frimureriets-historia': ['vad-ar-frimureri', 'vad-ar-en-loge', 'vill-du-bli-frimurare'],
+  'frimureri-och-religion': ['vad-ar-frimureri', 'blatt-frimureri', 'vill-du-bli-frimurare'],
+  'vill-du-bli-frimurare': ['frimureri-och-religion', 'distriktet-sverige', 'kontakta-logerna'],
+  'distriktet-sverige': ['free-and-accepted-masons-in-sweden', 'vill-du-bli-frimurare', 'kontakta-logerna']
+}
 
 // Get all articles for the related articles section
 const allArticles = await getCollection('articles')
-const relatedArticles = allArticles.filter(article => article.id !== title?.toLowerCase().replace(/\s+/g, '-')).slice(0, 3)
+
+// Get related articles based on mapping, or fallback to default behavior
+let relatedArticles: typeof allArticles = []
+if (articleId && relatedArticlesMap[articleId]) {
+  const relatedIds = relatedArticlesMap[articleId]
+  relatedArticles = relatedIds
+    .map(id => allArticles.find(article => article.id === id))
+    .filter(Boolean) as typeof allArticles
+} else {
+  // Fallback: exclude current article and take first 3
+  relatedArticles = allArticles.filter(article => article.id !== articleId).slice(0, 3)
+}
 ---
 
 <div class="page-layout">
@@ -51,13 +78,11 @@ const relatedArticles = allArticles.filter(article => article.id !== title?.toLo
             <!-- Related Articles Section - Right below the image -->
             {relatedArticles.length > 0 && (
               <div class="related-articles-section" style="margin-top: 2rem;">
-                <h3 class="related-articles-title">Läs mer</h3>
                 <div class="related-articles-grid">
                   {relatedArticles.map(article => (
                     <a href={`${import.meta.env.BASE_URL}/${article.id}`} class="related-article-card">
                       <div class="related-article-content">
-                        <h4 class="related-article-title">{article.data.title}</h4>
-                        <p class="related-article-excerpt">Klicka för att läsa mer om {article.data.title.toLowerCase()}</p>
+                        <h4 class="related-article-title">{toSentenceCase(article.data.title)}</h4>
                       </div>
                       <div class="related-article-arrow">→</div>
                     </a>
@@ -71,13 +96,11 @@ const relatedArticles = allArticles.filter(article => article.id !== title?.toLo
       
       {image && imagePosition === 'top' && relatedArticles.length > 0 && (
         <div class="related-articles-section related-articles-bottom">
-          <h3 class="related-articles-title">Läs mer</h3>
           <div class="related-articles-grid">
             {relatedArticles.map(article => (
               <a href={`${import.meta.env.BASE_URL}/${article.id}`} class="related-article-card">
                 <div class="related-article-content">
-                  <h4 class="related-article-title">{article.data.title}</h4>
-                  <p class="related-article-excerpt">Klicka för att läsa mer om {article.data.title.toLowerCase()}</p>
+                  <h4 class="related-article-title">{toSentenceCase(article.data.title)}</h4>
                 </div>
                 <div class="related-article-arrow">→</div>
               </a>
