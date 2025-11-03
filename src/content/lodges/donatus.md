@@ -4,7 +4,7 @@ number: 174
 city: Lund
 streetAddress: Krafts Torg 10
 email: donatus@friaochantagnamurare.se
-seal: $images/Sigill_Donatus_frilagd-scaled.png
+seal: $images/Donatus_sigill_frilagt.png
 schedule:
   - date: 2025-01-18
     work: Gradgivning 3°
