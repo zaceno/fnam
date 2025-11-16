@@ -11,6 +11,18 @@ const current = Astro.url.pathname;
 ---
 
 <nav class="main-nav">
+  <!-- Hidden checkbox controls open/close state on small screens -->
+  <input
+    type="checkbox"
+    id="nav-toggle"
+    class="nav-toggle"
+    aria-label="Öppna meny"
+  />
+  <!-- Label is the hamburger / X icon -->
+  <label for="nav-toggle" class="nav-toggle-label">
+    <span></span>
+  </label>
+
   <ul class="menu">
     {
       (() => {
@@ -41,13 +53,17 @@ const current = Astro.url.pathname;
     }
   </ul>
 </nav>
+
 <style>
   .main-nav {
     font-family: inherit;
-    background: #3F7F9F;
+    background: #3f7f9f;
     box-shadow: 0 2px 8px #0001;
     margin-bottom: 2rem;
+    position: relative;
+    min-height: 3.2rem; /* ensures the top bar has height even when menu is off-screen on mobile */
   }
+
   .menu {
     list-style: none;
     margin: 0;
@@ -58,9 +74,11 @@ const current = Astro.url.pathname;
     align-items: center;
     flex-wrap: wrap;
   }
+
   .menu > li {
     position: relative;
   }
+
   .menu > li > a,
   .dropdown-label {
     font-family: var(--font-serif);
@@ -73,24 +91,28 @@ const current = Astro.url.pathname;
     border-radius: 0.3rem;
     transition: background 0.2s;
   }
+
   .menu > li > a:hover,
   .dropdown-label:hover {
     background: rgba(255, 255, 255, 0.2);
   }
+
   .current {
     font-weight: bold;
   }
+
   .has-dropdown:hover > .dropdown,
   .has-dropdown:focus-within > .dropdown {
     display: block;
   }
+
   .dropdown {
     display: none;
     position: absolute;
     left: 0;
     top: 100%;
     min-width: 12rem;
-    background: #3F7F9F;
+    background: #3f7f9f;
     box-shadow: 0 4px 16px #0002;
     border-radius: 0 0 0.5rem 0.5rem;
     z-index: 100;
@@ -98,9 +120,11 @@ const current = Astro.url.pathname;
     margin: 0;
     padding: 0.5rem 0;
   }
+
   .dropdown li {
     width: 100%;
   }
+
   .dropdown a {
     color: white;
     padding: 0.5rem 1rem;
@@ -109,12 +133,55 @@ const current = Astro.url.pathname;
     border-radius: 0.3rem;
     transition: background 0.2s;
     font-family: var(--font-serif);
-
   }
+
   .dropdown a:hover {
     background: rgba(255, 255, 255, 0.2);
   }
-  
+
+  /* --- Hamburger controls (base) --- */
+
+  .nav-toggle {
+    display: none; /* hidden checkbox */
+  }
+
+  .nav-toggle-label {
+    display: none; /* only visible on small screens */
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.8rem;
+    height: 1.8rem;
+    cursor: pointer;
+    z-index: 1001; /* above the slide-out menu */
+  }
+
+  .nav-toggle-label span,
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: white;
+    content: "";
+    transition: transform 0.2s ease, top 0.2s ease, opacity 0.2s ease;
+  }
+
+  .nav-toggle-label span {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .nav-toggle-label span::before {
+    top: -6px;
+  }
+
+  .nav-toggle-label span::after {
+    top: 6px;
+  }
+
   /* Simple mobile fixes */
   @media (max-width: 768px) {
     .menu {
@@ -123,25 +190,86 @@ const current = Astro.url.pathname;
       flex-wrap: wrap;
       justify-content: center;
     }
-    
+
     .menu > li > a,
     .dropdown-label {
       padding: 0.4rem 0.8rem;
-      
-
     }
   }
-  
+
+  /* --- Small screens: full-screen hamburger menu --- */
   @media (max-width: 480px) {
-    .menu {
-      gap: 0.5rem;
-      padding: 0 0.5rem;
+    /* Show burger icon in the top bar */
+    .nav-toggle-label {
+      display: block;
     }
-    
+
+    /* Turn the menu into a full-screen scrollable panel */
+    .menu {
+      position: fixed;
+      inset: 0; /* top:0; left:0; right:0; bottom:0; */
+      padding: 4.2rem 1.5rem 1.5rem; /* extra top padding so items don't hide behind the bar */
+      flex-direction: column;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+      gap: 0.3rem;
+      background: #3f7f9f;
+      transform: translateX(100%); /* hidden off-screen to the right by default */
+      transition: transform 0.3s ease;
+      overflow-y: auto;
+      z-index: 1000;
+      scroll-padding-top: 0;
+    }
+
+    .menu > li {
+      width: 100%;
+    }
+
     .menu > li > a,
     .dropdown-label {
-      padding: 0.3rem 0.6rem;
-      font-size: 0.8rem;
+      width: 100%;
+      padding: 0.6rem 0.4rem;
+      font-size: 0.95rem;
+    }
+
+    /* Make dropdowns nested inside the vertical list instead of hover popovers */
+    .dropdown {
+      position: static;
+      display: block; /* always visible in the nested list */
+      box-shadow: none;
+      border-radius: 0;
+      padding: 0.2rem 0 0.3rem 0.8rem;
+      background: transparent;
+    }
+
+    .dropdown a {
+      padding: 0.3rem 0.4rem;
+      font-size: 0.9rem;
+    }
+
+    /* When the checkbox is checked, slide the menu in */
+    .nav-toggle:checked ~ .menu {
+      transform: translateX(0);
+    }
+
+    /* Morph burger into X when open */
+    .nav-toggle:checked + .nav-toggle-label span {
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    .nav-toggle:checked + .nav-toggle-label span::before {
+      top: 0;
+      transform: rotate(-90deg);
+    }
+
+    .nav-toggle:checked + .nav-toggle-label span::after {
+      opacity: 0;
+    }
+
+    /* On very small screens we don't want hover-based dropdown popups */
+    .has-dropdown:hover > .dropdown,
+    .has-dropdown:focus-within > .dropdown {
+      display: block;
     }
   }
 </style>
