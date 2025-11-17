@@ -9,7 +9,9 @@ const menu = JSON.parse(menuJSON) as ContentData;
 const baseurl = import.meta.env.BASE_URL;
 const current = Astro.url.pathname;
 ---
-
+<script is:inline define:vars={{current}}>
+  window._debug = {current}
+</script>
 <nav class="main-nav">
   <!-- Hidden checkbox controls open/close state on small screens -->
   <input
@@ -29,7 +31,7 @@ const current = Astro.url.pathname;
         const anchor = (link: Link) => {
           const url = `${baseurl}/${link.url}`;
           return (
-            <a class:list={{ current: current === url }} href={url}>
+            <a class:list={{ current: current.substring(0, url.length) === url }} href={url}>
               {link.title}
             </a>
           );
