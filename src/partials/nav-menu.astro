@@ -38,7 +38,7 @@ const current = Astro.url.pathname;
           !item.submenu ? (
             <li>{anchor(item.link)}</li>
           ) : (
-            <li class="has-dropdown">
+        <li class="has-dropdown" >
               <span class="dropdown-label">{item.link.title}</span>
               <ul class="dropdown">
                 <li>{anchor(item.link)}</li>
@@ -92,7 +92,8 @@ const current = Astro.url.pathname;
   }
 
   .menu > li > a:hover,
-  .dropdown-label:hover {
+  .dropdown-label:hover,
+  .dropdown-label: {
     background: rgba(255, 255, 255, 0.2);
   }
 
@@ -134,7 +135,7 @@ const current = Astro.url.pathname;
     font-family: var(--font-serif);
   }
 
-  .dropdown a:hover {
+  a:hover {
     background: rgba(255, 255, 255, 0.2);
   }
 
@@ -224,11 +225,18 @@ const current = Astro.url.pathname;
       width: 100%;
     }
 
+    .dropdown-label {
+      border-bottom: 1px #ffffff33 solid;
+      border-radius: 0;
+      padding-bottom: 0;
+      margin-bottom: 0.6; 
+    }
+
     .menu > li > a,
     .dropdown-label {
       width: 100%;
       padding: 0.6rem 0.4rem;
-      font-size: 0.95rem;
+      font-size: 1.1rem;
     }
 
     /* Make dropdowns nested inside the vertical list instead of hover popovers */
@@ -243,7 +251,7 @@ const current = Astro.url.pathname;
 
     .dropdown a {
       padding: 0.3rem 0.4rem;
-      font-size: 0.9rem;
+      font-size: 1.1rem;
     }
 
     /* When the checkbox is checked, slide the menu in */
