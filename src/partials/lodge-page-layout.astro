@@ -194,10 +194,18 @@ const { title, subtitle, lodgeSeal } = Astro.props
     /* Show mobile sigil, hide desktop sigil */
     .lodge-sigil-mobile {
       display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
       order: -2;
       margin-top: 0;
       margin-bottom: 1.5rem;
       padding: 1rem;
+    }
+
+    .lodge-sigil-mobile .lodge-seal-small {
+      margin: 0 auto;
+      display: block;
     }
 
     .lodge-sigil-desktop {
@@ -205,7 +213,7 @@ const { title, subtitle, lodgeSeal } = Astro.props
     }
 
     .lodge-content > .lodge-main {
-      padding: 2rem 1.5rem;
+      padding: 2.5rem 2rem;
       order: 0;
     }
 
@@ -225,12 +233,21 @@ const { title, subtitle, lodgeSeal } = Astro.props
     }
 
     .lodge-content > .lodge-main {
-      padding: 1.5rem 1rem;
+      padding: 2rem 1.5rem;
     }
 
     .lodge-sigil-mobile {
-      padding: 0.75rem;
-      margin-bottom: 1rem;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lodge-sigil-mobile .lodge-seal-small {
+      margin: 0 auto;
+      display: block;
     }
 
     .lodge-seal-small {
