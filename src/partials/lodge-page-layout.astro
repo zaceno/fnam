@@ -12,13 +12,24 @@ const { title, subtitle, lodgeSeal } = Astro.props
   <main class="lodge-main">
     <div class="lodge-container">
       <div class="lodge-content">
+        <!-- Sigil section - appears first on mobile, hidden on desktop -->
+        {lodgeSeal && (
+          <div class="lodge-sigil-section lodge-sigil-mobile">
+            <Image 
+              src={loadContentImage(lodgeSeal)} 
+              alt={`Logen ${title} sigill`} 
+              class="lodge-seal-small" 
+            />
+          </div>
+        )}
+        
         <div class="lodge-main">
           <slot />
         </div>
         
         <aside class="lodge-sidebar">
-          <!-- Lodge Sigil Section -->
-          <div class="lodge-sigil-section">
+          <!-- Lodge Sigil Section - desktop only -->
+          <div class="lodge-sigil-section lodge-sigil-desktop">
             {lodgeSeal && (
               <Image 
                 src={loadContentImage(lodgeSeal)} 
@@ -51,6 +62,16 @@ const { title, subtitle, lodgeSeal } = Astro.props
     border-radius: 0;
     box-shadow: none;
     margin-top: 1.5rem;
+  }
+
+  /* Hide mobile sigil on desktop */
+  .lodge-sigil-mobile {
+    display: none;
+  }
+
+  /* Show desktop sigil on desktop */
+  .lodge-sigil-desktop {
+    display: flex;
   }
 
   .lodge-seal-small {
@@ -170,20 +191,26 @@ const { title, subtitle, lodgeSeal } = Astro.props
       flex-direction: column;
     }
 
-    /* Reorder: sigil appears before text on mobile */
-    .lodge-sidebar {
-      order: -1;
+    /* Show mobile sigil, hide desktop sigil */
+    .lodge-sigil-mobile {
+      display: flex;
+      order: -2;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+    }
+
+    .lodge-sigil-desktop {
+      display: none;
     }
 
     .lodge-content > .lodge-main {
       padding: 2rem 1.5rem;
-      order: 1;
+      order: 0;
     }
 
-    .lodge-sigil-section {
-      margin-top: 0;
-      margin-bottom: 1.5rem;
-      padding: 1rem;
+    .lodge-sidebar {
+      order: 1;
     }
 
     .lodge-seal-small {
@@ -201,7 +228,7 @@ const { title, subtitle, lodgeSeal } = Astro.props
       padding: 1.5rem 1rem;
     }
 
-    .lodge-sigil-section {
+    .lodge-sigil-mobile {
       padding: 0.75rem;
       margin-bottom: 1rem;
     }
