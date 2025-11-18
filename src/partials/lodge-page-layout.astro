@@ -160,16 +160,30 @@ const { title, subtitle, lodgeSeal } = Astro.props
   /* Responsive Design */
   @media (max-width: 768px) {
     .lodge-container {
-      padding: 0.5rem 1rem;
+      padding: 1rem 1rem;
     }
 
     .lodge-content {
       grid-template-columns: 1fr;
       gap: 2rem;
+      display: flex;
+      flex-direction: column;
     }
 
-    .lodge-main {
+    /* Reorder: sigil appears before text on mobile */
+    .lodge-sidebar {
+      order: -1;
+    }
+
+    .lodge-content > .lodge-main {
       padding: 2rem 1.5rem;
+      order: 1;
+    }
+
+    .lodge-sigil-section {
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      padding: 1rem;
     }
 
     .lodge-seal-small {
@@ -180,11 +194,16 @@ const { title, subtitle, lodgeSeal } = Astro.props
 
   @media (max-width: 480px) {
     .lodge-container {
-      padding: 0.5rem 0.5rem;
+      padding: 1rem 1rem;
     }
 
-    .lodge-main {
+    .lodge-content > .lodge-main {
       padding: 1.5rem 1rem;
+    }
+
+    .lodge-sigil-section {
+      padding: 0.75rem;
+      margin-bottom: 1rem;
     }
 
     .lodge-seal-small {
