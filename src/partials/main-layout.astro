@@ -1,9 +1,14 @@
 ---
 import NavMenu from './nav-menu.astro'
+import { Image } from 'astro:assets'
 const baseTitle = 'Fria och Antagna Murare i Sverige'
 const {title} = Astro.props
 import '../styles/main.css'
 import '../styles/custom-image-layouts.css'
+import loadContentImage from '../utils/load-content-image'
+
+const facebookIcon = await loadContentImage('$images/facebook.png')
+const instagramIcon = await loadContentImage('$images/instagram.png')
 ---
 <html lang="sv">
   <head>
@@ -18,5 +23,57 @@ import '../styles/custom-image-layouts.css'
   <body>
     <NavMenu />
     <slot />
+    <footer class="site-footer">
+      <div class="footer-content">
+        <span class="footer-label">Sociala Medier:</span>
+        <a href="https://www.facebook.com/profile.php?id=61581697776076" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <Image src={facebookIcon.default} alt="Facebook" width={24} height={24} />
+        </a>
+        <a href="https://www.instagram.com/friaochantagnamurare/?hl=am-et" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <Image src={instagramIcon.default} alt="Instagram" width={24} height={24} />
+        </a>
+      </div>
+    </footer>
   </body>
 </html>
+
+<style>
+  .site-footer {
+    background: #3f7f9f;
+    padding: 0.8rem 2rem;
+    margin-top: auto;
+    box-shadow: 0 -2px 8px #0001;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .footer-label {
+    color: white;
+    font-family: var(--font-serif);
+    font-size: 0.9rem;
+  }
+
+  .footer-content a {
+    display: inline-block;
+    transition: opacity 0.2s;
+  }
+
+  .footer-content a:hover {
+    opacity: 0.8;
+  }
+
+  .footer-content :global(img) {
+    display: block;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+</style>
