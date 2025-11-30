@@ -5,10 +5,7 @@ title: Free & Accepted Masons in Sweden
 
 Welcome to the Free and Accepted Masons – the home of Craft Freemasonry in Sweden. We welcome all honorable men who believe in a Supreme Being. Freemasonry is a moral system, veiled in allegory and illustrated by symbols. It encourages us to think, to question, and to seek. It is a system of personal development in which members are inspired to examine their own values and shape their character. It is a path to freedom with responsibility, to self-knowledge, and to self-improvement.
 
-Freemasonry has no political or religious affiliation, and it brings together men of different ages, backgrounds, cultures, and beliefs. In lodges throughout the  
-country, we gather regularly to participate in ceremonies and traditions that  
-foster openness, tolerance, and respect – inspiring us to take responsibility  
-both as fellow human beings and as citizens.
+Freemasonry has no political or religious affiliation, and it brings together men of different ages, backgrounds, cultures, and beliefs. In lodges throughout the country, we gather regularly to participate in ceremonies and traditions that foster openness, tolerance, and respect – inspiring us to take responsibility both as fellow human beings and as citizens.
 
 In our lodges Jewish, Christian, Muslim, and other men of faith often meet side by side, all sharing the desire to grow – personally, morally, and spiritually. This diversity enriches our conversations and deepens our fellowship.
 
