@@ -37,7 +37,7 @@ Om logens namn och valspråk
 
 Logen är uppkallad efter den romerska kejsaren Marcus Aurelius Antonius som också var en stoisk filosof och en av de mest respekterade kejsarna under antiken. Hans stoiska ideal påminner om de värden som frimureriet också betonar.
 
-Logens valspråk lyder **Dum Vivis Dum Licet Fac Bonus Fias** och är hämtat från Marcus Aurelius Självbetraktelser IV:17. På svenska lyder valspråket ”Så länge du lever, så länge du kan, var god.
+Logens valspråk lyder **Dum Vivis Dum Licet Fac Bonus Fias** och är hämtat från Marcus Aurelius Självbetraktelser IV:17. På svenska lyder valspråket ”Så länge du lever, så länge du fortfarande kan, var god.
 
 ## Vill du besöka oss?
 
