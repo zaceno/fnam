@@ -31,9 +31,9 @@ schedule:
 
 Logen Aurelius är en ung och starkt växande loge som träffas den fjärde lördagen varje månad med några få undantag dock inte under juni-augusti. Våra logemöten börjar som i alla andra loger med ritualen. Efteråt avnjuter vi en brödramåltid som verkligen brukar sporra till djupa och trevliga diskussioner. I Aurelius har vi en otroligt fin gemenskap där alla trivs och våra logemöten brukar sträcka sig långt in på kvällen för de som vill och orkar.
 
-Fria och Antagna Murare Logen Aurelius nr 179 grundades i Vasa 22.05.2017. Planen var redan från början att logen skulle flyttas till Umeå och bli den fjärde logen i distriktet Sverige då ett tillräckligt antal bröder hade fått sina grader. De första bröderna fick sina grader i Jakobstad, Vasa och Karleby. 14.01.2023 höll Aurelius sitt första möte i Umeå och sedan dess så är vi helt etablerade i Umeå. 30 september 2023 invigdes logen officiellt i Umeå under högtidliga former.
+Fria och Antagna Murare Logen Aurelius nr 179 grundades i Vasa 22 maj 2017. Planen var redan från början att logen skulle flyttas till Umeå och bli den fjärde logen i distriktet Sverige då ett tillräckligt antal bröder hade fått sina grader. De första bröderna fick sina grader i Jakobstad, Vasa och Karleby. 14 januari 2023 höll Aurelius sitt första möte i Umeå och sedan dess så är vi helt etablerade i Umeå. 30 september 2023 invigdes logen officiellt i Umeå under högtidliga former.
 
-Om logens namn och valspråk
+## Om logens namn och valspråk
 
 Logen är uppkallad efter den romerska kejsaren Marcus Aurelius Antonius som också var en stoisk filosof och en av de mest respekterade kejsarna under antiken. Hans stoiska ideal påminner om de värden som frimureriet också betonar.
 
