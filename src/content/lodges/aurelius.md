@@ -6,7 +6,7 @@ streetAddress: Skolgatan 49
 email: aurelius@friaochantagnamurare.se
 seal: $images/Logen_Aurelius_sigill_farg.png
 schedule:
-  - date: 2025-01-27
+  - date: 2026-01-31
     work: Installation
   - date: 2025-02-24
     work: Gradgivning 1°, årsmöte
