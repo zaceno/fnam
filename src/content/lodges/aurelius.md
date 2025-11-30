@@ -8,8 +8,8 @@ seal: $images/Logen_Aurelius_sigill_farg.png
 schedule:
   - date: 2026-01-31
     work: Installation
-  - date: 2025-02-24
-    work: Gradgivning 1°, årsmöte
+  - date: 2026-02-21
+    work: Gradgivning 2°, årsmöte
   - date: 2025-03-23
     work: Gradgivning 2°
   - date: 2025-04-27
