@@ -10,20 +10,20 @@ schedule:
     work: Installation
   - date: 2026-02-21
     work: Gradgivning 2°, årsmöte
-  - date: 2025-03-23
+  - date: 2026-03-28
     work: Gradgivning 2°
-  - date: 2025-04-27
-    work: Gradgivning 1°
-  - date: 2025-05-18
+  - date: 2026-04-11
     work: Gradgivning 3°
-  - date: 2025-09-28
+  - date: 2026-05-16
+    work: Gradgivning 3°
+  - date: 2026-09-26
     work: Gradgivning 1°
-  - date: 2025-10-26
+  - date: 2026-10-24
     work: Gradgivning 1°
-  - date: 2025-11-30
+  - date: 2026-11-21
     work: Gradgivning 2°
-  - date: 2025-12-14
-    work: Gradgivning 3°
+  - date: 2026-12-12
+    work: Gradgivning 2°
 ---
 # F.&A.M Logen Aurelius nr 179
 
