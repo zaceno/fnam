@@ -29,9 +29,15 @@ schedule:
 
 <p style="text-align: center"><em>DUM VIVIS, DUM LICET, FAC BONUS FIAS</em></p>
 
-Fria och Antagna Murare Logen Aurelius nr 179 grundades 22a maj 2017. Den 30e september 2017 skedde överlåtelse av det interimistiska tillståndsbeviset. Logen invigdes under högtidliga former i Umeå den 30 september 2023. Är du intresserad och vill veta mer så ta kontakt via [aurelius@friaochantagnamurare.se](mailto:aurelius@friaochantagnamurare.se)
+Logen Aurelius är en ung och starkt växande loge som träffas den fjärde lördagen varje månad med några få undantag dock inte under juni-augusti. Våra logemöten börjar som i alla andra loger med ritualen. Efteråt avnjuter vi en brödramåltid som verkligen brukar sporra till djupa och trevliga diskussioner. I Aurelius har vi en otroligt fin gemenskap där alla trivs och våra logemöten brukar sträcka sig långt in på kvällen för de som vill och orkar.
 
-Logens valspråk på svenska lyder “Så länger du lever, så länge du fortfarande kan, var god!”
+Fria och Antagna Murare Logen Aurelius nr 179 grundades i Vasa 22.05.2017. Planen var redan från början att logen skulle flyttas till Umeå och bli den fjärde logen i distriktet Sverige då ett tillräckligt antal bröder hade fått sina grader. De första bröderna fick sina grader i Jakobstad, Vasa och Karleby. 14.01.2023 höll Aurelius sitt första möte i Umeå och sedan dess så är vi helt etablerade i Umeå. 30 september 2023 invigdes logen officiellt i Umeå under högtidliga former.
+
+Om logens namn och valspråk
+
+Logen är uppkallad efter den romerska kejsaren Marcus Aurelius Antonius som också var en stoisk filosof och en av de mest respekterade kejsarna under antiken. Hans stoiska ideal påminner om de värden som frimureriet också betonar.
+
+Logens valspråk lyder **Dum Vivis Dum Licet Fac Bonus Fias** och är hämtat från Marcus Aurelius Självbetraktelser IV:17. På svenska lyder valspråket ”Så länge du lever, så länge du kan, var god.
 
 ## Vill du besöka oss?
 
