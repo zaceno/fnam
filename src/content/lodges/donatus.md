@@ -7,15 +7,15 @@ email: donatus@friaochantagnamurare.se
 seal: $images/Donatus_sigill_frilagt.png
 meetingInfo: "Möten startar 11.30. "
 schedule:
-  - date: 2025-01-18
-    work: Gradgivning 3°
-  - date: 2025-02-15
-    work: Gradgivning 2°, Årsmöte
-  - date: 2025-03-15
+  - date: 2026-01-24
     work: Gradgivning 1°
-  - date: 2025-04-26
+  - date: 2026-02-21
+    work: Gradgivning 2°, Årsmöte
+  - date: 2026-03-14
     work: Gradgivning 3°
-  - date: 2025-05-17
+  - date: 2026-04-18
+    work: Gradgivning 1°
+  - date: 2026-05-16
     work: Gradgivning 2°
   - date: 2025-09-20
     work: Gradgivning 3°
