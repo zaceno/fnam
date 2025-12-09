@@ -17,13 +17,13 @@ schedule:
     work: Gradgivning 1°
   - date: 2026-05-16
     work: Gradgivning 2°
-  - date: 2025-09-20
+  - date: 2026-09-12
     work: Gradgivning 3°
-  - date: 2025-10-18
+  - date: 2026-10-17
     work: Gradgivning 1°
-  - date: 2025-11-22
+  - date: 2026-11-14
     work: Gradgivning 2°, Valmöte
-  - date: 2025-12-20
+  - date: 2026-12-05
     work: Installation (3°)
 ---
 # F.&A.M Logen Donatus nr 174
