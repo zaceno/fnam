@@ -5,6 +5,7 @@ city: Lund
 streetAddress: Krafts Torg 10
 email: donatus@friaochantagnamurare.se
 seal: $images/Donatus_sigill_frilagt.png
+meetingInfo: "Möten startar 11.30. "
 schedule:
   - date: 2025-01-18
     work: Gradgivning 3°
