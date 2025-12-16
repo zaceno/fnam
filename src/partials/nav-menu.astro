@@ -184,23 +184,39 @@ const current = Astro.url.pathname;
     top: 6px;
   }
 
+  @media (max-width: 900px) {
+    .menu {
+    gap: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .menu > li > a,
+  .dropdown-label {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+  } 
+
   /* Simple mobile fixes */
   @media (max-width: 768px) {
     .menu {
-      gap: 1rem;
-      padding: 0 1rem;
+      gap: 0;
+      padding: 0;
       flex-wrap: wrap;
       justify-content: center;
     }
 
     .menu > li > a,
     .dropdown-label {
+      font-size: 0.8rem;
       padding: 0.4rem 0.8rem;
     }
   }
 
   /* --- Small screens: full-screen hamburger menu --- */
-  @media (max-width: 480px) {
+  @media (max-width: 576px) {
     /* Show burger icon in the top bar */
     .nav-toggle-label {
       display: block;
