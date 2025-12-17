@@ -8,73 +8,73 @@
     },
     {
       "link": {
-        "url": "vad-ar-frimureri",
+        "url": "./vad-ar-frimureri",
         "title": "Vad är frimureri?"
       },
       "submenu": [
         {
-          "url": "blatt-frimureri",
+          "url": "./blatt-frimureri",
           "title": "Blått frimureri"
         },
         {
-          "url": "frimureriets-historia",
+          "url": "./frimureriets-historia",
           "title": "Frimureriets historia"
         },
         {
-          "url": "frimureri-och-religion",
+          "url": "./frimureri-och-religion",
           "title": "Frimureri och religion"
         },
         {
-          "url": "vad-ar-en-loge",
+          "url": "./vad-ar-en-loge",
           "title": "Vad är en loge?"
         }
       ]
     },
     {
       "link": {
-        "url": "vill-du-bli-frimurare",
+        "url": "./vill-du-bli-frimurare",
         "title": "Vill du bli Frimurare?"
       },
       "submenu": [
         {
-          "url": "kontakta-logerna",
+          "url": "./kontakta-logerna",
           "title": "Kontakt"
         }
       ]
     },
     {
       "link": {
-        "url": "distriktet-sverige",
+        "url": "./distriktet-sverige",
         "title": "Distriktet Sverige"
       },
       "submenu": [
         {
-          "url": "loger/telge",
+          "url": "./loger/telge",
           "title": "Logen Telge Nr. 169"
         },
         {
-          "url": "loger/donatus",
+          "url": "./loger/donatus",
           "title": "Logen Donatus Nr. 174"
         },
         {
-          "url": "loger/igelsta",
+          "url": "./loger/igelsta",
           "title": "Logen Igelsta Nr. 175"
         },
         {
-          "url": "loger/aurelius",
+          "url": "./loger/aurelius",
           "title": "Logen Aurelius Nr. 179"
         }
       ]
     },
     {
       "link": {
-        "url": "free-and-accepted-masons-in-sweden",
+        "url": "./free-and-accepted-masons-in-sweden",
         "title": "English"
       }
     },
     {
       "link": {
-        "url": "faq",
+        "url": "./faq",
         "title": "FAQ"
       }
     }
