@@ -7,7 +7,7 @@ lodges.sort((l, r) => (l.data.number - r.data.number))
 ---
 <div class="lodges-grid">
   {lodges.map(lodge => (
-  <a href={`${import.meta.env.BASE_URL}/loger/${lodge.id}`} class="lodge-card">
+  <a href={`${Astro.url.origin}/loger/${lodge.id}`} class="lodge-card">
       <div class="lodge-logo">
         <Image src={loadContentImage(lodge.data.seal)} alt={lodge.data.name} />
       </div>
