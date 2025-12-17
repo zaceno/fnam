@@ -9,6 +9,38 @@ const menu = JSON.parse(menuJSON) as ContentData;
 const current = Astro.url.pathname;
 ---
 <nav class="main-nav">
+  <script is:inline>
+    
+    /* 
+      Helper to make touch-devices able to open and close dropdowns
+    */
+    let currentOpen = null
+    
+    function closeDropdown () {
+      if (currentOpen) {
+        currentOpen.classList.remove("dropdown--hover")
+      }  
+    }
+    
+    function openDropdown (event) {
+      if (currentOpen) {
+        currentOpen.classList.remove("dropdown--hover")
+      }
+      currentOpen = event.target
+      currentOpen.classList.add("dropdown--hover")
+    }
+  
+    window.addEventListener('DOMContentLoaded', () => {
+      const dropdownElements = document.querySelectorAll('.main-nav .menu>li')
+      for (let li of dropdownElements) {
+        if (li.classList.contains('has-dropdown')) {
+          li.addEventListener('touchstart', openDropdown)
+        } else {
+          li.addEventListener('touchstart', closeDropdown)
+        }
+      }
+    })
+  </script>
   <!-- Hidden checkbox controls open/close state on small screens -->
   <input
     type="checkbox"
@@ -20,7 +52,7 @@ const current = Astro.url.pathname;
   <label for="nav-toggle" class="nav-toggle-label">
     <span></span>
   </label>
-
+  
   <ul class="menu">
     {
       (() => {
@@ -96,6 +128,7 @@ const current = Astro.url.pathname;
     font-weight: bold;
   }
 
+  .has-dropdown.dropdown--hover > .dropdown,
   .has-dropdown:hover > .dropdown,
   .has-dropdown:focus-within > .dropdown {
     display: block;
