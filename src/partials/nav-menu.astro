@@ -25,10 +25,10 @@ const current = Astro.url.pathname;
     {
       (() => {
         const anchor = (link: Link) =>  (
-            <a class:list={{ current: ((current==="/" && link.url==="./") || !!current.match(link.url)) }} href={new URL(link.url, Astro.url.origin)}>
+            <a class:list={{ current: (link.url === "./" ? current.length < 2 : !!current.match(link.url)) }} href={new URL(link.url, Astro.url.origin)}>
               {link.title}
             </a>
-          );
+          )
         return menu.main.map((item) =>
           !item.submenu ? (
             <li>{anchor(item.link)}</li>
