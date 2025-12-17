@@ -37,7 +37,7 @@
       },
       "submenu": [
         {
-          "url": "./kontakta-logerna",
+          "url": "kontakta-logerna",
           "title": "Kontakt"
         }
       ]
