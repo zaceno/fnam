@@ -8,9 +8,6 @@ const menuJSON = await fs.readFile("src/content/meny.json", "utf-8");
 const menu = JSON.parse(menuJSON) as ContentData;
 const current = Astro.url.pathname;
 ---
-<script is:inline define:vars={{current}}>
-  window._debug = {current}
-</script>
 <nav class="main-nav">
   <!-- Hidden checkbox controls open/close state on small screens -->
   <input
@@ -28,7 +25,7 @@ const current = Astro.url.pathname;
     {
       (() => {
         const anchor = (link: Link) =>  (
-            <a class:list={{ current: (current === ('/' + link.url)) }} href={new URL(link.url, Astro.url.origin)}>
+            <a class:list={{ current: !!current.match(link.url) }} href={new URL(link.url, Astro.url.origin)}>
               {link.title}
             </a>
           );
