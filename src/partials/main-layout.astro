@@ -18,6 +18,7 @@ const instagramIcon = await loadContentImage('$images/instagram.png')
     <link rel="apple-touch-icon" href={`${Astro.url.origin}/favicon.png`} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <title>{title ? `${title} – ${baseTitle}` : baseTitle}</title>
   </head>
   <body>
