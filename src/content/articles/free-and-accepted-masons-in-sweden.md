@@ -15,13 +15,13 @@ The District of Sweden is part of the Grand Lodge of Free and Accepted Masons o
 
 Today, four lodges of Free and Accepted Masons operate in Sweden:
 
-*   [F. & A.M. Lodge Telge No. 169](/fnam/loger/telge)
+*   [F. & A.M. Lodge Telge No. 169](/loger/telge)
     
-*   [F. & A.M. Lodge Donatus No. 174](/fnam/loger/donatus)
+*   [F. & A.M. Lodge Donatus No. 174](/loger/donatus)
     
-*   [F. & A.M. Lodge Igelsta No. 175](/fnam/loger/igelsta)
+*   [F. & A.M. Lodge Igelsta No. 175](/loger/igelsta)
     
-*   [F. & A.M. Lodge Aurelius No. 179](/fnam/loger/aurelius)
+*   [F. & A.M. Lodge Aurelius No. 179](/loger/aurelius)
     
 
 All lodge work is conducted in Swedish, according to a ritual from the late 18th century commonly known as Preston-Webb Workings, or “the American Ritual”. The ritual has existed in Swedish since 1923, when the first translation was completed in connection with the re-establishment of internationally recognized Freemasonry in Finland, supported at that time by the Grand Lodge of New York.

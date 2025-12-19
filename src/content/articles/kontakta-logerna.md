@@ -7,17 +7,17 @@ Om du är intresserad av att veta mer om frimureriet och kanske är intresserad 
 
 ### F. & A. M. Logen Telge Nr. 169, Södertälje  
 E-post: [telge@friaochantagnamurare.se](mailto:telge@friaochantagnamurare.se)  
-[Läs mer om Logen Telge](../loger/telge)
+[Läs mer om Logen Telge](/loger/telge)
 
 ### F. & A. M. Logen Donats Nr. 174, Lund  
 E-post: [donatus@friaochantagnamurare.se](mailto:donatus@friaochantagnamurare.se)  
-[Läs mer om Logen Donatus](../loger/donatus)
+[Läs mer om Logen Donatus](/loger/donatus)
 
 ### F. & A. M. Logen Igelsta Nr. 175, Göteborg  
 _Logen Igelsta är tänkt att flytta till Göteborg, så intresserade män i Västsverige är välkomna att höra av sig!_  
 E-post: [igelsta@friaochantagnamurare.se](mailto:igelsta@friaochantagnamurare.se)  
-[Läs mer om Logen Igelsta](../loger/igelsta)
+[Läs mer om Logen Igelsta](/loger/igelsta)
 
 ### F. & A. M. Logen Aurelius Nr. 179, Umeå  
 E-post: [aurelius@friaochantagnamurare.se](mailto:aurelius@friaochantagnamurare.se)  
-[Läs mer om Logen Aurelius](./loger/aurelius)
+[Läs mer om Logen Aurelius](/loger/aurelius)
