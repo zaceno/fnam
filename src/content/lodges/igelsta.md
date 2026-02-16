@@ -6,8 +6,10 @@ streetAddress: "-"
 email: igelsta@friaochantagnamurare.se
 seal: $images/Logen-Igelsta-farglagd-2.png
 schedule:
-  - date: 2026-01-01
-    work: "-"
+  - date: 2026-04-11
+    work: Gradgivning 1°
+  - date: 2026-10-03
+    work: Gradgivning 2° (Obs datum osäkert)
 ---
 # Logen flyttar till Göteborg
 
