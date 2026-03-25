@@ -10,9 +10,9 @@ meetingInfo: "Hålltider för mötena: De startar normalt kl. 12.00 och avslutas
 schedule:
   - date: 2026-03-07
     work: Gradgivning 3°
-  - date: 2026-04-18
+  - date: 2026-04-25
     work: Föredrag
-  - date: 2026-05-02
+  - date: 2026-05-16
     work: Gradgivning 2°
   - date: 2026-09-05
     work: Föredrag (alt gradgivning)
@@ -29,7 +29,7 @@ Fria och Antagna Murarelogen Telge nr 169 bildades 20 juni 2012 och sammanträdd
 
 Logen invigdes under högtidliga former på Igelsta gård i Södertälje den 14 september 2013 av stormästaren för Storlogen för Fria och Antagna Murare i Finland. Svenska Frimurare Ordens stormästare var inbjuden gäst vid invigningen. Moderloge för Logen Telge Nr 169 är den svenskspråkiga logen Patria St. Henrik Nr 5 i Helsingfors.
 
-Logen har ett valspråk som på svenska enklast översätts som _“Broderskap i tidens anda”._
+Logen har ett valspråk som på svenska enklast översätts som *“Broderskap i tidens anda”.*
 
 ## Vill du besöka oss?
 
