@@ -8,8 +8,6 @@ seal: $images/telge-sigill-frilagd-färgad.webp
 meetingInfo: "Hålltider för mötena: De startar normalt kl. 12.00 och avslutas ca
   15.30. Därefter hålls en brödramåltid som slutar ca 17.30."
 schedule:
-  - date: 2026-03-07
-    work: Gradgivning 3°
   - date: 2026-04-25
     work: Föredrag
   - date: 2026-05-16
