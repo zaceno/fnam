@@ -6,14 +6,14 @@ streetAddress: "-"
 email: igelsta@friaochantagnamurare.se
 seal: $images/Logen-Igelsta-farglagd-2.png
 schedule:
-  - date: 2026-04-11
-    work: Gradgivning 1°
   - date: 2026-10-03
     work: Gradgivning 2° (Obs datum osäkert)
 ---
-# Logen flyttar till Göteborg
+# Logen är nu verksam i Göteborg
 
-Logen har varit lokaliserad till Södertälje där den av olika anledningar haft en låg aktivitetsnivå. Detta är på gång att ändras då ett arbete att flytta logen till Göteborg är inlett! I och kring Göteborg finns det ett antal bröder som i dagsläget reser långt för att gå på loge. De har länge önskats och hoppats att det skall komma en dag då en loge kan arbeta i Göteborg. Det ser nu ut som att förutsättningarna för detta föreligger. Vi har ett antal lokala bröder som är sugna på att lägga ner det arbete som krävs för att starta en loge och vi har bröder i våra andra loger som är villiga att hjälpa till under uppstarten. Exakt när vi kan ha våra första möten i Göteborg är lite oklart, men vi har som mål att försöka få till det under 2026.
+Logen är sedan den 11 april 2026 verksam i Göteborg!
+
+Logen har tidigare varit lokaliserad till Södertälje där den av olika anledningar haft en låg aktivitetsnivå. Samtidigt har det i och kring Göteborg funnits ett antal bröder som i dagsläget reser långt för att gå på loge. Detta har gjort att logen flyttat till Göteborg. Med de lokala bröderna som grund och med hjälp av bröder från andra delar av landet håller logen nu på att utveckla sin verksamhet i Göteborg. Vi börjar mötesverksamheten med några möten per år och ökar intensiteten i mötesverksamheten i takt med att logen tar emot nya medlemmar. Vi är övertygade om att det i Göteborg, och den vidare regionen, finns ett ordentligt underlag för tillväxt.
 
 Om du bor i eller i närheten av Göteborg och är intresserad av att bli medlem i en blå loge så är du välkommen att kontakta oss.
 
