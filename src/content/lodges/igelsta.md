@@ -13,7 +13,7 @@ schedule:
 
 Logen är sedan den 11 april 2026 verksam i Göteborg!
 
-Logen hade sitt första möte i Göteborg den 11 april 2026. Logens verksamhet är under uppbyggnad Vi börjar mötesverksamheten med några möten per år och ökar intensiteten i mötesverksamheten i takt med att logen tar emot nya medlemmar. Vi är övertygade om att det i Göteborg, och den vidare regionen, finns ett ordentligt underlag för tillväxt.
+Logen hade sitt första möte i Göteborg den 11 april 2026. Logens verksamhet är under uppbyggnad. Vi börjar mötesverksamheten med några möten per år och ökar intensiteten i mötesverksamheten i takt med att logen tar emot nya medlemmar. Vi är övertygade om att det i Göteborg, och den vidare regionen, finns ett ordentligt underlag för tillväxt.
 
 Om du bor i eller i närheten av Göteborg och är intresserad av att bli medlem i en blå loge så är du välkommen att kontakta oss..
 
