@@ -16,7 +16,7 @@ schedule:
   - date: 2026-04-18
     work: Gradgivning 3°
   - date: 2026-05-16
-    work: Gradgivning 2°
+    work: Gradgivning 3°
   - date: 2026-09-12
     work: Gradgivning 3°
   - date: 2026-10-17
