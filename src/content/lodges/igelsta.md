@@ -1,8 +1,8 @@
 ---
 name: Igelsta
 number: 175
-city: Göteborgsregionen
-streetAddress: Gamla Gärdesgatan 10 B, Kungälv
+city: Kungälv
+streetAddress: Gamla Gärdesgatan 10 B
 email: igelsta@friaochantagnamurare.se
 seal: $images/Logen-Igelsta-farglagd-2.png
 schedule:
