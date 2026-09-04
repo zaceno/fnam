@@ -8,18 +8,14 @@ seal: $images/telge-sigill-frilagd-färgad.webp
 meetingInfo: "Hålltider för mötena: De startar normalt kl. 12.00 och avslutas ca
   15.30. Därefter hålls en brödramåltid som slutar ca 17.30."
 schedule:
-  - date: 2026-04-25
-    work: Föredrag
-  - date: 2026-05-16
-    work: Gradgivning 2°
   - date: 2026-09-05
-    work: Föredrag (alt gradgivning)
+    work: Gradgivning 1°
   - date: 2026-10-03
-    work: Ritualövning (alt gradgivning)
+    work: Ritualövning
   - date: 2026-11-07
-    work: Föredrag och valmöte
+    work: Gradgivning 3° & valmöte
   - date: 2026-12-05
-    work: Föredrag alt Gradgivning 3°
+    work: Gradgivning 1°
 ---
 # F.&A.M Logen Telge nr 169
 
