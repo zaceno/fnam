@@ -1,15 +1,15 @@
 ---
 name: Igelsta
 number: 175
-city: Göteborg
-streetAddress: "-"
+city: Göteborgsregionen
+streetAddress: Gamla Gärdesgatan 10 B, Kungälv
 email: igelsta@friaochantagnamurare.se
 seal: $images/Logen-Igelsta-farglagd-2.png
 schedule:
   - date: 2026-11-28
     work: Gradgivning 1° & gradgivning 2°
 ---
-# Logen är nu verksam i Göteborg
+# Logen är nu verksam i Göteborgsregionen
 
 Logen är sedan den 11 april 2026 verksam i Göteborg!
 
