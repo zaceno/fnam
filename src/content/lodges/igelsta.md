@@ -7,7 +7,7 @@ email: igelsta@friaochantagnamurare.se
 seal: $images/Logen-Igelsta-farglagd-2.png
 schedule:
   - date: 2026-11-28
-    work: Gradgivning 1°
+    work: Gradgivning 1° & gradgivning 2°
 ---
 # Logen är nu verksam i Göteborg
 
