@@ -12,5 +12,7 @@ export default defineConfig({
     layout: "constrained",
   },
 
-  integrations: [sitemap()],
+  integrations: [sitemap({
+    filter: (page) => !new URL(page).pathname.replace(/\/$/, '').endsWith('/loger/donatus/2026-10'),
+  })],
 })

@@ -20,6 +20,7 @@ const instagramIcon = await loadContentImage('$images/instagram.png')
     <meta name="generator" content={Astro.generator} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <title>{title ? `${title} – ${baseTitle}` : baseTitle}</title>
+    <slot name="head" />
   </head>
   <body>
     <NavMenu />

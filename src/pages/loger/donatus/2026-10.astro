@@ -1,0 +1,115 @@
+---
+import { randomBytes, pbkdf2Sync, createCipheriv } from 'node:crypto';
+import { getEntry } from 'astro:content';
+import MainLayout from '../../../partials/main-layout.astro';
+import LodgePageLayout from '../../../partials/lodge-page-layout.astro';
+
+const lodge = await getEntry('lodges', 'donatus');
+
+// Runs only during rendering/building. Never send the password or plaintext to the browser.
+const password = import.meta.env.DONATUS_EVENT_PASSWORD;
+if (!password) throw new Error('Set DONATUS_EVENT_PASSWORD before building the private event page.');
+const content = 'Memories from the Event';
+const iterations = 310_000;
+const salt = randomBytes(16);
+const iv = randomBytes(12);
+const key = pbkdf2Sync(password, salt, iterations, 32, 'sha256');
+const cipher = createCipheriv('aes-256-gcm', key, iv);
+const encrypted = Buffer.concat([
+  cipher.update(content, 'utf8'), cipher.final(), cipher.getAuthTag(),
+]);
+---
+
+<MainLayout title="Private event · Donatus">
+  <meta slot="head" name="robots" content="noindex, nofollow, noarchive" />
+  <LodgePageLayout title="Donatus" lodgeSeal={lodge?.data.seal}>
+      <section class="private-event" aria-label="Private event" lang="en">
+        <form id="unlock-form"
+          data-salt={salt.toString('base64')}
+          data-iv={iv.toString('base64')}
+          data-content={encrypted.toString('base64')}
+          data-iterations={iterations}>
+          <p class="eyebrow">Donatus · October 2026</p>
+          <h1>Private event</h1>
+          <p>Enter the password to open this page.</p>
+          <label for="password">Password</label>
+          <input id="password" type="password" autocomplete="current-password" required aria-describedby="unlock-error" />
+          <button type="submit">Unlock page</button>
+          <p id="unlock-error" role="alert"></p>
+          <noscript>Enable JavaScript to unlock this page.</noscript>
+        </form>
+        <section id="event-content" hidden>
+          <h1 id="event-heading" tabindex="-1"></h1>
+          <button id="lock-page" type="button">Lock page</button>
+        </section>
+      </section>
+  </LodgePageLayout>
+</MainLayout>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>('#unlock-form')!;
+  const input = document.querySelector<HTMLInputElement>('#password')!;
+  const error = document.querySelector<HTMLElement>('#unlock-error')!;
+  const content = document.querySelector<HTMLElement>('#event-content')!;
+  const heading = document.querySelector<HTMLElement>('#event-heading')!;
+  const submit = form.querySelector<HTMLButtonElement>('button')!;
+  const decode = (value: string) => Uint8Array.from(atob(value), character => character.charCodeAt(0));
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    error.textContent = '';
+    if (!window.crypto.subtle) {
+      error.textContent = 'Please open this page over HTTPS or on localhost.';
+      return;
+    }
+    submit.disabled = true;
+    submit.textContent = 'Unlocking…';
+    try {
+      const material = await crypto.subtle.importKey(
+        'raw', new TextEncoder().encode(input.value), 'PBKDF2', false, ['deriveKey'],
+      );
+      const key = await crypto.subtle.deriveKey(
+        { name: 'PBKDF2', salt: decode(form.dataset.salt!), iterations: Number(form.dataset.iterations), hash: 'SHA-256' },
+        material, { name: 'AES-GCM', length: 256 }, false, ['decrypt'],
+      );
+      const plaintext = await crypto.subtle.decrypt(
+        { name: 'AES-GCM', iv: decode(form.dataset.iv!) }, key, decode(form.dataset.content!),
+      );
+      heading.textContent = new TextDecoder().decode(plaintext);
+      input.value = '';
+      form.hidden = true;
+      content.hidden = false;
+      heading.focus();
+    } catch {
+      error.textContent = 'Incorrect password. Please try again.';
+      input.value = '';
+      input.focus();
+    } finally {
+      submit.disabled = false;
+      submit.textContent = 'Unlock page';
+    }
+  });
+
+  document.querySelector('#lock-page')!.addEventListener('click', () => {
+    heading.textContent = '';
+    content.hidden = true;
+    form.hidden = false;
+    input.focus();
+  });
+</script>
+
+<style>
+  .private-event { min-width: 0; }
+  h1 { color: #1a237e; font-size: 2rem; margin: 0 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #e3eaf3; }
+  p { color: #333; margin-bottom: 1.5rem; }
+  .eyebrow { color: #3f7f9f; margin-bottom: 1rem; }
+  label { display: block; margin: 1.5rem 0 0.5rem; font-weight: 600; }
+  input { width: 100%; box-sizing: border-box; padding: 0.75rem; background: #f8fafc; color: #1a237e; -webkit-text-fill-color: #1a237e; caret-color: #1a237e; color-scheme: light; border: 1px solid #8c99ac; border-radius: 0.5rem; font: inherit; }
+  button { margin-top: 1rem; padding: 0.75rem 1.25rem; background: #3f7f9f; color: white; border: 0; border-radius: 0.5rem; font: inherit; cursor: pointer; transition: background 0.2s; }
+  button:hover { background: #326580; }
+  button:disabled { opacity: 0.6; cursor: wait; }
+  :is(input, button):focus-visible { outline: 3px solid #3f7f9f; outline-offset: 3px; }
+  #unlock-error { color: #a32020; margin-top: 1rem; }
+  [hidden] { display: none !important; }
+  @media (max-width: 768px) { h1 { font-size: 1.6rem; } }
+</style>

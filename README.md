@@ -2,6 +2,19 @@
 
 Prototype website for F. & A. M. Sweden district.
 
+## Private Donatus event page
+
+`/loger/donatus/2026-10` is unlinked, excluded from the sitemap, and marked noindex.
+Its text is encrypted at build time and decrypted in the browser with the exact,
+case-sensitive password. Refreshing or choosing “Lock page” locks it again.
+
+Set `DONATUS_EVENT_PASSWORD` in your local `.env` file (which is ignored by Git).
+For GitHub Pages deployment, set the repository Actions secret
+`DONATUS_EVENT_PASSWORD` to the same password before running the deployment.
+Production must use HTTPS. Anyone who knows the password can unlock the page.
+The encryption covers the event text; future photos or other private assets also
+need encryption and must not be placed as public files.
+
 ## PagesCMS
 
 Uses PagesCMS (https://pagescms.org) to manage content via the `.pages.yml` file.
