@@ -13,6 +13,6 @@ export default defineConfig({
   },
 
   integrations: [sitemap({
-    filter: (page) => !new URL(page).pathname.replace(/\/$/, '').endsWith('/loger/donatus/2026-10'),
+    filter: (page) => !/^\/loger\/donatus\/(?:events\/)?2026-10$/.test(new URL(page).pathname.replace(/\/$/, '')),
   })],
 })

@@ -4,7 +4,8 @@ Prototype website for F. & A. M. Sweden district.
 
 ## Private Donatus event page
 
-`/loger/donatus/2026-10` is unlinked, excluded from the sitemap, and marked noindex.
+`/loger/donatus/events/2026-10` is unlinked, excluded from the sitemap, and marked noindex.
+The previous address redirects to this page so existing QR codes and bookmarks continue to work.
 Its text is encrypted at build time and decrypted in the browser with the exact,
 case-sensitive password. Refreshing or choosing “Lock page” locks it again.
 
