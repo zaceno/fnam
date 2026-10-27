@@ -21,7 +21,7 @@ schedule:
     work: Gradgivning 3°
   - date: 2026-10-17
     work: Gradgivning 1°
-  - date: 2026-11-14
+  - date: 2026-11-02
     work: Gradgivning 2°, Valmöte
   - date: 2026-12-05
     work: Installation (3°)
